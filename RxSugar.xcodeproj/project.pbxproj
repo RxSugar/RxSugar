@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D809DA51C62B344003D1D63 /* ValueBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DA41C62B344003D1D63 /* ValueBinding.swift */; };
+		4D809DBB1C62B399003D1D63 /* ValueBindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DBA1C62B399003D1D63 /* ValueBindingTests.swift */; };
+		4D809DBD1C62BF51003D1D63 /* RxsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DBC1C62BF51003D1D63 /* RxsError.swift */; };
 		4D91C3431C625FE700926C99 /* RxSugar.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D91C3421C625FE700926C99 /* RxSugar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4D91C34A1C625FE700926C99 /* RxSugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D91C33F1C625FE700926C99 /* RxSugar.framework */; };
 		4D91C35A1C6267D100926C99 /* Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3591C6267D100926C99 /* Trigger.swift */; };
@@ -19,6 +22,7 @@
 		4D91C3AF1C6297C200926C99 /* RxDisposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AE1C6297C200926C99 /* RxDisposal.swift */; };
 		4D91C3B11C629B3D00926C99 /* UIControl+TriggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3B01C629B3D00926C99 /* UIControl+TriggerTests.swift */; };
 		4D91C3B41C62A6B800926C99 /* UIButton+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3B21C62A5D000926C99 /* UIButton+Sugar.swift */; };
+		4D91C3B61C62A88800926C99 /* UITextField+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3B51C62A88800926C99 /* UITextField+Sugar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,6 +176,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D809DA41C62B344003D1D63 /* ValueBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueBinding.swift; sourceTree = "<group>"; };
+		4D809DBA1C62B399003D1D63 /* ValueBindingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValueBindingTests.swift; path = RxSugarTests/ValueBindingTests.swift; sourceTree = SOURCE_ROOT; };
+		4D809DBC1C62BF51003D1D63 /* RxsError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxsError.swift; sourceTree = "<group>"; };
 		4D91C33F1C625FE700926C99 /* RxSugar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSugar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D91C3421C625FE700926C99 /* RxSugar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RxSugar.h; sourceTree = "<group>"; };
 		4D91C3441C625FE700926C99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -185,6 +192,7 @@
 		4D91C3AE1C6297C200926C99 /* RxDisposal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxDisposal.swift; sourceTree = "<group>"; };
 		4D91C3B01C629B3D00926C99 /* UIControl+TriggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIControl+TriggerTests.swift"; path = "RxSugarTests/UIControl+TriggerTests.swift"; sourceTree = "<group>"; };
 		4D91C3B21C62A5D000926C99 /* UIButton+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Sugar.swift"; sourceTree = "<group>"; };
+		4D91C3B51C62A88800926C99 /* UITextField+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Sugar.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,6 +247,9 @@
 				4D91C3441C625FE700926C99 /* Info.plist */,
 				4D91C3591C6267D100926C99 /* Trigger.swift */,
 				4D91C35E1C626B7B00926C99 /* TriggerTests.swift */,
+				4D809DA41C62B344003D1D63 /* ValueBinding.swift */,
+				4D809DBA1C62B399003D1D63 /* ValueBindingTests.swift */,
+				4D809DBC1C62BF51003D1D63 /* RxsError.swift */,
 			);
 			path = RxSugar;
 			sourceTree = "<group>";
@@ -299,6 +310,7 @@
 				4D91C3A71C6277B300926C99 /* UIControl+Trigger.swift */,
 				4D91C3B01C629B3D00926C99 /* UIControl+TriggerTests.swift */,
 				4D91C3B21C62A5D000926C99 /* UIButton+Sugar.swift */,
+				4D91C3B51C62A88800926C99 /* UITextField+Sugar.swift */,
 			);
 			name = "RxSugar+UIKit";
 			sourceTree = "<group>";
@@ -560,9 +572,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D809DBD1C62BF51003D1D63 /* RxsError.swift in Sources */,
 				4D91C3AF1C6297C200926C99 /* RxDisposal.swift in Sources */,
 				4D91C3B41C62A6B800926C99 /* UIButton+Sugar.swift in Sources */,
+				4D91C3B61C62A88800926C99 /* UITextField+Sugar.swift in Sources */,
 				4D91C3A91C628D5800926C99 /* UIControl+Trigger.swift in Sources */,
+				4D809DA51C62B344003D1D63 /* ValueBinding.swift in Sources */,
 				4D91C3AD1C6297A700926C99 /* RxVariableBinding.swift in Sources */,
 				4D91C35A1C6267D100926C99 /* Trigger.swift in Sources */,
 			);
@@ -573,6 +588,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D91C3B11C629B3D00926C99 /* UIControl+TriggerTests.swift in Sources */,
+				4D809DBB1C62B399003D1D63 /* ValueBindingTests.swift in Sources */,
 				4D91C35F1C626B7B00926C99 /* TriggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

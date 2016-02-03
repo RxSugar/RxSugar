@@ -10,17 +10,34 @@ extension UIControlType {
 		return self as! ControlType
 	}
 	
-	public func rxs_controlEvents<T>(eventTypes: UIControlEvents, valueGenerator: (Self)->T) -> Observable<T> {
-		let trigger = Trigger { return valueGenerator(self) }
-		typedSelf().addTarget(trigger, action: trigger.action, forControlEvents: eventTypes)
+	public func rxs_triggerForControlEvents<T>(controlEvents: UIControlEvents, valueGetter: (Self)->T) -> Trigger<T> {
+		let trigger = Trigger<T> { [weak self] in
+			guard let this = self else { throw RxsError() }
+			return valueGetter(this)
+		}
+		typedSelf().addTarget(trigger, action: trigger.action, forControlEvents: controlEvents)
+		return trigger
+	}
+	
+	public func rxs_controlEvents<T>(controlEvents: UIControlEvents, valueGetter: (Self)->T) -> Observable<T> {
+		let trigger = rxs_triggerForControlEvents(controlEvents, valueGetter: valueGetter)
 		rx_disposeBag ++ AnonymousDisposable { [weak self] in
-			self?.typedSelf().removeTarget(trigger, action: trigger.action, forControlEvents: eventTypes)
+			self?.typedSelf().removeTarget(trigger, action: trigger.action, forControlEvents: controlEvents)
 		}
 		return trigger.events
 	}
 	
-	public func rxs_controlEvents(eventTypes: UIControlEvents) -> Observable<Void> {
-		return rxs_controlEvents(eventTypes, valueGenerator: { _ in })
+	public func rxs_controlEvents(controlEvents: UIControlEvents) -> Observable<Void> {
+		return rxs_controlEvents(controlEvents, valueGetter: { _ in })
+	}
+	
+	public func rxs_controlValueBinding<T>(valueChangeEventTypes valueChangeEventTypes: UIControlEvents, valueGetter: (Self)->T, valueSetter: (Self, T)->()) -> ValueBinding<T> {
+		return ValueBinding(
+			getValueTrigger: rxs_triggerForControlEvents(valueChangeEventTypes, valueGetter: valueGetter),
+			setValue: { [weak self] in
+				guard let this = self else { return }
+				valueSetter(this, $0)
+		})
 	}
 }
 
