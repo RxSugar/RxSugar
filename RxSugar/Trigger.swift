@@ -1,7 +1,9 @@
 import Foundation
 import RxSwift
 
-public class Trigger<T>: NSObject {
+public final class Trigger<T>: NSObject {
+	let action: Selector = "trigger"
+	
 	private let subject = PublishSubject<T>()
 	private let valueGenerator: ()->T
 	public let events: Observable<T>
@@ -19,3 +21,4 @@ public class Trigger<T>: NSObject {
 		subject.onCompleted()
 	}
 }
+

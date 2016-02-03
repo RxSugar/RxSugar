@@ -14,6 +14,10 @@
 		4D91C3A31C62712C00926C99 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D91C37C1C62711A00926C99 /* RxSwift.framework */; };
 		4D91C3A41C62713B00926C99 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D91C38C1C62711A00926C99 /* RxBlocking.framework */; };
 		4D91C3A51C62714900926C99 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D91C37C1C62711A00926C99 /* RxSwift.framework */; };
+		4D91C3A91C628D5800926C99 /* UIControl+Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3A71C6277B300926C99 /* UIControl+Trigger.swift */; };
+		4D91C3AD1C6297A700926C99 /* RxVariableBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AC1C6297A700926C99 /* RxVariableBinding.swift */; };
+		4D91C3AF1C6297C200926C99 /* RxDisposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AE1C6297C200926C99 /* RxDisposal.swift */; };
+		4D91C3B11C629B3D00926C99 /* UIControl+TriggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3B01C629B3D00926C99 /* UIControl+TriggerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +179,10 @@
 		4D91C3591C6267D100926C99 /* Trigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigger.swift; sourceTree = "<group>"; };
 		4D91C35E1C626B7B00926C99 /* TriggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TriggerTests.swift; path = RxSugarTests/TriggerTests.swift; sourceTree = SOURCE_ROOT; };
 		4D91C3641C62711A00926C99 /* Rx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rx.xcodeproj; path = Carthage/Checkouts/RxSwift/Rx.xcodeproj; sourceTree = "<group>"; };
+		4D91C3A71C6277B300926C99 /* UIControl+Trigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Trigger.swift"; sourceTree = "<group>"; };
+		4D91C3AC1C6297A700926C99 /* RxVariableBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxVariableBinding.swift; sourceTree = "<group>"; };
+		4D91C3AE1C6297C200926C99 /* RxDisposal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxDisposal.swift; sourceTree = "<group>"; };
+		4D91C3B01C629B3D00926C99 /* UIControl+TriggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIControl+TriggerTests.swift"; path = "RxSugarTests/UIControl+TriggerTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +210,7 @@
 		4D91C3351C625FE700926C99 = {
 			isa = PBXGroup;
 			children = (
+				4D91C3A61C62778F00926C99 /* RxSugar+UIKit */,
 				4D91C3411C625FE700926C99 /* RxSugar */,
 				4D91C34D1C625FE700926C99 /* RxSugarTests */,
 				4D91C3631C6270EE00926C99 /* Dependencies */,
@@ -222,6 +231,8 @@
 		4D91C3411C625FE700926C99 /* RxSugar */ = {
 			isa = PBXGroup;
 			children = (
+				4D91C3AE1C6297C200926C99 /* RxDisposal.swift */,
+				4D91C3AC1C6297A700926C99 /* RxVariableBinding.swift */,
 				4D91C3421C625FE700926C99 /* RxSugar.h */,
 				4D91C3441C625FE700926C99 /* Info.plist */,
 				4D91C3591C6267D100926C99 /* Trigger.swift */,
@@ -278,6 +289,15 @@
 				4D91C3A21C62711A00926C99 /* PerformanceTests.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4D91C3A61C62778F00926C99 /* RxSugar+UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				4D91C3A71C6277B300926C99 /* UIControl+Trigger.swift */,
+				4D91C3B01C629B3D00926C99 /* UIControl+TriggerTests.swift */,
+			);
+			name = "RxSugar+UIKit";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -537,6 +557,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D91C3AF1C6297C200926C99 /* RxDisposal.swift in Sources */,
+				4D91C3A91C628D5800926C99 /* UIControl+Trigger.swift in Sources */,
+				4D91C3AD1C6297A700926C99 /* RxVariableBinding.swift in Sources */,
 				4D91C35A1C6267D100926C99 /* Trigger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,6 +568,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D91C3B11C629B3D00926C99 /* UIControl+TriggerTests.swift in Sources */,
 				4D91C35F1C626B7B00926C99 /* TriggerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
