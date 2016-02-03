@@ -18,6 +18,7 @@
 		4D91C3AD1C6297A700926C99 /* RxVariableBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AC1C6297A700926C99 /* RxVariableBinding.swift */; };
 		4D91C3AF1C6297C200926C99 /* RxDisposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AE1C6297C200926C99 /* RxDisposal.swift */; };
 		4D91C3B11C629B3D00926C99 /* UIControl+TriggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3B01C629B3D00926C99 /* UIControl+TriggerTests.swift */; };
+		4D91C3B41C62A6B800926C99 /* UIButton+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3B21C62A5D000926C99 /* UIButton+Sugar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,6 +184,7 @@
 		4D91C3AC1C6297A700926C99 /* RxVariableBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxVariableBinding.swift; sourceTree = "<group>"; };
 		4D91C3AE1C6297C200926C99 /* RxDisposal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxDisposal.swift; sourceTree = "<group>"; };
 		4D91C3B01C629B3D00926C99 /* UIControl+TriggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIControl+TriggerTests.swift"; path = "RxSugarTests/UIControl+TriggerTests.swift"; sourceTree = "<group>"; };
+		4D91C3B21C62A5D000926C99 /* UIButton+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Sugar.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +298,7 @@
 			children = (
 				4D91C3A71C6277B300926C99 /* UIControl+Trigger.swift */,
 				4D91C3B01C629B3D00926C99 /* UIControl+TriggerTests.swift */,
+				4D91C3B21C62A5D000926C99 /* UIButton+Sugar.swift */,
 			);
 			name = "RxSugar+UIKit";
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D91C3AF1C6297C200926C99 /* RxDisposal.swift in Sources */,
+				4D91C3B41C62A6B800926C99 /* UIButton+Sugar.swift in Sources */,
 				4D91C3A91C628D5800926C99 /* UIControl+Trigger.swift in Sources */,
 				4D91C3AD1C6297A700926C99 /* RxVariableBinding.swift in Sources */,
 				4D91C35A1C6267D100926C99 /* Trigger.swift in Sources */,
