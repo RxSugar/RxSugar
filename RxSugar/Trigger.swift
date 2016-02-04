@@ -1,44 +1,21 @@
 import Foundation
 import RxSwift
 
-public protocol TriggerType {
-	typealias TriggerElement
-	
-	var events: Observable<TriggerElement> { get }
-}
-
-extension TriggerType {
-	public func asTrigger() -> Trigger<TriggerElement> {
-		return Trigger(self)
-	}
-}
-
-
-public struct Trigger<T>: TriggerType {
-	public typealias TriggerElement = T
-	private let getEvents: () -> Observable<TriggerElement>
-	public var events: Observable<TriggerElement> { return getEvents() }
-	
-	public init<Type: TriggerType where Type.TriggerElement == T>(_ trigger: Type) {
-		getEvents = { trigger.events }  // captures trigger reference to ensure original trigger stays alive, if necessary
-	}
-}
-
-public final class TargetActionTrigger<T>: NSObject, TriggerType {
-	public typealias TriggerElement = T
+public final class TargetActionObservable<T>: NSObject, ObservableType {
+    public typealias E = T
 	let action: Selector = "trigger"
 	
 	private let _unsubscribe: (NSObjectProtocol, Selector) -> ()
-	private let subject = PublishSubject<T>()
-	private let valueGenerator: () throws -> T
-	public let events: Observable<T>
+    private let subject = PublishSubject<E>()
+    private let valueGenerator: () throws -> T
+    private let complete: Observable<Void>
 	
-	public init(valueGenerator generator: () throws -> T, subscribe: (NSObjectProtocol, Selector) -> (), unsubscribe: (NSObjectProtocol, Selector) -> ()) {
-		events = subject.asObservable()
+    public init(valueGenerator generator: () throws -> T, subscribe subscribeAction: (NSObjectProtocol, Selector) -> (), unsubscribe: (NSObjectProtocol, Selector) -> (), complete completeEvents: Observable<Void>) {
 		valueGenerator = generator
 		_unsubscribe = unsubscribe
+        complete = completeEvents
 		super.init()
-		subscribe(self, action)
+		subscribeAction(self, action)
 	}
 	
 	public convenience init (control: UIControl, forEvents controlEvents: UIControlEvents, valueGenerator generator: () throws -> T) {
@@ -49,11 +26,12 @@ public final class TargetActionTrigger<T>: NSObject, TriggerType {
 			},
 			unsubscribe: { (target, action) in
 				control.removeTarget(target, action: action, forControlEvents: controlEvents)
-			}
+			},
+            complete: control.rxs.onDeinit
 		)
 	}
 	
-	public convenience init(notificationName: String, onObject: AnyObject, valueGenerator: () throws -> T) {
+	public convenience init(notificationName: String, onObject: NSObject, valueGenerator: () throws -> T) {
 		self.init(
 			valueGenerator: valueGenerator,
 			subscribe: { (target, action) in
@@ -61,9 +39,16 @@ public final class TargetActionTrigger<T>: NSObject, TriggerType {
 			},
 			unsubscribe: { (target, _) in
 				NSNotificationCenter.defaultCenter().removeObserver(target, name: notificationName, object: onObject)
-			}
+            },
+            complete: onObject.rxs.onDeinit
 		)
 	}
+    
+    public func subscribe<O: ObserverType where O.E == E>(observer: O) -> Disposable {
+        let subjectDisposable = subject.takeUntil(complete).subscribe(observer)
+        let triggerDisposable = AnonymousDisposable { _ = self }
+        return CompositeDisposable() ++ subjectDisposable ++ triggerDisposable
+    }
 	
 	public func trigger() {
 		guard let value = try? valueGenerator() else { return }

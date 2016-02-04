@@ -5,25 +5,13 @@ public protocol UIControlType: NSObjectProtocol {
     typealias ControlType: UIControl = Self
 }
 
-public extension UIControlType {
-    typealias RxsSelfType = Self
-    
-    public var rxs: RxSugarExtensions<RxsSelfType> { return RxSugarExtensions<RxsSelfType>(host: self) }
-}
-
 extension UIControl: UIControlType {}
 
-public struct RxSugarExtensions<HostType: NSObjectProtocol> {
-    private let host:HostType
-    
-    public init(host: HostType) {
-        self.host = host
-    }
-}
+var disposeBagKey: UInt8 = 0
 
 public extension RxSugarExtensions where HostType: UIControl {
-	public func triggerForControlEvents<T>(controlEvents: UIControlEvents, valueGetter: (HostType)->T) -> Trigger<T> {
-		let trigger = TargetActionTrigger<T>(
+	public func triggerForControlEvents<T>(controlEvents: UIControlEvents, valueGetter: (HostType)->T) -> Observable<T> {
+		let trigger = TargetActionObservable<T>(
 			valueGenerator: { [weak host] in
 				guard let this = host else { throw RxsError() }
 				return valueGetter(this)
@@ -33,12 +21,13 @@ public extension RxSugarExtensions where HostType: UIControl {
 			},
 			unsubscribe:{ [weak host] (target, action) in
 				host?.removeTarget(target, action: action, forControlEvents: controlEvents)
-		})
-        return trigger.asTrigger()
+		},
+            complete: onDeinit)
+        return trigger.asObservable()
     }
     
     public func controlEvents<T>(controlEvents: UIControlEvents, valueGetter: (HostType)->T) -> Observable<T> {
-        return triggerForControlEvents(controlEvents, valueGetter: valueGetter).events
+        return triggerForControlEvents(controlEvents, valueGetter: valueGetter)
     }
     
     public func controlEvents(controlEvents: UIControlEvents) -> Observable<Void> {

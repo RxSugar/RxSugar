@@ -1,13 +1,21 @@
 import Foundation
+import RxSwift
 import RxSugar
 import XCTest
 
-class TriggerTests: XCTestCase {
+class TargetActionTriggerTests: XCTestCase {
 	func testTriggerSendsEventWhenFiredViaPerformSelector () {
-		let testObject = TargetActionTrigger { return 42 }
+		let testObject = TargetActionObservable<Int>(
+            valueGenerator: { _ in
+                return 42
+            },
+            subscribe: { _ in },
+            unsubscribe: { _ in },
+            complete: self.rxs.onDeinit
+        )
 		
 		var events: [Int] = []
-		_ = testObject.events.subscribeNext { events.append($0) }
+		_ = testObject.subscribeNext { events.append($0) }
 		
 		testObject.performSelector("trigger")
 		XCTAssertEqual(events, [42])
@@ -16,15 +24,21 @@ class TriggerTests: XCTestCase {
 		XCTAssertEqual(events, [42, 42])
 	}
 	
-	func testTriggerSendsCompleteEventWhenDeinited () {
-		var testObject: TargetActionTrigger<Int>? = TargetActionTrigger { return 42 }
+	func testTriggerSendsCompleteEventWhenCompleteEventReceived() {
+        let completeSubject = PublishSubject<Void>()
+        
+		let testObject: TargetActionObservable<Int> = TargetActionObservable(
+            valueGenerator: { _ in return 42 },
+            subscribe: { _ in },
+            unsubscribe: { _ in },
+            complete: completeSubject
+        )
 		
 		var complete = false
-		_ = testObject?.events.subscribeCompleted { complete = true }
-		
+		_ = testObject.subscribeCompleted { complete = true }
 		
 		XCTAssertFalse(complete)
-		testObject = nil
+		completeSubject.onNext()
 		XCTAssertTrue(complete)
 	}
 }

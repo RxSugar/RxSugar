@@ -3,12 +3,16 @@ import RxSwift
 import RxSugar
 import XCTest
 
-class ValueTestObject {
+class ValueTestObject: RXSObject {
 	var value:Int = 2
-	private var trigger: TargetActionTrigger<Int>? = nil
+	private var trigger: TargetActionObservable<Int>? = nil
 	
 	init() {
-		trigger = TargetActionTrigger(valueGenerator: { return self.value })
+        trigger = TargetActionObservable(
+            valueGenerator: { return self.value },
+            subscribe: { _ in },
+            unsubscribe: { _ in },
+            complete: self.rxs.onDeinit)
 	}
 	
 	func fireValueChangeEvent() {
@@ -17,7 +21,7 @@ class ValueTestObject {
 	
 	func simpleBinding() -> ValueBinding<Int> {
 		return ValueBinding<Int>(
-			getValueTrigger: trigger!.asTrigger(),
+			getValueTrigger: trigger!.asObservable(),
 			setValue: { [unowned self] in self.value = $0 })
 	}
 }
