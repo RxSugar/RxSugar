@@ -22,15 +22,18 @@ public struct RxSugarExtensions<HostType: NSObjectProtocol> {
 }
 
 public extension RxSugarExtensions where HostType: UIControl {
-    public func triggerForControlEvents<T>(controlEvents: UIControlEvents, valueGetter: (HostType)->T) -> Trigger<T> {
-        let trigger = TargetActionTrigger<T> { [weak host] in
-            guard let this = host else { throw RxsError() }
-            return valueGetter(this)
-        }
-        host.addTarget(trigger, action: trigger.action, forControlEvents: controlEvents)
-        host.rx_disposeBag ++ AnonymousDisposable { [weak host] in // TODO should move this to Trigger deinit
-            host?.removeTarget(trigger, action: trigger.action, forControlEvents: controlEvents)
-        }
+	public func triggerForControlEvents<T>(controlEvents: UIControlEvents, valueGetter: (HostType)->T) -> Trigger<T> {
+		let trigger = TargetActionTrigger<T>(
+			valueGenerator: { [weak host] in
+				guard let this = host else { throw RxsError() }
+				return valueGetter(this)
+			},
+			subscribe: { (target, action) in
+				self.host.addTarget(target, action: action, forControlEvents: controlEvents)
+			},
+			unsubscribe:{ [weak host] (target, action) in
+				host?.removeTarget(target, action: action, forControlEvents: controlEvents)
+		})
         return trigger.asTrigger()
     }
     
