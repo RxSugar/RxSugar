@@ -5,10 +5,10 @@ import XCTest
 
 class ValueTestObject: RXSObject {
 	var value:Int = 2
-	private var trigger: TargetActionObservable<Int>? = nil
+	private var events: TargetActionObservable<Int>? = nil
 	
 	init() {
-        trigger = TargetActionObservable(
+        events = TargetActionObservable(
             valueGenerator: { return self.value },
             subscribe: { _ in },
             unsubscribe: { _ in },
@@ -16,12 +16,13 @@ class ValueTestObject: RXSObject {
 	}
 	
 	func fireValueChangeEvent() {
-		trigger?.trigger()
+        guard let events = events else { fatalError() }
+		events.performSelector(events.actionSelector)
 	}
 	
 	func simpleBinding() -> ValueBinding<Int> {
 		return ValueBinding<Int>(
-			getValueTrigger: trigger!.asObservable(),
+			observable: events!.asObservable(),
 			setValue: { [unowned self] in self.value = $0 })
 	}
 }

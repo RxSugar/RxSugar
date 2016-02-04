@@ -36,7 +36,7 @@ public extension RxSugarExtensions where HostType: UIControl {
     
     public func controlValueBinding<T>(valueChangeEventTypes valueChangeEventTypes: UIControlEvents, valueGetter: (HostType)->T, valueSetter: (HostType, T)->()) -> ValueBinding<T> {
         return ValueBinding(
-            getValueTrigger: triggerForControlEvents(valueChangeEventTypes, valueGetter: valueGetter),
+            observable: triggerForControlEvents(valueChangeEventTypes, valueGetter: valueGetter),
             setValue: { [weak host] in
                 guard let host = host else { return }
                 valueSetter(host, $0)

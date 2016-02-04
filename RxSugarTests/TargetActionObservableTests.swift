@@ -3,8 +3,8 @@ import RxSwift
 import RxSugar
 import XCTest
 
-class TargetActionTriggerTests: XCTestCase {
-	func testTriggerSendsEventWhenFiredViaPerformSelector () {
+class TargetActionObservableTests: XCTestCase {
+	func testObservableEventsUponPerformSelector () {
 		let testObject = TargetActionObservable<Int>(
             valueGenerator: { _ in
                 return 42
@@ -16,15 +16,15 @@ class TargetActionTriggerTests: XCTestCase {
 		
 		var events: [Int] = []
 		_ = testObject.subscribeNext { events.append($0) }
-		
-		testObject.performSelector("trigger")
+        
+		testObject.performSelector(testObject.actionSelector)
 		XCTAssertEqual(events, [42])
 		
-		testObject.performSelector("trigger")
+		testObject.performSelector(testObject.actionSelector)
 		XCTAssertEqual(events, [42, 42])
 	}
 	
-	func testTriggerSendsCompleteEventWhenCompleteEventReceived() {
+	func testObservableCompletesUponCompletionEvent() {
         let completeSubject = PublishSubject<Void>()
         
 		let testObject: TargetActionObservable<Int> = TargetActionObservable(

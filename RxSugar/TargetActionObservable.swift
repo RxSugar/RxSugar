@@ -3,7 +3,7 @@ import RxSwift
 
 public final class TargetActionObservable<T>: NSObject, ObservableType {
     public typealias E = T
-	let action: Selector = "trigger"
+	public let actionSelector: Selector = "action"
 	
 	private let _unsubscribe: (NSObjectProtocol, Selector) -> ()
     private let subject = PublishSubject<E>()
@@ -15,7 +15,7 @@ public final class TargetActionObservable<T>: NSObject, ObservableType {
 		_unsubscribe = unsubscribe
         complete = completeEvents
 		super.init()
-		subscribeAction(self, action)
+		subscribeAction(self, actionSelector)
 	}
 	
 	public convenience init (control: UIControl, forEvents controlEvents: UIControlEvents, valueGenerator generator: () throws -> T) {
@@ -50,13 +50,13 @@ public final class TargetActionObservable<T>: NSObject, ObservableType {
         return CompositeDisposable() ++ subjectDisposable ++ triggerDisposable
     }
 	
-	public func trigger() {
-		guard let value = try? valueGenerator() else { return }
+    func action() {
+        guard let value = try? valueGenerator() else { subject.onError(RxsError()); return }
 		subject.onNext(value)
 	}
 	
 	deinit {
 		subject.onCompleted()
-		_unsubscribe(self, action)
+		_unsubscribe(self, actionSelector)
 	}
 }
