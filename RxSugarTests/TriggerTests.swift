@@ -4,7 +4,7 @@ import XCTest
 
 class TriggerTests: XCTestCase {
 	func testTriggerSendsEventWhenFiredViaPerformSelector () {
-		let testObject = Trigger { return 42 }
+		let testObject = TargetActionTrigger { return 42 }
 		
 		var events: [Int] = []
 		_ = testObject.events.subscribeNext { events.append($0) }
@@ -17,7 +17,7 @@ class TriggerTests: XCTestCase {
 	}
 	
 	func testTriggerSendsCompleteEventWhenDeinited () {
-		var testObject: Trigger<Int>? = Trigger { return 42 }
+		var testObject: TargetActionTrigger<Int>? = TargetActionTrigger { return 42 }
 		
 		var complete = false
 		_ = testObject?.events.subscribeCompleted { complete = true }

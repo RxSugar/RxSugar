@@ -5,10 +5,10 @@ import XCTest
 
 class ValueTestObject {
 	var value:Int = 2
-	private var trigger: Trigger<Int>? = nil
+	private var trigger: TargetActionTrigger<Int>? = nil
 	
 	init() {
-		trigger = Trigger(valueGenerator: { return self.value })
+		trigger = TargetActionTrigger(valueGenerator: { return self.value })
 	}
 	
 	func fireValueChangeEvent() {
@@ -17,7 +17,7 @@ class ValueTestObject {
 	
 	func simpleBinding() -> ValueBinding<Int> {
 		return ValueBinding<Int>(
-			getValueTrigger: trigger!,
+			getValueTrigger: trigger!.asTrigger(),
 			setValue: { [unowned self] in self.value = $0 })
 	}
 }

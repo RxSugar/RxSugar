@@ -11,20 +11,19 @@ extension UIControlType {
 	}
 	
 	public func rxs_triggerForControlEvents<T>(controlEvents: UIControlEvents, valueGetter: (Self)->T) -> Trigger<T> {
-		let trigger = Trigger<T> { [weak self] in
+		let trigger = TargetActionTrigger<T> { [weak self] in
 			guard let this = self else { throw RxsError() }
 			return valueGetter(this)
 		}
 		typedSelf().addTarget(trigger, action: trigger.action, forControlEvents: controlEvents)
-		return trigger
+		rx_disposeBag ++ AnonymousDisposable { [weak self] in // TODO should move this to Trigger deinit
+			self?.typedSelf().removeTarget(trigger, action: trigger.action, forControlEvents: controlEvents)
+		}
+		return trigger.asTrigger()
 	}
 	
 	public func rxs_controlEvents<T>(controlEvents: UIControlEvents, valueGetter: (Self)->T) -> Observable<T> {
-		let trigger = rxs_triggerForControlEvents(controlEvents, valueGetter: valueGetter)
-		rx_disposeBag ++ AnonymousDisposable { [weak self] in
-			self?.typedSelf().removeTarget(trigger, action: trigger.action, forControlEvents: controlEvents)
-		}
-		return trigger.events
+		return rxs_triggerForControlEvents(controlEvents, valueGetter: valueGetter).events
 	}
 	
 	public func rxs_controlEvents(controlEvents: UIControlEvents) -> Observable<Void> {
