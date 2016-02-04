@@ -17,12 +17,12 @@
 		4D91C3A31C62712C00926C99 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D91C37C1C62711A00926C99 /* RxSwift.framework */; };
 		4D91C3A41C62713B00926C99 /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D91C38C1C62711A00926C99 /* RxBlocking.framework */; };
 		4D91C3A51C62714900926C99 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D91C37C1C62711A00926C99 /* RxSwift.framework */; };
-		4D91C3A91C628D5800926C99 /* UIControl+Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3A71C6277B300926C99 /* UIControl+Trigger.swift */; };
 		4D91C3AD1C6297A700926C99 /* RxVariableBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AC1C6297A700926C99 /* RxVariableBinding.swift */; };
 		4D91C3AF1C6297C200926C99 /* RxDisposal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AE1C6297C200926C99 /* RxDisposal.swift */; };
 		4D91C3B11C629B3D00926C99 /* UIControl+TriggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3B01C629B3D00926C99 /* UIControl+TriggerTests.swift */; };
-		4D91C3B41C62A6B800926C99 /* UIButton+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3B21C62A5D000926C99 /* UIButton+Sugar.swift */; };
-		4D91C3B61C62A88800926C99 /* UITextField+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3B51C62A88800926C99 /* UITextField+Sugar.swift */; };
+		5ADFED0B1C63B44C0081A5E0 /* UIButton+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFED081C63B44C0081A5E0 /* UIButton+Sugar.swift */; };
+		5ADFED0C1C63B44C0081A5E0 /* UIControl+Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFED091C63B44C0081A5E0 /* UIControl+Trigger.swift */; };
+		5ADFED0D1C63B44C0081A5E0 /* UITextField+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFED0A1C63B44C0081A5E0 /* UITextField+Sugar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,12 +187,12 @@
 		4D91C3591C6267D100926C99 /* Trigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trigger.swift; sourceTree = "<group>"; };
 		4D91C35E1C626B7B00926C99 /* TriggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TriggerTests.swift; path = RxSugarTests/TriggerTests.swift; sourceTree = SOURCE_ROOT; };
 		4D91C3641C62711A00926C99 /* Rx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rx.xcodeproj; path = Carthage/Checkouts/RxSwift/Rx.xcodeproj; sourceTree = "<group>"; };
-		4D91C3A71C6277B300926C99 /* UIControl+Trigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIControl+Trigger.swift"; sourceTree = "<group>"; };
 		4D91C3AC1C6297A700926C99 /* RxVariableBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxVariableBinding.swift; sourceTree = "<group>"; };
 		4D91C3AE1C6297C200926C99 /* RxDisposal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxDisposal.swift; sourceTree = "<group>"; };
 		4D91C3B01C629B3D00926C99 /* UIControl+TriggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIControl+TriggerTests.swift"; path = "RxSugarTests/UIControl+TriggerTests.swift"; sourceTree = "<group>"; };
-		4D91C3B21C62A5D000926C99 /* UIButton+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Sugar.swift"; sourceTree = "<group>"; };
-		4D91C3B51C62A88800926C99 /* UITextField+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+Sugar.swift"; sourceTree = "<group>"; };
+		5ADFED081C63B44C0081A5E0 /* UIButton+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+Sugar.swift"; path = "RxSugar/UIButton+Sugar.swift"; sourceTree = "<group>"; };
+		5ADFED091C63B44C0081A5E0 /* UIControl+Trigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIControl+Trigger.swift"; path = "RxSugar/UIControl+Trigger.swift"; sourceTree = "<group>"; };
+		5ADFED0A1C63B44C0081A5E0 /* UITextField+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextField+Sugar.swift"; path = "RxSugar/UITextField+Sugar.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,15 +241,15 @@
 		4D91C3411C625FE700926C99 /* RxSugar */ = {
 			isa = PBXGroup;
 			children = (
-				4D91C3AE1C6297C200926C99 /* RxDisposal.swift */,
-				4D91C3AC1C6297A700926C99 /* RxVariableBinding.swift */,
-				4D91C3421C625FE700926C99 /* RxSugar.h */,
 				4D91C3441C625FE700926C99 /* Info.plist */,
+				4D91C3AE1C6297C200926C99 /* RxDisposal.swift */,
+				4D809DBC1C62BF51003D1D63 /* RxsError.swift */,
+				4D91C3421C625FE700926C99 /* RxSugar.h */,
+				4D91C3AC1C6297A700926C99 /* RxVariableBinding.swift */,
 				4D91C3591C6267D100926C99 /* Trigger.swift */,
 				4D91C35E1C626B7B00926C99 /* TriggerTests.swift */,
 				4D809DA41C62B344003D1D63 /* ValueBinding.swift */,
 				4D809DBA1C62B399003D1D63 /* ValueBindingTests.swift */,
-				4D809DBC1C62BF51003D1D63 /* RxsError.swift */,
 			);
 			path = RxSugar;
 			sourceTree = "<group>";
@@ -307,10 +307,10 @@
 		4D91C3A61C62778F00926C99 /* RxSugar+UIKit */ = {
 			isa = PBXGroup;
 			children = (
-				4D91C3A71C6277B300926C99 /* UIControl+Trigger.swift */,
+				5ADFED081C63B44C0081A5E0 /* UIButton+Sugar.swift */,
+				5ADFED091C63B44C0081A5E0 /* UIControl+Trigger.swift */,
 				4D91C3B01C629B3D00926C99 /* UIControl+TriggerTests.swift */,
-				4D91C3B21C62A5D000926C99 /* UIButton+Sugar.swift */,
-				4D91C3B51C62A88800926C99 /* UITextField+Sugar.swift */,
+				5ADFED0A1C63B44C0081A5E0 /* UITextField+Sugar.swift */,
 			);
 			name = "RxSugar+UIKit";
 			sourceTree = "<group>";
@@ -572,14 +572,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ADFED0D1C63B44C0081A5E0 /* UITextField+Sugar.swift in Sources */,
 				4D809DBD1C62BF51003D1D63 /* RxsError.swift in Sources */,
 				4D91C3AF1C6297C200926C99 /* RxDisposal.swift in Sources */,
-				4D91C3B41C62A6B800926C99 /* UIButton+Sugar.swift in Sources */,
-				4D91C3B61C62A88800926C99 /* UITextField+Sugar.swift in Sources */,
-				4D91C3A91C628D5800926C99 /* UIControl+Trigger.swift in Sources */,
+				5ADFED0C1C63B44C0081A5E0 /* UIControl+Trigger.swift in Sources */,
 				4D809DA51C62B344003D1D63 /* ValueBinding.swift in Sources */,
 				4D91C3AD1C6297A700926C99 /* RxVariableBinding.swift in Sources */,
 				4D91C35A1C6267D100926C99 /* Trigger.swift in Sources */,
+				5ADFED0B1C63B44C0081A5E0 /* UIButton+Sugar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
