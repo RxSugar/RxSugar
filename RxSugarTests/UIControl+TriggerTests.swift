@@ -2,11 +2,11 @@ import UIKit
 import RxSugar
 import XCTest
 
-class TestControl: UIControl {
-	var value: String = ""
-	
+protocol TestControl {}
+
+extension TestControl where Self: UIControl {
 	// best approximation of UIControl behavior without running UI tests
-	override func sendActionsForControlEvents(controlEvents: UIControlEvents) {
+	func fireControlEvents(controlEvents: UIControlEvents) {
 		self.allTargets().forEach { target in
 			self.actionsForTarget(target, forControlEvent: controlEvents)?.forEach { action in
 				target.performSelector(NSSelectorFromString(action))
@@ -15,9 +15,13 @@ class TestControl: UIControl {
 	}
 }
 
+private class Control: UIControl, TestControl {
+	var value: String = ""
+}
+
 class UIControl_TriggerTests: XCTestCase {
 	func testControlSendsEvents() {
-        let testObject = TestControl()
+		let testObject = Control()
 		let eventStream = testObject.rxs.controlEvents([UIControlEvents.AllEvents]) {
 			return $0.value
 		}
@@ -26,16 +30,16 @@ class UIControl_TriggerTests: XCTestCase {
 		_ = eventStream.subscribeNext { events.append($0) }
 		
 		testObject.value = "Major Tom"
-		testObject.sendActionsForControlEvents([.ValueChanged])
+		testObject.fireControlEvents([.ValueChanged])
 		XCTAssertEqual(events, ["Major Tom"])
 		
 		testObject.value = "Ground Control"
-		testObject.sendActionsForControlEvents([.TouchDown])
+		testObject.fireControlEvents([.TouchDown])
 		XCTAssertEqual(events, ["Major Tom", "Ground Control"])
 	}
 	
 	func testControlSendsOnlyEventsSubscribedTo() {
-		let testObject = TestControl()
+		let testObject = Control()
 		let eventStream = testObject.rxs.controlEvents([.ValueChanged]) {
 			return $0.value
 		}
@@ -44,11 +48,11 @@ class UIControl_TriggerTests: XCTestCase {
 		_ = eventStream.subscribeNext { events.append($0) }
 		
 		testObject.value = "Major Tom"
-		testObject.sendActionsForControlEvents([.TouchDragInside])
+		testObject.fireControlEvents([.TouchDragInside])
 		XCTAssertEqual(events, [])
 		
 		testObject.value = "Ground Control"
-		testObject.sendActionsForControlEvents([.ValueChanged])
+		testObject.fireControlEvents([.ValueChanged])
 		XCTAssertEqual(events, ["Ground Control"])
 	}
 }
