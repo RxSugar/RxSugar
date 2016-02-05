@@ -376,9 +376,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4D91C33E1C625FE700926C99 /* RxSugar */ = {
+		4D91C33E1C625FE700926C99 /* RxSugar-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D91C3531C625FE700926C99 /* Build configuration list for PBXNativeTarget "RxSugar" */;
+			buildConfigurationList = 4D91C3531C625FE700926C99 /* Build configuration list for PBXNativeTarget "RxSugar-iOS" */;
 			buildPhases = (
 				4D91C33A1C625FE700926C99 /* Sources */,
 				4D91C33B1C625FE700926C99 /* Frameworks */,
@@ -389,7 +389,7 @@
 			);
 			dependencies = (
 			);
-			name = RxSugar;
+			name = "RxSugar-iOS";
 			productName = RxSugar;
 			productReference = 4D91C33F1C625FE700926C99 /* RxSugar.framework */;
 			productType = "com.apple.product-type.framework";
@@ -448,7 +448,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				4D91C33E1C625FE700926C99 /* RxSugar */,
+				4D91C33E1C625FE700926C99 /* RxSugar-iOS */,
 				4D91C3481C625FE700926C99 /* RxSugarTests */,
 			);
 		};
@@ -658,7 +658,7 @@
 /* Begin PBXTargetDependency section */
 		4D91C34C1C625FE700926C99 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4D91C33E1C625FE700926C99 /* RxSugar */;
+			target = 4D91C33E1C625FE700926C99 /* RxSugar-iOS */;
 			targetProxy = 4D91C34B1C625FE700926C99 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -766,7 +766,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.rxsugar.RxSugar;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -785,7 +785,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.rxsugar.RxSugar;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -825,7 +825,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D91C3531C625FE700926C99 /* Build configuration list for PBXNativeTarget "RxSugar" */ = {
+		4D91C3531C625FE700926C99 /* Build configuration list for PBXNativeTarget "RxSugar-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D91C3541C625FE700926C99 /* Debug */,
