@@ -7,8 +7,6 @@ public protocol UIControlType: NSObjectProtocol {
 
 extension UIControl: UIControlType {}
 
-var disposeBagKey: UInt8 = 0
-
 public extension RxSugarExtensions where HostType: UIControl {
 	public func triggerForControlEvents<T>(controlEvents: UIControlEvents, valueGetter: (HostType)->T) -> Observable<T> {
 		let trigger = TargetActionObservable<T>(

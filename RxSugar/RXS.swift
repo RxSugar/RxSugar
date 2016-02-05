@@ -19,6 +19,8 @@ public struct RxSugarExtensions<HostType: Any> {
     }
 }
 
+private var disposeBagKey: UInt8 = 0
+
 public extension RxSugarExtensions where HostType: RXSObject {
     public var onDeinit: Observable<Void> {
         let bag = disposeBag
