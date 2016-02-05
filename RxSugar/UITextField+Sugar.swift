@@ -1,7 +1,7 @@
 import RxSwift
 
-extension RxSugarExtensions where HostType: UITextField {
-	var text: ValueBinding<String> {
+public extension RxSugarExtensions where HostType: UITextField {
+	public var text: ValueBinding<String> {
 		return controlValueBinding(
             valueChangeEventTypes: .EditingChanged,
 			valueGetter: { $0.text ?? "" },
@@ -10,7 +10,7 @@ extension RxSugarExtensions where HostType: UITextField {
 		})
 	}
 	
-	var attributedText: ValueBinding<NSAttributedString> {
+	public var attributedText: ValueBinding<NSAttributedString> {
 		return controlValueBinding(
             valueChangeEventTypes: .EditingChanged,
 			valueGetter: { $0.attributedText ?? NSAttributedString() },

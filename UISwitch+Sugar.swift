@@ -1,7 +1,7 @@
 import RxSwift
 
-extension RxSugarExtensions where HostType: UISwitch {
-    var on: ValueBinding<Bool> {
+public extension RxSugarExtensions where HostType: UISwitch {
+    public var on: ValueBinding<Bool> {
         return controlValueBinding(
             valueChangeEventTypes: .ValueChanged,
             valueGetter: { $0.on },
