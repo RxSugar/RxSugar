@@ -20,7 +20,8 @@
 		4D91C3AD1C6297A700926C99 /* ObserverBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AC1C6297A700926C99 /* ObserverBinding.swift */; };
 		4D91C3AF1C6297C200926C99 /* AppendDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AE1C6297C200926C99 /* AppendDisposable.swift */; };
 		4D91C3B11C629B3D00926C99 /* UIControl+TriggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3B01C629B3D00926C99 /* UIControl+TriggerTests.swift */; };
-		5AC009851C640B3F005CAAC5 /* RXS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC009841C640B3F005CAAC5 /* RXS.swift */; };
+		5A9AE8671C6514DD00F8FD92 /* ObserverBindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AE8661C6514DD00F8FD92 /* ObserverBindingTests.swift */; };
+		5AC009851C640B3F005CAAC5 /* Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC009841C640B3F005CAAC5 /* Sugar.swift */; };
 		5AC009B21C6416AB005CAAC5 /* UITextView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC009B11C6416AB005CAAC5 /* UITextView+Sugar.swift */; };
 		5AC009CB1C64EBCB005CAAC5 /* UITextView+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC009CA1C64EBCB005CAAC5 /* UITextView+SugarTests.swift */; };
 		5AC009CD1C64F0DB005CAAC5 /* UITextField+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC009CC1C64F0DB005CAAC5 /* UITextField+SugarTests.swift */; };
@@ -197,7 +198,8 @@
 		4D91C3AC1C6297A700926C99 /* ObserverBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObserverBinding.swift; path = RxSugar/ObserverBinding.swift; sourceTree = "<group>"; };
 		4D91C3AE1C6297C200926C99 /* AppendDisposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppendDisposable.swift; path = RxSugar/AppendDisposable.swift; sourceTree = "<group>"; };
 		4D91C3B01C629B3D00926C99 /* UIControl+TriggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIControl+TriggerTests.swift"; path = "RxSugarTests/UIControl+TriggerTests.swift"; sourceTree = "<group>"; };
-		5AC009841C640B3F005CAAC5 /* RXS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXS.swift; sourceTree = "<group>"; };
+		5A9AE8661C6514DD00F8FD92 /* ObserverBindingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObserverBindingTests.swift; path = RxSugarTests/ObserverBindingTests.swift; sourceTree = "<group>"; };
+		5AC009841C640B3F005CAAC5 /* Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sugar.swift; sourceTree = "<group>"; };
 		5AC009B11C6416AB005CAAC5 /* UITextView+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextView+Sugar.swift"; path = "RxSugar/UITextView+Sugar.swift"; sourceTree = "<group>"; };
 		5AC009CA1C64EBCB005CAAC5 /* UITextView+SugarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextView+SugarTests.swift"; path = "RxSugarTests/UITextView+SugarTests.swift"; sourceTree = "<group>"; };
 		5AC009CC1C64F0DB005CAAC5 /* UITextField+SugarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextField+SugarTests.swift"; path = "RxSugarTests/UITextField+SugarTests.swift"; sourceTree = "<group>"; };
@@ -257,7 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				4D91C3441C625FE700926C99 /* Info.plist */,
-				5AC009841C640B3F005CAAC5 /* RXS.swift */,
+				5AC009841C640B3F005CAAC5 /* Sugar.swift */,
 				4D809DBC1C62BF51003D1D63 /* RxsError.swift */,
 				4D91C3421C625FE700926C99 /* RxSugar.h */,
 				4D91C3591C6267D100926C99 /* TargetActionObservable.swift */,
@@ -340,6 +342,7 @@
 			children = (
 				4D91C3AE1C6297C200926C99 /* AppendDisposable.swift */,
 				4D91C3AC1C6297A700926C99 /* ObserverBinding.swift */,
+				5A9AE8661C6514DD00F8FD92 /* ObserverBindingTests.swift */,
 			);
 			name = "Operator Overloads";
 			sourceTree = "<group>";
@@ -610,7 +613,7 @@
 				4D91C35A1C6267D100926C99 /* TargetActionObservable.swift in Sources */,
 				5ADFED0B1C63B44C0081A5E0 /* UIButton+Sugar.swift in Sources */,
 				5ADFED231C63BE4B0081A5E0 /* UISwitch+Sugar.swift in Sources */,
-				5AC009851C640B3F005CAAC5 /* RXS.swift in Sources */,
+				5AC009851C640B3F005CAAC5 /* Sugar.swift in Sources */,
 				5AC009B21C6416AB005CAAC5 /* UITextView+Sugar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -622,6 +625,7 @@
 				5AC009CF1C64F238005CAAC5 /* UIButton+SugarTests.swift in Sources */,
 				5AC009CB1C64EBCB005CAAC5 /* UITextView+SugarTests.swift in Sources */,
 				4D91C3B11C629B3D00926C99 /* UIControl+TriggerTests.swift in Sources */,
+				5A9AE8671C6514DD00F8FD92 /* ObserverBindingTests.swift in Sources */,
 				5AC009CD1C64F0DB005CAAC5 /* UITextField+SugarTests.swift in Sources */,
 				4D809DBB1C62B399003D1D63 /* ValueBindingTests.swift in Sources */,
 				5AE89E4A1C64F94D007034C1 /* UISwitch+SugarTests.swift in Sources */,

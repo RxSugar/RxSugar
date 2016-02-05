@@ -8,19 +8,21 @@ associativity right
 precedence 141
 }
 
-//@warn_unused_result(message="http://git.io/rxs.ud")
-//public func <~<O: ObservableType>(variable: Variable<O.E>, observable: O) -> Disposable {
-//    return observable.bindTo(variable)
-//}
-//
-//@warn_unused_result(message="http://git.io/rxs.ud")
-//public func <~<T>(variable1: Variable<T>, variable2: Variable<T>) -> Disposable {
-//    return variable2.asObservable().bindTo(variable1)
-//}
+extension Variable: ObserverType, ObservableConvertibleType {
+    public func asObserver() -> Variable<E> {
+        return self
+    }
+    
+    public func on(event: Event<E>) {
+        if case .Next(let element) = event {
+            value = element
+        }
+    }
+}
 
 @warn_unused_result(message="http://git.io/rxs.ud")
-public func <~<Source: ObservableType, Destination: ObserverType where Source.E == Destination.E>(observer: Destination, observable: Source) -> Disposable {
-	return observable.subscribe(observer)
+public func <~<Source: ObservableConvertibleType, Destination: ObserverType where Source.E == Destination.E>(observer: Destination, observable: Source) -> Disposable {
+	return observable.asObservable().subscribe(observer)
 }
 
 @warn_unused_result(message="http://git.io/rxs.ud")
