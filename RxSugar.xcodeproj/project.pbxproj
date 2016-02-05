@@ -21,6 +21,7 @@
 		4D91C3AF1C6297C200926C99 /* AppendDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AE1C6297C200926C99 /* AppendDisposable.swift */; };
 		4D91C3B11C629B3D00926C99 /* UIControl+TriggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3B01C629B3D00926C99 /* UIControl+TriggerTests.swift */; };
 		5AC009851C640B3F005CAAC5 /* RXS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC009841C640B3F005CAAC5 /* RXS.swift */; };
+		5AC009B21C6416AB005CAAC5 /* UITextView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC009B11C6416AB005CAAC5 /* UITextView+Sugar.swift */; };
 		5ADFED0B1C63B44C0081A5E0 /* UIButton+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFED081C63B44C0081A5E0 /* UIButton+Sugar.swift */; };
 		5ADFED0C1C63B44C0081A5E0 /* UIControl+Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFED091C63B44C0081A5E0 /* UIControl+Trigger.swift */; };
 		5ADFED0D1C63B44C0081A5E0 /* UITextField+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFED0A1C63B44C0081A5E0 /* UITextField+Sugar.swift */; };
@@ -193,6 +194,7 @@
 		4D91C3AE1C6297C200926C99 /* AppendDisposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppendDisposable.swift; path = RxSugar/AppendDisposable.swift; sourceTree = "<group>"; };
 		4D91C3B01C629B3D00926C99 /* UIControl+TriggerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIControl+TriggerTests.swift"; path = "RxSugarTests/UIControl+TriggerTests.swift"; sourceTree = "<group>"; };
 		5AC009841C640B3F005CAAC5 /* RXS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RXS.swift; sourceTree = "<group>"; };
+		5AC009B11C6416AB005CAAC5 /* UITextView+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+Sugar.swift"; sourceTree = "<group>"; };
 		5ADFED081C63B44C0081A5E0 /* UIButton+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIButton+Sugar.swift"; path = "RxSugar/UIButton+Sugar.swift"; sourceTree = "<group>"; };
 		5ADFED091C63B44C0081A5E0 /* UIControl+Trigger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIControl+Trigger.swift"; path = "RxSugar/UIControl+Trigger.swift"; sourceTree = "<group>"; };
 		5ADFED0A1C63B44C0081A5E0 /* UITextField+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextField+Sugar.swift"; path = "RxSugar/UITextField+Sugar.swift"; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 				4D91C3B01C629B3D00926C99 /* UIControl+TriggerTests.swift */,
 				5ADFED221C63BE4B0081A5E0 /* UISwitch+Sugar.swift */,
 				5ADFED0A1C63B44C0081A5E0 /* UITextField+Sugar.swift */,
+				5AC009B11C6416AB005CAAC5 /* UITextView+Sugar.swift */,
 			);
 			name = "RxSugar+UIKit";
 			sourceTree = "<group>";
@@ -596,6 +599,7 @@
 				5ADFED0B1C63B44C0081A5E0 /* UIButton+Sugar.swift in Sources */,
 				5ADFED231C63BE4B0081A5E0 /* UISwitch+Sugar.swift in Sources */,
 				5AC009851C640B3F005CAAC5 /* RXS.swift in Sources */,
+				5AC009B21C6416AB005CAAC5 /* UITextView+Sugar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

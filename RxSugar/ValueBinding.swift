@@ -4,8 +4,8 @@ public final class ValueBinding<E>: ObserverType, ObservableType {
 	private let setter: (E)->()
 	private let observable: Observable<E>
 	
-	public init(observable: Observable<E>, setValue: (E)->()) {
-		self.observable = observable
+    public init<O: ObservableType where E == O.E>(observable: O, setValue: (E)->()) {
+		self.observable = observable.asObservable()
 		self.setter = setValue
 	}
 	

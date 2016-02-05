@@ -31,9 +31,9 @@ public final class TargetActionObservable<T>: NSObject, ObservableType {
 		)
 	}
 	
-	public convenience init(notificationName: String, onObject: NSObject, valueGenerator: () throws -> T) {
+    public convenience init<ObservedType: RXSObject>(notificationName: String, onObject: ObservedType, valueGenerator: (ObservedType) throws -> T) {
 		self.init(
-			valueGenerator: valueGenerator,
+            valueGenerator: { [unowned onObject] in try valueGenerator(onObject) },
 			subscribe: { (target, action) in
 				NSNotificationCenter.defaultCenter().addObserver(target, selector: action, name: notificationName, object: onObject)
 			},
