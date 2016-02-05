@@ -2,10 +2,10 @@ import RxSwift
 
 public final class ValueBinding<E>: ObserverType, ObservableType {
 	private let setter: (E)->()
-	private let trigger: Trigger<E>
+	private let observable: Observable<E>
 	
-	public init(getValueTrigger: Trigger<E>, setValue: (E)->()) {
-		self.trigger = getValueTrigger
+	public init(observable: Observable<E>, setValue: (E)->()) {
+		self.observable = observable
 		self.setter = setValue
 	}
 	
@@ -15,6 +15,6 @@ public final class ValueBinding<E>: ObserverType, ObservableType {
 	}
 	
 	public func subscribe<O: ObserverType where O.E == E>(observer: O) -> Disposable {
-		return trigger.events.subscribe(observer)
+		return observable.subscribe(observer)
 	}
 }
