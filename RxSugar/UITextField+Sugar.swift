@@ -1,6 +1,6 @@
 import RxSwift
 
-public extension RxSugarExtensions where HostType: UITextField {
+public extension Sugar where HostType: UITextField {
 	public var text: ValueBinding<String> {
 		return controlValueBinding(
             valueChangeEventTypes: .EditingChanged,

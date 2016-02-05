@@ -6,12 +6,12 @@ public protocol RXSObject: AnyObject {}
 public extension RXSObject {
     typealias RxsSelfType = Self
     
-    public var rxs: RxSugarExtensions<RxsSelfType> { return RxSugarExtensions<RxsSelfType>(host: self) }
+    public var rxs: Sugar<RxsSelfType> { return Sugar<RxsSelfType>(host: self) }
 }
 
 extension NSObject: RXSObject {}
 
-public struct RxSugarExtensions<HostType: Any> {
+public struct Sugar<HostType: Any> {
     let host:HostType
     
     public init(host: HostType) {
@@ -21,7 +21,7 @@ public struct RxSugarExtensions<HostType: Any> {
 
 private var disposeBagKey: UInt8 = 0
 
-public extension RxSugarExtensions where HostType: RXSObject {
+public extension Sugar where HostType: RXSObject {
     public var onDeinit: Observable<Void> {
         let bag = disposeBag
         return Observable.create { [weak bag] observer in

@@ -7,7 +7,7 @@ public protocol UIControlType: NSObjectProtocol {
 
 extension UIControl: UIControlType {}
 
-public extension RxSugarExtensions where HostType: UIControl {
+public extension Sugar where HostType: UIControl {
 	public func triggerForControlEvents<T>(controlEvents: UIControlEvents, valueGetter: (HostType)->T) -> Observable<T> {
 		let trigger = TargetActionObservable<T>(
 			valueGenerator: { [weak host] in

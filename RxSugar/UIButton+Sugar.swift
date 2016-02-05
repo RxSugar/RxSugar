@@ -1,5 +1,5 @@
 import RxSwift
 
-extension RxSugarExtensions where HostType: UIButton {
+extension Sugar where HostType: UIButton {
 	public var tap: Observable<Void> { return controlEvents(.TouchUpInside) }
 }
