@@ -22,6 +22,15 @@ associativity left
 precedence 140
 }
 
+/**
+ Appends a disposable to another disposable collection, aka a CompositeDisposable or DisposeBag.
+ 
+ In this form it's equivalent to `addDisposable` method and allows chaining of subscriptions
+ 
+ - parameter composite: Disposable collection to add the disposable to.
+ - parameter disposable: A disposable to be added to the collection.
+ - returns: The disposable collection.
+ */
 public func ++<T: DisposableCollection>(composite: T, disposable: Disposable) -> T {
 	composite.addDisposable(disposable)
 	return composite
