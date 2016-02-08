@@ -36,7 +36,11 @@ RxSugar adds `Sugar` to all NSObjects as a property called rxs. The rxs property
 
 ### UITextField
 `textField.rxs.text` - a `ValueBinding<String>` that sends an event on every `.EditingChanged` control event and sets the control's text for every event sent to it.
+
 `textField.rxs.attributedText` - a `ValueBinding<NSAttributedString>` that sends an event on every `.EditingChanged` control event and sets the control's attributedText for every event sent to it.
 
 ### UITextView
 Same as UITextField, but using the `UITextViewTextDidChangeNotification` to drive events
+
+## Adding your own Sugar
+`TargetActionObservable` and `ValueBinding` provide the building blocks for creating your own interface "sugar" similar to the examples above.
