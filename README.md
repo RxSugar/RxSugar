@@ -32,4 +32,11 @@ RxSugar adds `Sugar` to all NSObjects as a property called rxs. The rxs property
 `object.rxs.disposeBag` - a collection of dispoasables that will be disposed on deinit
 
 ### UIButton
-`button.rxs.tap` - an Observable<Void> that sends an event on every `.TouchUpInside` control event.
+`button.rxs.tap` - an `Observable<Void>` that sends an event on every `.TouchUpInside` control event.
+
+### UITextField
+`textField.rxs.text` - a `ValueBinding<String>` that sends an event on every `.EditingChanged` control event and sets the control's text for every event sent to it.
+`textField.rxs.attributedText` - a `ValueBinding<NSAttributedString>` that sends an event on every `.EditingChanged` control event and sets the control's attributedText for every event sent to it.
+
+### UITextView
+Same as UITextField, but using the `UITextViewTextDidChangeNotification` to drive events
