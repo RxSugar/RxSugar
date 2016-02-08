@@ -1,3 +1,5 @@
+[![Travis CI](https://travis-ci.org/RxSugar/RxSugar.svg?branch=master)](https://travis-ci.org/RxSugar/RxSugar) ![platforms](https://img.shields.io/badge/platforms-iOS-333333.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![pod](https://img.shields.io/cocoapods/v/RxSugar.svg)](https://cocoapods.org/?q=RxSugar)
+
 # RxSugar
 Simple RxSwift extensions for interacting with Apple APIs.
 
@@ -30,4 +32,15 @@ RxSugar adds `Sugar` to all NSObjects as a property called rxs. The rxs property
 `object.rxs.disposeBag` - a collection of dispoasables that will be disposed on deinit
 
 ### UIButton
-`button.rxs.tap` - an Observable<Void> that sends an event on every `.TouchUpInside` control event.
+`button.rxs.tap` - an `Observable<Void>` that sends an event on every `.TouchUpInside` control event.
+
+### UITextField
+`textField.rxs.text` - a `ValueBinding<String>` that sends an event on every `.EditingChanged` control event and sets the control's text for every event sent to it.
+
+`textField.rxs.attributedText` - a `ValueBinding<NSAttributedString>` that sends an event on every `.EditingChanged` control event and sets the control's attributedText for every event sent to it.
+
+### UITextView
+Same as UITextField, but using the `UITextViewTextDidChangeNotification` to drive events
+
+## Adding your own Sugar
+`TargetActionObservable` and `ValueBinding` provide the building blocks for creating your own interface "sugar" similar to the examples above.
