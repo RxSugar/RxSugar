@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
                      "Mark Sands" => "marksands07@gmail.com",
                      "Asynchrony" => nil }
                      
-  s.platform     = :ios
+  s.platform     = :ios, "8.0"
   
   s.source       = { :git => "https://github.com/RxSugar/RxSugar.git", :tag => "v0.0.1" }
   s.source_files  = "RxSugar/RxSugar.h", "RxSugar/**/*.{swift}"
