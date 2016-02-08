@@ -1,0 +1,4 @@
+language: swift
+xcode_project: RxSugar.xcodeproj
+xcode_scheme: RxSugar
+xcode_sdk: iphonesimulator
