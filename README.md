@@ -1,3 +1,5 @@
+[![Travis CI](https://travis-ci.org/RxSugar/RxSugar.svg?branch=master)](https://travis-ci.org/ReactiveX/RxSwift) ![platforms](https://img.shields.io/badge/platforms-iOS-333333.svg) ![pod](https://img.shields.io/cocoapods/v/RxSugar.svg)
+
 # RxSugar
 Simple RxSwift extensions for interacting with Apple APIs.
 
