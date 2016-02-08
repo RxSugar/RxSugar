@@ -23,3 +23,11 @@ static func bindView(view: View, model: Model, selectionHandler:(SearchResult)->
 		++ selectionHandler <~ view.selectionEvents
 }
 ```
+## Foundation / UIKit extensions
+RxSugar adds `Sugar` to all NSObjects as a property called rxs. The rxs property contains RxSwift bindings for many common APIs. Here are a few examples:
+
+### NSObject
+`object.rxs.disposeBag` - a collection of dispoasables that will be disposed on deinit
+
+### UIButton
+`button.rxs.tap` - an Observable<Void> that sends an event on every `.TouchUpInside` control event.
