@@ -22,6 +22,10 @@ public struct Sugar<HostType: Any> {
 private var disposeBagKey: UInt8 = 0
 
 public extension Sugar where HostType: RXSObject {
+	
+	/**
+	An Observable<Void> that will send a Next and Completed event upon deinit
+	*/
     public var onDeinit: Observable<Void> {
         let bag = disposeBag
         return Observable.create { [weak bag] observer in
@@ -33,7 +37,10 @@ public extension Sugar where HostType: RXSObject {
             return NopDisposable.instance
         }
     }
-    
+	
+	/**
+	A DisposeBag that will dispose upon deinit
+	*/
     public var disposeBag: DisposeBag {
         objc_sync_enter(host)
         let bag = objc_getAssociatedObject(host, &disposeBagKey) as? DisposeBag ?? createAssociatedDisposeBag()

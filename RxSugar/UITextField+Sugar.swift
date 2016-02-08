@@ -1,6 +1,9 @@
 import RxSwift
 
 public extension Sugar where HostType: UITextField {
+	/**
+	RxSugar wrapper for text property.
+	*/
 	public var text: ValueBinding<String> {
 		return controlValueBinding(
             valueChangeEventTypes: .EditingChanged,
@@ -10,6 +13,9 @@ public extension Sugar where HostType: UITextField {
 		})
 	}
 	
+	/**
+	RxSugar wrapper for attributedText property.
+	*/
 	public var attributedText: ValueBinding<NSAttributedString> {
 		return controlValueBinding(
             valueChangeEventTypes: .EditingChanged,

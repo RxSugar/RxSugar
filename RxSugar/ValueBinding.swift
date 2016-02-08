@@ -1,5 +1,10 @@
 import RxSwift
 
+/**
+A reactive wrapper for readwrite control properties. This is intended for use on controls whose value changes due to a user action.
+
+See UITextField+Sugar.swift for an example
+*/
 public final class ValueBinding<E>: ObserverType, ObservableType {
 	private let setter: (E)->()
 	private let observable: Observable<E>
