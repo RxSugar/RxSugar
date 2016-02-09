@@ -1,23 +1,23 @@
 import Foundation
 import RxSwift
 
-public protocol RXSObject: AnyObject {}
-
-public extension RXSObject {
-    typealias RxsSelfType = Self
-    
-    public var rxs: Sugar<RxsSelfType> { return Sugar<RxsSelfType>(host: self) }
-}
-
-extension NSObject: RXSObject {}
-
-public struct Sugar<HostType: Any> {
+public struct Sugar<HostType> {
     let host:HostType
     
     public init(host: HostType) {
         self.host = host
     }
 }
+
+public protocol RXSObject: AnyObject {}
+
+public extension RXSObject {
+	typealias RxsSelfType = Self
+	
+	public var rxs: Sugar<RxsSelfType> { return Sugar(host: self) }
+}
+
+extension NSObject: RXSObject {}
 
 private var disposeBagKey: UInt8 = 0
 
