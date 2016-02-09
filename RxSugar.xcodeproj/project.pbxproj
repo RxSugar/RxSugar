@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D37F9DB1C6A7E240094DA7D /* UILabel+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F9DA1C6A7E240094DA7D /* UILabel+Sugar.swift */; };
+		4D37F9DC1C6A7E240094DA7D /* UILabel+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F9DA1C6A7E240094DA7D /* UILabel+Sugar.swift */; };
+		4D37F9F41C6A825E0094DA7D /* UILabel+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F9F11C6A819F0094DA7D /* UILabel+SugarTests.swift */; };
+		4D37F9F51C6A825F0094DA7D /* UILabel+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F9F11C6A819F0094DA7D /* UILabel+SugarTests.swift */; };
 		4D809DA51C62B344003D1D63 /* ValueBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DA41C62B344003D1D63 /* ValueBinding.swift */; };
 		4D809DBB1C62B399003D1D63 /* ValueBindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DBA1C62B399003D1D63 /* ValueBindingTests.swift */; };
 		4D809DBD1C62BF51003D1D63 /* RxsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DBC1C62BF51003D1D63 /* RxsError.swift */; };
@@ -222,6 +226,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D37F9DA1C6A7E240094DA7D /* UILabel+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Sugar.swift"; sourceTree = "<group>"; };
+		4D37F9F11C6A819F0094DA7D /* UILabel+SugarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILabel+SugarTests.swift"; path = "RxSugarTests/UILabel+SugarTests.swift"; sourceTree = "<group>"; };
 		4D809DA41C62B344003D1D63 /* ValueBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueBinding.swift; sourceTree = "<group>"; };
 		4D809DBA1C62B399003D1D63 /* ValueBindingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValueBindingTests.swift; path = RxSugarTests/ValueBindingTests.swift; sourceTree = SOURCE_ROOT; };
 		4D809DBC1C62BF51003D1D63 /* RxsError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxsError.swift; sourceTree = "<group>"; };
@@ -405,6 +411,8 @@
 				5AC009CC1C64F0DB005CAAC5 /* UITextField+SugarTests.swift */,
 				5AC009B11C6416AB005CAAC5 /* UITextView+Sugar.swift */,
 				5AC009CA1C64EBCB005CAAC5 /* UITextView+SugarTests.swift */,
+				4D37F9DA1C6A7E240094DA7D /* UILabel+Sugar.swift */,
+				4D37F9F11C6A819F0094DA7D /* UILabel+SugarTests.swift */,
 			);
 			name = "RxSugar+UIKit";
 			sourceTree = "<group>";
@@ -751,6 +759,7 @@
 				4D91C35A1C6267D100926C99 /* TargetActionObservable.swift in Sources */,
 				5ADFED0B1C63B44C0081A5E0 /* UIButton+Sugar.swift in Sources */,
 				5ADFED231C63BE4B0081A5E0 /* UISwitch+Sugar.swift in Sources */,
+				4D37F9DB1C6A7E240094DA7D /* UILabel+Sugar.swift in Sources */,
 				5A9AE87F1C65458100F8FD92 /* IgnoreNil.swift in Sources */,
 				5A9AE8811C65459000F8FD92 /* CombinePrevious.swift in Sources */,
 				5AC009851C640B3F005CAAC5 /* Sugar.swift in Sources */,
@@ -771,6 +780,7 @@
 				5AC009CD1C64F0DB005CAAC5 /* UITextField+SugarTests.swift in Sources */,
 				4D809DBB1C62B399003D1D63 /* ValueBindingTests.swift in Sources */,
 				5AE89E4A1C64F94D007034C1 /* UISwitch+SugarTests.swift in Sources */,
+				4D37F9F41C6A825E0094DA7D /* UILabel+SugarTests.swift in Sources */,
 				4D91C35F1C626B7B00926C99 /* TargetActionObservableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -781,6 +791,7 @@
 			files = (
 				5A9AE9491C6A5A3E00F8FD92 /* AppendDisposable.swift in Sources */,
 				5A9AE94A1C6A5A3E00F8FD92 /* ObserverBinding.swift in Sources */,
+				4D37F9DC1C6A7E240094DA7D /* UILabel+Sugar.swift in Sources */,
 				5A9AE94B1C6A5A3E00F8FD92 /* UIButton+Sugar.swift in Sources */,
 				5A9AE94C1C6A5A3E00F8FD92 /* UIControl+Trigger.swift in Sources */,
 				5A9AE94E1C6A5A3E00F8FD92 /* UITextField+Sugar.swift in Sources */,
@@ -800,6 +811,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A9AE9571C6A5A7200F8FD92 /* ObserverBindingTests.swift in Sources */,
+				4D37F9F51C6A825F0094DA7D /* UILabel+SugarTests.swift in Sources */,
 				5A9AE9581C6A5A7200F8FD92 /* UIButton+SugarTests.swift in Sources */,
 				5A9AE9591C6A5A7200F8FD92 /* UIControl+TriggerTests.swift in Sources */,
 				5A9AE95B1C6A5A7200F8FD92 /* UITextField+SugarTests.swift in Sources */,
