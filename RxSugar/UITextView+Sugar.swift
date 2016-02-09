@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 public extension Sugar where HostType: UITextView {
 	

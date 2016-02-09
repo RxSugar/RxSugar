@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 import RxSwift
 
 public final class TargetActionObservable<Element>: NSObject, ObservableType {

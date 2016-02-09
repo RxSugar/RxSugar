@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4D91C33E1C625FE700926C99"
+               BlueprintIdentifier = "5A9AE91A1C6A599000F8FD92"
                BuildableName = "RxSugar.framework"
-               BlueprintName = "RxSugar-iOS"
+               BlueprintName = "RxSugar-tvOS"
                ReferencedContainer = "container:RxSugar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4D91C3481C625FE700926C99"
-               BuildableName = "RxSugarTests-iOS.xctest"
-               BlueprintName = "RxSugarTests-iOS"
+               BlueprintIdentifier = "5A9AE9231C6A599000F8FD92"
+               BuildableName = "RxSugarTests-tvOS.xctest"
+               BlueprintName = "RxSugarTests-tvOS"
                ReferencedContainer = "container:RxSugar.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -42,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4D91C33E1C625FE700926C99"
+            BlueprintIdentifier = "5A9AE91A1C6A599000F8FD92"
             BuildableName = "RxSugar.framework"
-            BlueprintName = "RxSugar-iOS"
+            BlueprintName = "RxSugar-tvOS"
             ReferencedContainer = "container:RxSugar.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -64,9 +64,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4D91C33E1C625FE700926C99"
+            BlueprintIdentifier = "5A9AE91A1C6A599000F8FD92"
             BuildableName = "RxSugar.framework"
-            BlueprintName = "RxSugar-iOS"
+            BlueprintName = "RxSugar-tvOS"
             ReferencedContainer = "container:RxSugar.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -82,9 +82,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4D91C33E1C625FE700926C99"
+            BlueprintIdentifier = "5A9AE91A1C6A599000F8FD92"
             BuildableName = "RxSugar.framework"
-            BlueprintName = "RxSugar-iOS"
+            BlueprintName = "RxSugar-tvOS"
             ReferencedContainer = "container:RxSugar.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
