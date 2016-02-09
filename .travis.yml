@@ -1,6 +1,4 @@
 language: objective-c
 osx_image: xcode7.2
 
-xcode_project: RxSugar.xcodeproj
-xcode_scheme: RxSugar-iOS
-xcode_sdk: iphonesimulator
+script: set -o pipefail && xcodebuild -destination "OS=9.2,name=iPad Air 2" -scheme "RxSugar-iOS" -project "RxSugar.xcodeproj" build test | xcpretty --color --test
