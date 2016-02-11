@@ -6,17 +6,17 @@ A reactive wrapper for readwrite control properties. This is intended for use on
 See UITextField+Sugar.swift for an example
 */
 public final class ValueBinding<E>: ObserverType, ObservableType {
-	private let setter: (E)->()
+	private let setter: AnyObserver<E>
 	private let observable: Observable<E>
 	
-    public init<O: ObservableType where E == O.E>(observable: O, setValue: (E)->()) {
-		self.observable = observable.asObservable()
-		self.setter = setValue
+	public init<Getter: ObservableType, Setter: ObserverType where Getter.E == E, Setter.E == E>(getter: Getter, setter: Setter) {
+		self.observable = getter.asObservable()
+		self.setter = setter.asObserver()
 	}
 	
 	public func on(event: Event<E>) {
 		guard case .Next(let value) = event else { return }
-		setter(value)
+		setter.onNext(value)
 	}
 	
 	public func subscribe<O: ObserverType where O.E == E>(observer: O) -> Disposable {

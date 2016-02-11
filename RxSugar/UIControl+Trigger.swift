@@ -51,12 +51,23 @@ public extension Sugar where HostType: UIControl {
 	- parameter valueSetter: closure used to set value of the control when event is received.
 	- returns: ValueBinding<T>.
 	*/
-    public func controlValueBinding<T>(valueChangeEventTypes valueChangeEventTypes: UIControlEvents, valueGetter: (HostType)->T, valueSetter: (HostType, T)->()) -> ValueBinding<T> {
+    public func controlValueBinding<T>(valueChangeEventTypes valueChangeEventTypes: UIControlEvents, getter: (HostType)->T, setter: (HostType, T)->()) -> ValueBinding<T> {
         return ValueBinding(
-            observable: controlEvents(valueChangeEventTypes, valueGetter: valueGetter),
-            setValue: { [weak host] in
-                guard let host = host else { return }
-                valueSetter(host, $0)
-            })
-    }
+            getter: controlEvents(valueChangeEventTypes, valueGetter: getter),
+			setter: valueSetter(setter))
+	}
+	
+	/**
+	Reactive setter for enabled propterty
+	*/
+	public func enabled() -> AnyObserver<Bool> {
+		return valueSetter { $0.enabled = $1 }
+	}
+	
+	/**
+	Reactive setter for selected propterty
+	*/
+	public func selected() -> AnyObserver<Bool> {
+		return valueSetter { $0.selected = $1 }
+	}
 }

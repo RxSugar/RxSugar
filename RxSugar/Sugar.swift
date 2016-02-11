@@ -52,5 +52,9 @@ public extension Sugar where HostType: RXSObject {
         let bag = DisposeBag()
         objc_setAssociatedObject(host, &disposeBagKey, bag, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         return bag
-    }
+	}
+	
+	public func valueSetter<T>(setter: (HostType, T)->()) -> AnyObserver<T> {
+		return ValueSetter<HostType, T>(host: host, setter: setter).asObserver()
+	}
 }

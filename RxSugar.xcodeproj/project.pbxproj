@@ -11,6 +11,8 @@
 		4D37F9DC1C6A7E240094DA7D /* UILabel+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F9DA1C6A7E240094DA7D /* UILabel+Sugar.swift */; };
 		4D37F9F41C6A825E0094DA7D /* UILabel+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F9F11C6A819F0094DA7D /* UILabel+SugarTests.swift */; };
 		4D37F9F51C6A825F0094DA7D /* UILabel+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F9F11C6A819F0094DA7D /* UILabel+SugarTests.swift */; };
+		4D37F9F71C6D01360094DA7D /* ValueSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F9F61C6D01350094DA7D /* ValueSetter.swift */; };
+		4D37F9F81C6D01360094DA7D /* ValueSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F9F61C6D01350094DA7D /* ValueSetter.swift */; };
 		4D809DA51C62B344003D1D63 /* ValueBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DA41C62B344003D1D63 /* ValueBinding.swift */; };
 		4D809DBB1C62B399003D1D63 /* ValueBindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DBA1C62B399003D1D63 /* ValueBindingTests.swift */; };
 		4D809DBD1C62BF51003D1D63 /* RxsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DBC1C62BF51003D1D63 /* RxsError.swift */; };
@@ -228,6 +230,7 @@
 /* Begin PBXFileReference section */
 		4D37F9DA1C6A7E240094DA7D /* UILabel+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Sugar.swift"; sourceTree = "<group>"; };
 		4D37F9F11C6A819F0094DA7D /* UILabel+SugarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILabel+SugarTests.swift"; path = "RxSugarTests/UILabel+SugarTests.swift"; sourceTree = "<group>"; };
+		4D37F9F61C6D01350094DA7D /* ValueSetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueSetter.swift; sourceTree = "<group>"; };
 		4D809DA41C62B344003D1D63 /* ValueBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueBinding.swift; sourceTree = "<group>"; };
 		4D809DBA1C62B399003D1D63 /* ValueBindingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValueBindingTests.swift; path = RxSugarTests/ValueBindingTests.swift; sourceTree = SOURCE_ROOT; };
 		4D809DBC1C62BF51003D1D63 /* RxsError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxsError.swift; sourceTree = "<group>"; };
@@ -343,6 +346,7 @@
 				5A9AE8871C6548AA00F8FD92 /* IgnoreNilTests.swift */,
 				5A9AE8801C65459000F8FD92 /* CombinePrevious.swift */,
 				5A9AE8841C6545FC00F8FD92 /* CombinePreviousTests.swift */,
+				4D37F9F61C6D01350094DA7D /* ValueSetter.swift */,
 			);
 			path = RxSugar;
 			sourceTree = "<group>";
@@ -749,6 +753,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D37F9F71C6D01360094DA7D /* ValueSetter.swift in Sources */,
 				5ADFED0D1C63B44C0081A5E0 /* UITextField+Sugar.swift in Sources */,
 				4D809DBD1C62BF51003D1D63 /* RxsError.swift in Sources */,
 				4D91C3AF1C6297C200926C99 /* AppendDisposable.swift in Sources */,
@@ -793,6 +798,7 @@
 				5A9AE94A1C6A5A3E00F8FD92 /* ObserverBinding.swift in Sources */,
 				4D37F9DC1C6A7E240094DA7D /* UILabel+Sugar.swift in Sources */,
 				5A9AE94B1C6A5A3E00F8FD92 /* UIButton+Sugar.swift in Sources */,
+				4D37F9F81C6D01360094DA7D /* ValueSetter.swift in Sources */,
 				5A9AE94C1C6A5A3E00F8FD92 /* UIControl+Trigger.swift in Sources */,
 				5A9AE94E1C6A5A3E00F8FD92 /* UITextField+Sugar.swift in Sources */,
 				5A9AE94F1C6A5A3E00F8FD92 /* UITextView+Sugar.swift in Sources */,
