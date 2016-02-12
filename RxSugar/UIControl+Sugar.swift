@@ -1,12 +1,6 @@
 import UIKit
 import RxSwift
 
-public protocol UIControlType: NSObjectProtocol {
-    typealias ControlType: UIControl = Self
-}
-
-extension UIControl: UIControlType {}
-
 public extension Sugar where HostType: UIControl {
 	
 	/**
@@ -58,14 +52,14 @@ public extension Sugar where HostType: UIControl {
 	}
 	
 	/**
-	Reactive setter for enabled propterty
+	Reactive setter for enabled property
 	*/
 	public func enabled() -> AnyObserver<Bool> {
 		return valueSetter { $0.enabled = $1 }
 	}
 	
 	/**
-	Reactive setter for selected propterty
+	Reactive setter for selected property
 	*/
 	public func selected() -> AnyObserver<Bool> {
 		return valueSetter { $0.selected = $1 }
