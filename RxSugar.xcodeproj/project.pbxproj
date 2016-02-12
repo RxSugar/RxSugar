@@ -228,7 +228,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4D37F9DA1C6A7E240094DA7D /* UILabel+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Sugar.swift"; sourceTree = "<group>"; };
+		4D37F9DA1C6A7E240094DA7D /* UILabel+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILabel+Sugar.swift"; path = "RxSugar/UILabel+Sugar.swift"; sourceTree = "<group>"; };
 		4D37F9F11C6A819F0094DA7D /* UILabel+SugarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILabel+SugarTests.swift"; path = "RxSugarTests/UILabel+SugarTests.swift"; sourceTree = "<group>"; };
 		4D37F9F61C6D01350094DA7D /* ValueSetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueSetter.swift; sourceTree = "<group>"; };
 		4D809DA41C62B344003D1D63 /* ValueBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueBinding.swift; sourceTree = "<group>"; };
