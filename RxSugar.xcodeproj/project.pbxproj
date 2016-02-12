@@ -26,8 +26,8 @@
 		4D91C3AD1C6297A700926C99 /* ObserverBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AC1C6297A700926C99 /* ObserverBinding.swift */; };
 		4D91C3AF1C6297C200926C99 /* AppendDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AE1C6297C200926C99 /* AppendDisposable.swift */; };
 		4D91C3B11C629B3D00926C99 /* UIControl+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3B01C629B3D00926C99 /* UIControl+SugarTests.swift */; };
-		5A272E9C1C6E6FED00F3C285 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A272E9B1C6E6FED00F3C285 /* UIImageView.swift */; };
-		5A272E9D1C6E6FED00F3C285 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A272E9B1C6E6FED00F3C285 /* UIImageView.swift */; };
+		5A272E9C1C6E6FED00F3C285 /* UIImageView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A272E9B1C6E6FED00F3C285 /* UIImageView+Sugar.swift */; };
+		5A272E9D1C6E6FED00F3C285 /* UIImageView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A272E9B1C6E6FED00F3C285 /* UIImageView+Sugar.swift */; };
 		5A9AE8671C6514DD00F8FD92 /* ObserverBindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AE8661C6514DD00F8FD92 /* ObserverBindingTests.swift */; };
 		5A9AE87F1C65458100F8FD92 /* IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AE87E1C65458100F8FD92 /* IgnoreNil.swift */; };
 		5A9AE8811C65459000F8FD92 /* CombinePrevious.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AE8801C65459000F8FD92 /* CombinePrevious.swift */; };
@@ -247,7 +247,7 @@
 		4D91C3AC1C6297A700926C99 /* ObserverBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObserverBinding.swift; path = RxSugar/ObserverBinding.swift; sourceTree = "<group>"; };
 		4D91C3AE1C6297C200926C99 /* AppendDisposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppendDisposable.swift; path = RxSugar/AppendDisposable.swift; sourceTree = "<group>"; };
 		4D91C3B01C629B3D00926C99 /* UIControl+SugarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIControl+SugarTests.swift"; path = "RxSugarTests/UIControl+SugarTests.swift"; sourceTree = "<group>"; };
-		5A272E9B1C6E6FED00F3C285 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		5A272E9B1C6E6FED00F3C285 /* UIImageView+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Sugar.swift"; path = "RxSugar/UIImageView+Sugar.swift"; sourceTree = "<group>"; };
 		5A9AE8661C6514DD00F8FD92 /* ObserverBindingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObserverBindingTests.swift; path = RxSugarTests/ObserverBindingTests.swift; sourceTree = "<group>"; };
 		5A9AE87E1C65458100F8FD92 /* IgnoreNil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IgnoreNil.swift; sourceTree = "<group>"; };
 		5A9AE8801C65459000F8FD92 /* CombinePrevious.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinePrevious.swift; sourceTree = "<group>"; };
@@ -420,7 +420,7 @@
 				5AC009CA1C64EBCB005CAAC5 /* UITextView+SugarTests.swift */,
 				4D37F9DA1C6A7E240094DA7D /* UILabel+Sugar.swift */,
 				4D37F9F11C6A819F0094DA7D /* UILabel+SugarTests.swift */,
-				5A272E9B1C6E6FED00F3C285 /* UIImageView.swift */,
+				5A272E9B1C6E6FED00F3C285 /* UIImageView+Sugar.swift */,
 			);
 			name = "RxSugar+UIKit";
 			sourceTree = "<group>";
@@ -772,7 +772,7 @@
 				5A9AE87F1C65458100F8FD92 /* IgnoreNil.swift in Sources */,
 				5A9AE8811C65459000F8FD92 /* CombinePrevious.swift in Sources */,
 				5AC009851C640B3F005CAAC5 /* Sugar.swift in Sources */,
-				5A272E9C1C6E6FED00F3C285 /* UIImageView.swift in Sources */,
+				5A272E9C1C6E6FED00F3C285 /* UIImageView+Sugar.swift in Sources */,
 				5AC009B21C6416AB005CAAC5 /* UITextView+Sugar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -807,7 +807,7 @@
 				5A9AE94C1C6A5A3E00F8FD92 /* UIControl+Sugar.swift in Sources */,
 				5A9AE94E1C6A5A3E00F8FD92 /* UITextField+Sugar.swift in Sources */,
 				5A9AE94F1C6A5A3E00F8FD92 /* UITextView+Sugar.swift in Sources */,
-				5A272E9D1C6E6FED00F3C285 /* UIImageView.swift in Sources */,
+				5A272E9D1C6E6FED00F3C285 /* UIImageView+Sugar.swift in Sources */,
 				5A9AE9501C6A5A3E00F8FD92 /* Sugar.swift in Sources */,
 				5A9AE9511C6A5A3E00F8FD92 /* RxsError.swift in Sources */,
 				5A9AE9521C6A5A3E00F8FD92 /* TargetActionObservable.swift in Sources */,

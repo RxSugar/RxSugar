@@ -54,14 +54,14 @@ public extension Sugar where HostType: UIControl {
 	/**
 	Reactive setter for enabled property
 	*/
-	public func enabled() -> AnyObserver<Bool> {
+    public var enabled: AnyObserver<Bool> {
 		return valueSetter { $0.enabled = $1 }
 	}
 	
 	/**
 	Reactive setter for selected property
 	*/
-	public func selected() -> AnyObserver<Bool> {
+    public var selected: AnyObserver<Bool> {
 		return valueSetter { $0.selected = $1 }
 	}
 }
