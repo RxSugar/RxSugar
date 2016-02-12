@@ -1,6 +1,6 @@
 [![Travis CI](https://travis-ci.org/RxSugar/RxSugar.svg?branch=master)](https://travis-ci.org/RxSugar/RxSugar) ![platforms](https://img.shields.io/badge/platforms-iOS-333333.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![pod](https://img.shields.io/cocoapods/v/RxSugar.svg)](https://cocoapods.org/?q=RxSugar)
 
-# <img src="RxSugarLogo.png" alt="RxSugar Logo" width="36" height="36">  RxSugar
+# <img src="RxSugarLogo.png" alt="RxSugar Logo" width="60" height="60">  RxSugar
 Simple RxSwift extensions for interacting with Apple APIs.
 
 ## Operators that improve visualization of data flow
