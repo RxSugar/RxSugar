@@ -8,18 +8,6 @@ associativity right
 precedence 141
 }
 
-extension Variable: ObserverType, ObservableConvertibleType {
-    public func asObserver() -> Variable<E> {
-        return self
-    }
-    
-    public func on(event: Event<E>) {
-        if case .Next(let element) = event {
-            value = element
-        }
-    }
-}
-
 /**
  Creates new subscription and sends elements to observer.
  
