@@ -2,7 +2,7 @@ import Foundation
 import RxSwift
 
 public struct Sugar<HostType> {
-    let host:HostType
+    public let host:HostType
     
     public init(host: HostType) {
         self.host = host
