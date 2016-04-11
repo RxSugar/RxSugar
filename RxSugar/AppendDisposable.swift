@@ -1,7 +1,7 @@
 import RxSwift
 
 public protocol DisposableCollection {
-	typealias AddDisposableReturnType
+	associatedtype AddDisposableReturnType
 	
 	func addDisposable(disposable: Disposable) -> AddDisposableReturnType
 }

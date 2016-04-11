@@ -1,5 +1,5 @@
 public protocol OptionalType {
-    typealias Wrapped
+    associatedtype Wrapped
     
     var optional: Wrapped? { get }
 }
