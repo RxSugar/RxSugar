@@ -1,9 +1,10 @@
-//
-//  UIView+Sugar.swift
-//  RxSugar
-//
-//  Created by dev1 on 4/12/16.
-//  Copyright © 2016 RxSugar. All rights reserved.
-//
+import UIKit
+import RxSwift
 
-import Foundation
+public extension Sugar where HostType: UIView {
+    
+    /**
+     RxSugar trigger for setNeedsLayout.
+     */
+    public var setNeedsLayout: AnyObserver<Void> { return valueSetter { (host, _) in host.setNeedsLayout() } }
+}
