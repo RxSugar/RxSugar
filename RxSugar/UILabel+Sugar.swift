@@ -1,7 +1,7 @@
 import UIKit
 import RxSwift
 
-public extension Sugar where HostType: UILabel {
+public extension Sugar where HostType: UILabel, HostType: RXSObject {
 	
 	/**
 	RxSugar wrapper for text property.

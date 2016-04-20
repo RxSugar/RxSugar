@@ -1,6 +1,6 @@
 import UIKit
 
-public extension Sugar where HostType: UITextView {
+public extension Sugar where HostType: UITextView, HostType: RXSObject {
 	
 	/**
 	RxSugar wrapper for text property.

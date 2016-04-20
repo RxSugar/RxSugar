@@ -1,7 +1,7 @@
 import UIKit
 import RxSwift
 
-public extension Sugar where HostType: UIGestureRecognizer {
+public extension Sugar where HostType: UIGestureRecognizer, HostType: RXSObject {
     /**
      Observable<UIGestureRecognizer> that sends events for every state change
 

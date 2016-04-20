@@ -1,7 +1,7 @@
 import UIKit
 import RxSwift
 
-extension Sugar where HostType: UIActivityIndicatorView {
+extension Sugar where HostType: UIActivityIndicatorView, HostType: RXSObject {
     /**
      RxSugar wrapper for animating.
      */

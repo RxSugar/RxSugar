@@ -1,7 +1,7 @@
 import UIKit
 import RxSwift
 
-public extension Sugar where HostType: UITapGestureRecognizer {
+public extension Sugar where HostType: UITapGestureRecognizer, HostType: RXSObject {
     /**
      Observable<Void> that sends events for every recognized tap event
      

@@ -1,7 +1,7 @@
 import UIKit
 import RxSwift
 
-public extension Sugar where HostType: UIControl {
+public extension Sugar where HostType: UIControl, HostType: RXSObject {
 	
 	/**
 	Observable<T> that sends Event<T> on every event in controlEvents.
