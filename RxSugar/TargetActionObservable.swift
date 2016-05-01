@@ -3,7 +3,7 @@ import RxSwift
 
 public final class TargetActionObservable<Element>: NSObject, ObservableType {
     public typealias E = Element
-    public let actionSelector: Selector = "action"
+    public let actionSelector = #selector(TargetActionObservable<Element>.action)
     
 	private let _unsubscribe: (NSObjectProtocol, Selector) -> ()
     private let subject = PublishSubject<Element>()
