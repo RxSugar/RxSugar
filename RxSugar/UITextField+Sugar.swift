@@ -1,7 +1,7 @@
 import UIKit
 import RxSwift
 
-public extension Sugar where HostType: UITextField, HostType: RXSObject {
+public extension Sugar where HostType: UITextField {
 	/**
 	RxSugar wrapper for text property.
 	*/

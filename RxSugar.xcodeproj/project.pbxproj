@@ -273,7 +273,7 @@
 		5A9AE91B1C6A599000F8FD92 /* RxSugar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSugar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9AE9241C6A599000F8FD92 /* RxSugarTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RxSugarTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9AE9461C6A59D000F8FD92 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = "../RxSwift/build/Debug-appletvos/RxSwift.framework"; sourceTree = "<group>"; };
-		5ABE29051CBC503300B98E7E /* UIActivityIndicator+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIActivityIndicator+Sugar.swift"; sourceTree = "<group>"; };
+		5ABE29051CBC503300B98E7E /* UIActivityIndicator+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIActivityIndicator+Sugar.swift"; path = "RxSugar/UIActivityIndicator+Sugar.swift"; sourceTree = "<group>"; };
 		5ABE291D1CBD36BE00B98E7E /* UIView+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+Sugar.swift"; path = "RxSugar/UIView+Sugar.swift"; sourceTree = "<group>"; };
 		5AC009841C640B3F005CAAC5 /* Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sugar.swift; sourceTree = "<group>"; };
 		5AC009B11C6416AB005CAAC5 /* UITextView+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextView+Sugar.swift"; path = "RxSugar/UITextView+Sugar.swift"; sourceTree = "<group>"; };

@@ -1,6 +1,6 @@
 import RxSwift
 
-public extension Sugar where HostType: UISwitch, HostType: RXSObject {
+public extension Sugar where HostType: UISwitch {
 	/**
 	RxSugar wrapper for on property.
 	*/

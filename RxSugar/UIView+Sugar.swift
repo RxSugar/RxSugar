@@ -1,7 +1,7 @@
 import UIKit
 import RxSwift
 
-public extension Sugar where HostType: UIView, HostType: RXSObject {
+public extension Sugar where HostType: UIView {
 
     /**
      RxSugar trigger for setNeedsLayout.
