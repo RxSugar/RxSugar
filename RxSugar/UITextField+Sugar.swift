@@ -7,7 +7,7 @@ public extension Sugar where HostType: UITextField {
 	*/
 	public var text: ValueBinding<String> {
 		return controlValueBinding(
-            valueChangeEventTypes: .EditingChanged,
+            valueChangeEventTypes: [.EditingChanged, .EditingDidEnd],
 			getter: { $0.text ?? "" },
 			setter: { $0.text = $1 })
 	}
