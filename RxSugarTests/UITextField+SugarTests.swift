@@ -57,6 +57,10 @@ class UITextField_SugarTests: XCTestCase {
         testObject.text = "Ground Control"
         testObject.fireControlEvents([.EditingChanged])
         XCTAssertEqual(events, ["Major Tom", "Ground Control"])
+        
+        testObject.text = ""
+        testObject.fireControlEvents([.EditingDidEnd])
+        XCTAssertEqual(events, ["Major Tom", "Ground Control", ""])
     }
     
     func testTextFieldUpdatesAttributedText() {

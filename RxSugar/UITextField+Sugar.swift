@@ -17,7 +17,7 @@ public extension Sugar where HostType: UITextField {
 	*/
 	public var attributedText: ValueBinding<NSAttributedString> {
 		return controlValueBinding(
-            valueChangeEventTypes: .EditingChanged,
+            valueChangeEventTypes: [.EditingChanged, .EditingDidEnd],
 			getter: { $0.attributedText ?? NSAttributedString() },
 			setter: { $0.attributedText = $1 })
 	}
