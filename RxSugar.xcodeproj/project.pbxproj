@@ -19,6 +19,15 @@
 		4D37F9F51C6A825F0094DA7D /* UILabel+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F9F11C6A819F0094DA7D /* UILabel+SugarTests.swift */; };
 		4D37F9F71C6D01360094DA7D /* ValueSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F9F61C6D01350094DA7D /* ValueSetter.swift */; };
 		4D37F9F81C6D01360094DA7D /* ValueSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F9F61C6D01350094DA7D /* ValueSetter.swift */; };
+		4D381CFF1D341E50001F7085 /* RxSugar-watchOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D381CFD1D341E50001F7085 /* RxSugar-watchOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D381D031D341EB5001F7085 /* Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC009841C640B3F005CAAC5 /* Sugar.swift */; };
+		4D381D041D341EB5001F7085 /* RxsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DBC1C62BF51003D1D63 /* RxsError.swift */; };
+		4D381D071D341EB5001F7085 /* ValueBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DA41C62B344003D1D63 /* ValueBinding.swift */; };
+		4D381D091D341EB5001F7085 /* OptionalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AE8821C6545C900F8FD92 /* OptionalType.swift */; };
+		4D381D0A1D341EB5001F7085 /* IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AE87E1C65458100F8FD92 /* IgnoreNil.swift */; };
+		4D381D0C1D341EB5001F7085 /* CombinePrevious.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AE8801C65459000F8FD92 /* CombinePrevious.swift */; };
+		4D381D0E1D341EB5001F7085 /* ValueSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F9F61C6D01350094DA7D /* ValueSetter.swift */; };
+		4D381D0F1D341EB5001F7085 /* Variable+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB4A0E1C6F9F03004C3194 /* Variable+Sugar.swift */; };
 		4D809DA51C62B344003D1D63 /* ValueBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DA41C62B344003D1D63 /* ValueBinding.swift */; };
 		4D809DBB1C62B399003D1D63 /* ValueBindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DBA1C62B399003D1D63 /* ValueBindingTests.swift */; };
 		4D809DBD1C62BF51003D1D63 /* RxsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DBC1C62BF51003D1D63 /* RxsError.swift */; };
@@ -34,31 +43,6 @@
 		4D91C3B11C629B3D00926C99 /* UIControl+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3B01C629B3D00926C99 /* UIControl+SugarTests.swift */; };
 		4DDB4A0F1C6F9F04004C3194 /* Variable+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB4A0E1C6F9F03004C3194 /* Variable+Sugar.swift */; };
 		4DDB4A101C6F9F04004C3194 /* Variable+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB4A0E1C6F9F03004C3194 /* Variable+Sugar.swift */; };
-		4DF4C7791D34051600C3D52D /* ObserverBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AC1C6297A700926C99 /* ObserverBinding.swift */; };
-		4DF4C77A1D34051600C3D52D /* AppendDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AE1C6297C200926C99 /* AppendDisposable.swift */; };
-		4DF4C77D1D34051600C3D52D /* Variable+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB4A0E1C6F9F03004C3194 /* Variable+Sugar.swift */; };
-		4DF4C77E1D34051600C3D52D /* ValueSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F9F61C6D01350094DA7D /* ValueSetter.swift */; };
-		4DF4C7851D34051600C3D52D /* Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC009841C640B3F005CAAC5 /* Sugar.swift */; };
-		4DF4C7861D34051600C3D52D /* RxsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DBC1C62BF51003D1D63 /* RxsError.swift */; };
-		4DF4C7881D34051600C3D52D /* ValueBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DA41C62B344003D1D63 /* ValueBinding.swift */; };
-		4DF4C78A1D34051600C3D52D /* OptionalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AE8821C6545C900F8FD92 /* OptionalType.swift */; };
-		4DF4C78B1D34051600C3D52D /* IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AE87E1C65458100F8FD92 /* IgnoreNil.swift */; };
-		4DF4C78C1D34051600C3D52D /* CombinePrevious.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AE8801C65459000F8FD92 /* CombinePrevious.swift */; };
-		4DF4C78E1D34051600C3D52D /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D91C3801C62711A00926C99 /* RxSwift.framework */; };
-		4DF4C7AE1D34054E00C3D52D /* ObserverBindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AE8661C6514DD00F8FD92 /* ObserverBindingTests.swift */; };
-		4DF4C7AF1D34054E00C3D52D /* UILabel+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F9F11C6A819F0094DA7D /* UILabel+SugarTests.swift */; };
-		4DF4C7B01D34054E00C3D52D /* UIButton+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC009CE1C64F238005CAAC5 /* UIButton+SugarTests.swift */; };
-		4DF4C7B11D34054E00C3D52D /* UIControl+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3B01C629B3D00926C99 /* UIControl+SugarTests.swift */; };
-		4DF4C7B21D34054E00C3D52D /* UIGestureRecognizer+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2798B31C76DC45007C63B9 /* UIGestureRecognizer+SugarTests.swift */; };
-		4DF4C7B31D34054E00C3D52D /* UITextField+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC009CC1C64F0DB005CAAC5 /* UITextField+SugarTests.swift */; };
-		4DF4C7B41D34054E00C3D52D /* UITextView+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC009CA1C64EBCB005CAAC5 /* UITextView+SugarTests.swift */; };
-		4DF4C7B51D34054E00C3D52D /* TargetActionObservableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C35E1C626B7B00926C99 /* TargetActionObservableTests.swift */; };
-		4DF4C7B61D34054E00C3D52D /* ValueBindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DBA1C62B399003D1D63 /* ValueBindingTests.swift */; };
-		4DF4C7B71D34054E00C3D52D /* IgnoreNilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AE8871C6548AA00F8FD92 /* IgnoreNilTests.swift */; };
-		4DF4C7B81D34054E00C3D52D /* CombinePreviousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AE8841C6545FC00F8FD92 /* CombinePreviousTests.swift */; };
-		4DF4C7BA1D34054E00C3D52D /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D91C3901C62711A00926C99 /* RxBlocking.framework */; };
-		4DF4C7BB1D34054E00C3D52D /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D91C3801C62711A00926C99 /* RxSwift.framework */; };
-		4DF4C7BC1D34054E00C3D52D /* RxSugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A9AE91B1C6A599000F8FD92 /* RxSugar.framework */; };
 		5A272E9C1C6E6FED00F3C285 /* UIImageView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A272E9B1C6E6FED00F3C285 /* UIImageView+Sugar.swift */; };
 		5A272E9D1C6E6FED00F3C285 /* UIImageView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A272E9B1C6E6FED00F3C285 /* UIImageView+Sugar.swift */; };
 		5A9AE8671C6514DD00F8FD92 /* ObserverBindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AE8661C6514DD00F8FD92 /* ObserverBindingTests.swift */; };
@@ -257,13 +241,6 @@
 			remoteGlobalIDString = C85BA04B1C3878740075D68E;
 			remoteInfo = PerformanceTests;
 		};
-		4DF4C7AC1D34054E00C3D52D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4D91C3361C625FE700926C99 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5A9AE91A1C6A599000F8FD92;
-			remoteInfo = RxSugar;
-		};
 		5A9AE9261C6A599000F8FD92 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4D91C3361C625FE700926C99 /* Project object */;
@@ -280,6 +257,11 @@
 		4D37F9DA1C6A7E240094DA7D /* UILabel+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILabel+Sugar.swift"; path = "RxSugar/UILabel+Sugar.swift"; sourceTree = "<group>"; };
 		4D37F9F11C6A819F0094DA7D /* UILabel+SugarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILabel+SugarTests.swift"; path = "RxSugarTests/UILabel+SugarTests.swift"; sourceTree = "<group>"; };
 		4D37F9F61C6D01350094DA7D /* ValueSetter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueSetter.swift; sourceTree = "<group>"; };
+		4D381CF01D341E36001F7085 /* RxSugar-watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RxSugar-watchOS.h"; sourceTree = "<group>"; };
+		4D381CF11D341E36001F7085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D381CFB1D341E50001F7085 /* RxSugar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSugar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D381CFD1D341E50001F7085 /* RxSugar-watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RxSugar-watchOS.h"; sourceTree = "<group>"; };
+		4D381CFE1D341E50001F7085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D809DA41C62B344003D1D63 /* ValueBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueBinding.swift; sourceTree = "<group>"; };
 		4D809DBA1C62B399003D1D63 /* ValueBindingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValueBindingTests.swift; path = RxSugarTests/ValueBindingTests.swift; sourceTree = SOURCE_ROOT; };
 		4D809DBC1C62BF51003D1D63 /* RxsError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxsError.swift; sourceTree = "<group>"; };
@@ -295,8 +277,6 @@
 		4D91C3AE1C6297C200926C99 /* AppendDisposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppendDisposable.swift; path = RxSugar/AppendDisposable.swift; sourceTree = "<group>"; };
 		4D91C3B01C629B3D00926C99 /* UIControl+SugarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIControl+SugarTests.swift"; path = "RxSugarTests/UIControl+SugarTests.swift"; sourceTree = "<group>"; };
 		4DDB4A0E1C6F9F03004C3194 /* Variable+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Variable+Sugar.swift"; sourceTree = "<group>"; };
-		4DF4C7941D34051600C3D52D /* RxSugar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSugar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4DF4C7C11D34054E00C3D52D /* RxSugarTests-watchOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RxSugarTests-watchOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A272E9B1C6E6FED00F3C285 /* UIImageView+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Sugar.swift"; path = "RxSugar/UIImageView+Sugar.swift"; sourceTree = "<group>"; };
 		5A9AE8661C6514DD00F8FD92 /* ObserverBindingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObserverBindingTests.swift; path = RxSugarTests/ObserverBindingTests.swift; sourceTree = "<group>"; };
 		5A9AE87E1C65458100F8FD92 /* IgnoreNil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IgnoreNil.swift; sourceTree = "<group>"; };
@@ -322,6 +302,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4D381CF71D341E50001F7085 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D91C33B1C625FE700926C99 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -337,24 +324,6 @@
 				4D91C3A51C62714900926C99 /* RxSwift.framework in Frameworks */,
 				4D91C3A41C62713B00926C99 /* RxBlocking.framework in Frameworks */,
 				4D91C34A1C625FE700926C99 /* RxSugar.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4DF4C78D1D34051600C3D52D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4DF4C78E1D34051600C3D52D /* RxSwift.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4DF4C7B91D34054E00C3D52D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4DF4C7BA1D34054E00C3D52D /* RxBlocking.framework in Frameworks */,
-				4DF4C7BB1D34054E00C3D52D /* RxSwift.framework in Frameworks */,
-				4DF4C7BC1D34054E00C3D52D /* RxSugar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +348,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D381CEF1D341E36001F7085 /* RxSugar-watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				4D381CF01D341E36001F7085 /* RxSugar-watchOS.h */,
+				4D381CF11D341E36001F7085 /* Info.plist */,
+			);
+			path = "RxSugar-watchOS";
+			sourceTree = "<group>";
+		};
+		4D381CFC1D341E50001F7085 /* RxSugar-watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				4D381CFD1D341E50001F7085 /* RxSugar-watchOS.h */,
+				4D381CFE1D341E50001F7085 /* Info.plist */,
+			);
+			path = "RxSugar-watchOS";
+			sourceTree = "<group>";
+		};
 		4D91C3351C625FE700926C99 = {
 			isa = PBXGroup;
 			children = (
@@ -387,6 +374,8 @@
 				4D91C3411C625FE700926C99 /* RxSugar */,
 				4D91C34D1C625FE700926C99 /* RxSugarTests */,
 				4D91C3631C6270EE00926C99 /* Dependencies */,
+				4D381CEF1D341E36001F7085 /* RxSugar-watchOS */,
+				4D381CFC1D341E50001F7085 /* RxSugar-watchOS */,
 				4D91C35D1C6268DF00926C99 /* Frameworks */,
 				4D91C3401C625FE700926C99 /* Products */,
 			);
@@ -399,8 +388,7 @@
 				4D91C3491C625FE700926C99 /* RxSugarTests-iOS.xctest */,
 				5A9AE91B1C6A599000F8FD92 /* RxSugar.framework */,
 				5A9AE9241C6A599000F8FD92 /* RxSugarTests-tvOS.xctest */,
-				4DF4C7941D34051600C3D52D /* RxSugar.framework */,
-				4DF4C7C11D34054E00C3D52D /* RxSugarTests-watchOS.xctest */,
+				4D381CFB1D341E50001F7085 /* RxSugar.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -411,7 +399,6 @@
 				4D91C3441C625FE700926C99 /* Info.plist */,
 				5AC009841C640B3F005CAAC5 /* Sugar.swift */,
 				4D809DBC1C62BF51003D1D63 /* RxsError.swift */,
-				4D91C3421C625FE700926C99 /* RxSugar.h */,
 				4D91C3591C6267D100926C99 /* TargetActionObservable.swift */,
 				4D91C35E1C626B7B00926C99 /* TargetActionObservableTests.swift */,
 				4D809DA41C62B344003D1D63 /* ValueBinding.swift */,
@@ -423,6 +410,7 @@
 				5A9AE8841C6545FC00F8FD92 /* CombinePreviousTests.swift */,
 				4D37F9F61C6D01350094DA7D /* ValueSetter.swift */,
 				4DDB4A0E1C6F9F03004C3194 /* Variable+Sugar.swift */,
+				4D91C3421C625FE700926C99 /* RxSugar.h */,
 			);
 			path = RxSugar;
 			sourceTree = "<group>";
@@ -516,18 +504,19 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		4D381CF81D341E50001F7085 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D381CFF1D341E50001F7085 /* RxSugar-watchOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D91C33C1C625FE700926C99 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4D91C3431C625FE700926C99 /* RxSugar.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4DF4C78F1D34051600C3D52D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,6 +530,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		4D381CFA1D341E50001F7085 /* RxSugar-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D381D001D341E50001F7085 /* Build configuration list for PBXNativeTarget "RxSugar-watchOS" */;
+			buildPhases = (
+				4D381CF61D341E50001F7085 /* Sources */,
+				4D381CF71D341E50001F7085 /* Frameworks */,
+				4D381CF81D341E50001F7085 /* Headers */,
+				4D381CF91D341E50001F7085 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RxSugar-watchOS";
+			productName = "RxSugar-watchOS";
+			productReference = 4D381CFB1D341E50001F7085 /* RxSugar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		4D91C33E1C625FE700926C99 /* RxSugar-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D91C3531C625FE700926C99 /* Build configuration list for PBXNativeTarget "RxSugar-iOS" */;
@@ -575,42 +582,6 @@
 			name = "RxSugarTests-iOS";
 			productName = RxSugarTests;
 			productReference = 4D91C3491C625FE700926C99 /* RxSugarTests-iOS.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		4DF4C7761D34051600C3D52D /* RxSugar-watchOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4DF4C7911D34051600C3D52D /* Build configuration list for PBXNativeTarget "RxSugar-watchOS" */;
-			buildPhases = (
-				4DF4C7771D34051600C3D52D /* Sources */,
-				4DF4C78D1D34051600C3D52D /* Frameworks */,
-				4DF4C78F1D34051600C3D52D /* Headers */,
-				4DF4C7901D34051600C3D52D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "RxSugar-watchOS";
-			productName = RxSugar;
-			productReference = 4DF4C7941D34051600C3D52D /* RxSugar.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		4DF4C7AA1D34054E00C3D52D /* RxSugarTests-watchOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4DF4C7BE1D34054E00C3D52D /* Build configuration list for PBXNativeTarget "RxSugarTests-watchOS" */;
-			buildPhases = (
-				4DF4C7AD1D34054E00C3D52D /* Sources */,
-				4DF4C7B91D34054E00C3D52D /* Frameworks */,
-				4DF4C7BD1D34054E00C3D52D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4DF4C7AB1D34054E00C3D52D /* PBXTargetDependency */,
-			);
-			name = "RxSugarTests-watchOS";
-			productName = RxSugarTests;
-			productReference = 4DF4C7C11D34054E00C3D52D /* RxSugarTests-watchOS.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		5A9AE91A1C6A599000F8FD92 /* RxSugar-tvOS */ = {
@@ -659,6 +630,12 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = RxSugar;
 				TargetAttributes = {
+					4D381CFA1D341E50001F7085 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 438VZ6GLSU;
+						DevelopmentTeamName = "Asynchrony Solutions, Inc.";
+						ProvisioningStyle = Automatic;
+					};
 					4D91C33E1C625FE700926C99 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -695,8 +672,7 @@
 				4D91C3481C625FE700926C99 /* RxSugarTests-iOS */,
 				5A9AE91A1C6A599000F8FD92 /* RxSugar-tvOS */,
 				5A9AE9231C6A599000F8FD92 /* RxSugarTests-tvOS */,
-				4DF4C7761D34051600C3D52D /* RxSugar-watchOS */,
-				4DF4C7AA1D34054E00C3D52D /* RxSugarTests-watchOS */,
+				4D381CFA1D341E50001F7085 /* RxSugar-watchOS */,
 			);
 		};
 /* End PBXProject section */
@@ -845,6 +821,13 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4D381CF91D341E50001F7085 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D91C33D1C625FE700926C99 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -853,20 +836,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		4D91C3471C625FE700926C99 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4DF4C7901D34051600C3D52D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4DF4C7BD1D34054E00C3D52D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -890,6 +859,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4D381CF61D341E50001F7085 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D381D031D341EB5001F7085 /* Sugar.swift in Sources */,
+				4D381D041D341EB5001F7085 /* RxsError.swift in Sources */,
+				4D381D071D341EB5001F7085 /* ValueBinding.swift in Sources */,
+				4D381D091D341EB5001F7085 /* OptionalType.swift in Sources */,
+				4D381D0A1D341EB5001F7085 /* IgnoreNil.swift in Sources */,
+				4D381D0C1D341EB5001F7085 /* CombinePrevious.swift in Sources */,
+				4D381D0E1D341EB5001F7085 /* ValueSetter.swift in Sources */,
+				4D381D0F1D341EB5001F7085 /* Variable+Sugar.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D91C33A1C625FE700926C99 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -935,41 +919,6 @@
 				5AE89E4A1C64F94D007034C1 /* UISwitch+SugarTests.swift in Sources */,
 				4D37F9F41C6A825E0094DA7D /* UILabel+SugarTests.swift in Sources */,
 				4D91C35F1C626B7B00926C99 /* TargetActionObservableTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4DF4C7771D34051600C3D52D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4DF4C7791D34051600C3D52D /* ObserverBinding.swift in Sources */,
-				4DF4C77A1D34051600C3D52D /* AppendDisposable.swift in Sources */,
-				4DF4C77D1D34051600C3D52D /* Variable+Sugar.swift in Sources */,
-				4DF4C77E1D34051600C3D52D /* ValueSetter.swift in Sources */,
-				4DF4C7851D34051600C3D52D /* Sugar.swift in Sources */,
-				4DF4C7861D34051600C3D52D /* RxsError.swift in Sources */,
-				4DF4C7881D34051600C3D52D /* ValueBinding.swift in Sources */,
-				4DF4C78A1D34051600C3D52D /* OptionalType.swift in Sources */,
-				4DF4C78B1D34051600C3D52D /* IgnoreNil.swift in Sources */,
-				4DF4C78C1D34051600C3D52D /* CombinePrevious.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4DF4C7AD1D34054E00C3D52D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4DF4C7AE1D34054E00C3D52D /* ObserverBindingTests.swift in Sources */,
-				4DF4C7AF1D34054E00C3D52D /* UILabel+SugarTests.swift in Sources */,
-				4DF4C7B01D34054E00C3D52D /* UIButton+SugarTests.swift in Sources */,
-				4DF4C7B11D34054E00C3D52D /* UIControl+SugarTests.swift in Sources */,
-				4DF4C7B21D34054E00C3D52D /* UIGestureRecognizer+SugarTests.swift in Sources */,
-				4DF4C7B31D34054E00C3D52D /* UITextField+SugarTests.swift in Sources */,
-				4DF4C7B41D34054E00C3D52D /* UITextView+SugarTests.swift in Sources */,
-				4DF4C7B51D34054E00C3D52D /* TargetActionObservableTests.swift in Sources */,
-				4DF4C7B61D34054E00C3D52D /* ValueBindingTests.swift in Sources */,
-				4DF4C7B71D34054E00C3D52D /* IgnoreNilTests.swift in Sources */,
-				4DF4C7B81D34054E00C3D52D /* CombinePreviousTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1027,11 +976,6 @@
 			target = 4D91C33E1C625FE700926C99 /* RxSugar-iOS */;
 			targetProxy = 4D91C34B1C625FE700926C99 /* PBXContainerItemProxy */;
 		};
-		4DF4C7AB1D34054E00C3D52D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5A9AE91A1C6A599000F8FD92 /* RxSugar-tvOS */;
-			targetProxy = 4DF4C7AC1D34054E00C3D52D /* PBXContainerItemProxy */;
-		};
 		5A9AE9271C6A599000F8FD92 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 5A9AE91A1C6A599000F8FD92 /* RxSugar-tvOS */;
@@ -1040,6 +984,53 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		4D381D011D341E50001F7085 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "RxSugar-watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.rxsugar.RxSugar-watchOS";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		4D381D021D341E50001F7085 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "RxSugar-watchOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.rxsugar.RxSugar-watchOS";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
 		4D91C3511C625FE700926C99 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1194,70 +1185,6 @@
 			};
 			name = Release;
 		};
-		4DF4C7921D34051600C3D52D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RxSugar/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.rxsugar.RxSugar;
-				PRODUCT_NAME = "$(PROJECT_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
-				TARGETED_DEVICE_FAMILY = 3;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Debug;
-		};
-		4DF4C7931D34051600C3D52D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RxSugar/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.rxsugar.RxSugar;
-				PRODUCT_NAME = "$(PROJECT_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
-				TARGETED_DEVICE_FAMILY = 3;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
-			};
-			name = Release;
-		};
-		4DF4C7BF1D34054E00C3D52D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "RxSugarTests-watchOS-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.rxsugar.RxSugarTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_VERSION = 2.3;
-			};
-			name = Debug;
-		};
-		4DF4C7C01D34054E00C3D52D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = "RxSugarTests-watchOS-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = org.rxsugar.RxSugarTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_VERSION = 2.3;
-			};
-			name = Release;
-		};
 		5A9AE92C1C6A599000F8FD92 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1327,6 +1254,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4D381D001D341E50001F7085 /* Build configuration list for PBXNativeTarget "RxSugar-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D381D011D341E50001F7085 /* Debug */,
+				4D381D021D341E50001F7085 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		4D91C3391C625FE700926C99 /* Build configuration list for PBXProject "RxSugar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1350,24 +1285,6 @@
 			buildConfigurations = (
 				4D91C3571C625FE700926C99 /* Debug */,
 				4D91C3581C625FE700926C99 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4DF4C7911D34051600C3D52D /* Build configuration list for PBXNativeTarget "RxSugar-watchOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4DF4C7921D34051600C3D52D /* Debug */,
-				4DF4C7931D34051600C3D52D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4DF4C7BE1D34054E00C3D52D /* Build configuration list for PBXNativeTarget "RxSugarTests-watchOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4DF4C7BF1D34054E00C3D52D /* Debug */,
-				4DF4C7C01D34054E00C3D52D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
