@@ -1,13 +1,13 @@
 import UIKit
 import RxSwift
 
-public extension Sugar where HostType: UITextField, HostType: RXSObject {
+public extension Sugar where HostType: UITextField {
 	/**
 	RxSugar wrapper for text property.
 	*/
 	public var text: ValueBinding<String> {
 		return controlValueBinding(
-            valueChangeEventTypes: .EditingChanged,
+            valueChangeEventTypes: [.EditingChanged, .EditingDidEnd],
 			getter: { $0.text ?? "" },
 			setter: { $0.text = $1 })
 	}
@@ -17,7 +17,7 @@ public extension Sugar where HostType: UITextField, HostType: RXSObject {
 	*/
 	public var attributedText: ValueBinding<NSAttributedString> {
 		return controlValueBinding(
-            valueChangeEventTypes: .EditingChanged,
+            valueChangeEventTypes: [.EditingChanged, .EditingDidEnd],
 			getter: { $0.attributedText ?? NSAttributedString() },
 			setter: { $0.attributedText = $1 })
 	}

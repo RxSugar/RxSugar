@@ -1,7 +1,7 @@
 import UIKit
 import RxSwift
 
-public extension Sugar where HostType: UIImageView, HostType: RXSObject {
+public extension Sugar where HostType: UIImageView {
 
     /**
      Reactive setter for image property

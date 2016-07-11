@@ -1,7 +1,7 @@
 import UIKit
 import RxSwift
 
-extension Sugar where HostType: UIButton, HostType: RXSObject {
+extension Sugar where HostType: UIButton {
 	/**
 	Observable<Void> that sends event for every .TouchUpInside (iOS) or .PrimaryActionTriggered (tvOS) control event
 	*/

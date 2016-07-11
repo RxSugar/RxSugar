@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RxSugar"
-  s.version      = "0.0.6"
+  s.version      = "0.0.10"
   s.summary      = "Simple RxSwift extensions for interacting with Apple APIs"
   s.description  = <<-DESC
     RxSugar adds simple UI extensions for interacting with Apple APIs, and includes custom operators.
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "8.0"
   s.tvos.deployment_target = "9.0"
   
-  s.source       = { :git => "https://github.com/RxSugar/RxSugar.git", :tag => "v0.0.6" }
+  s.source       = { :git => "https://github.com/RxSugar/RxSugar.git", :tag => "v0.0.10" }
   s.ios.source_files  = "RxSugar/RxSugar.h", "RxSugar/**/*.{swift}"
   s.ios.exclude_files = "RxSugarTests"  
   s.tvos.source_files = "RxSugar/RxSugar.h", "RxSugar/**/*.{swift}"
@@ -24,5 +24,5 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   
-  s.dependency "RxSwift", "~> 2.1"
+  s.dependency "RxSwift", "~> 2.3"
 end
