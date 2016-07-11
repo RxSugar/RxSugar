@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4D381CED1D341E36001F7085"
-               BuildableName = "RxSugar-watchOS.framework"
+               BlueprintIdentifier = "4D381CFA1D341E50001F7085"
+               BuildableName = "RxSugar.framework"
                BlueprintName = "RxSugar-watchOS"
                ReferencedContainer = "container:RxSugar.xcodeproj">
             </BuildableReference>
@@ -45,8 +45,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4D381CED1D341E36001F7085"
-            BuildableName = "RxSugar-watchOS.framework"
+            BlueprintIdentifier = "4D381CFA1D341E50001F7085"
+            BuildableName = "RxSugar.framework"
             BlueprintName = "RxSugar-watchOS"
             ReferencedContainer = "container:RxSugar.xcodeproj">
          </BuildableReference>
@@ -63,8 +63,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4D381CED1D341E36001F7085"
-            BuildableName = "RxSugar-watchOS.framework"
+            BlueprintIdentifier = "4D381CFA1D341E50001F7085"
+            BuildableName = "RxSugar.framework"
             BlueprintName = "RxSugar-watchOS"
             ReferencedContainer = "container:RxSugar.xcodeproj">
          </BuildableReference>

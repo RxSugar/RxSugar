@@ -41,6 +41,7 @@
 		4D91C3AD1C6297A700926C99 /* ObserverBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AC1C6297A700926C99 /* ObserverBinding.swift */; };
 		4D91C3AF1C6297C200926C99 /* AppendDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AE1C6297C200926C99 /* AppendDisposable.swift */; };
 		4D91C3B11C629B3D00926C99 /* UIControl+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3B01C629B3D00926C99 /* UIControl+SugarTests.swift */; };
+		4DAF9E361D34269C00812095 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D91C3821C62711A00926C99 /* RxSwift.framework */; };
 		4DDB4A0F1C6F9F04004C3194 /* Variable+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB4A0E1C6F9F03004C3194 /* Variable+Sugar.swift */; };
 		4DDB4A101C6F9F04004C3194 /* Variable+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB4A0E1C6F9F03004C3194 /* Variable+Sugar.swift */; };
 		5A272E9C1C6E6FED00F3C285 /* UIImageView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A272E9B1C6E6FED00F3C285 /* UIImageView+Sugar.swift */; };
@@ -306,6 +307,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DAF9E361D34269C00812095 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1261,6 +1263,7 @@
 				4D381D021D341E50001F7085 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D91C3391C625FE700926C99 /* Build configuration list for PBXProject "RxSugar" */ = {
 			isa = XCConfigurationList;
