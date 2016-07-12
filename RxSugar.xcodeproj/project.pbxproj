@@ -42,6 +42,8 @@
 		4D91C3AF1C6297C200926C99 /* AppendDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AE1C6297C200926C99 /* AppendDisposable.swift */; };
 		4D91C3B11C629B3D00926C99 /* UIControl+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3B01C629B3D00926C99 /* UIControl+SugarTests.swift */; };
 		4DAF9E361D34269C00812095 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D91C3821C62711A00926C99 /* RxSwift.framework */; };
+		4DAF9E541D34847500812095 /* AppendDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AE1C6297C200926C99 /* AppendDisposable.swift */; };
+		4DAF9E551D34847500812095 /* ObserverBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AC1C6297A700926C99 /* ObserverBinding.swift */; };
 		4DDB4A0F1C6F9F04004C3194 /* Variable+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB4A0E1C6F9F03004C3194 /* Variable+Sugar.swift */; };
 		4DDB4A101C6F9F04004C3194 /* Variable+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB4A0E1C6F9F03004C3194 /* Variable+Sugar.swift */; };
 		5A272E9C1C6E6FED00F3C285 /* UIImageView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A272E9B1C6E6FED00F3C285 /* UIImageView+Sugar.swift */; };
@@ -866,6 +868,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D381D031D341EB5001F7085 /* Sugar.swift in Sources */,
+				4DAF9E541D34847500812095 /* AppendDisposable.swift in Sources */,
 				4D381D041D341EB5001F7085 /* RxsError.swift in Sources */,
 				4D381D071D341EB5001F7085 /* ValueBinding.swift in Sources */,
 				4D381D091D341EB5001F7085 /* OptionalType.swift in Sources */,
@@ -873,6 +876,7 @@
 				4D381D0C1D341EB5001F7085 /* CombinePrevious.swift in Sources */,
 				4D381D0E1D341EB5001F7085 /* ValueSetter.swift in Sources */,
 				4D381D0F1D341EB5001F7085 /* Variable+Sugar.swift in Sources */,
+				4DAF9E551D34847500812095 /* ObserverBinding.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
