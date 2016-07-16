@@ -13,6 +13,21 @@ public extension Sugar where HostType: UIView {
      */
     public var layoutIfNeeded: AnyObserver<Void> { return valueSetter { (host, _) in host.layoutIfNeeded() } }
 
+    /**
+     RxSugar observer for alpha.
+     */
+    public var alpha: AnyObserver<CGFloat> { return valueSetter { (host, alpha) in host.alpha = alpha } }
+    
+    /**
+     RxSugar observer for backgroundColor.
+     */
+    public var backgroundColor: AnyObserver<UIColor> { return valueSetter { (host, color) in host.backgroundColor = color } }
+    
+    /**
+     RxSugar observer for hidden.
+     */
+    public var hidden: AnyObserver<Bool> { return valueSetter { (host, hidden) in host.hidden = hidden } }
+    
     #if os(tvOS)
     /**
      RxSugar trigger for setNeedsFocusUpdate.
