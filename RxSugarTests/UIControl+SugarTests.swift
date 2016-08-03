@@ -31,7 +31,7 @@ private class Control<T>: UIControl, TestControl {
 class UIControl_TriggerTests: XCTestCase {
 	func testControlSendsEvents() {
 		let testObject = Control("")
-		let eventStream = testObject.rxs.controlEvents([UIControlEvents.AllEvents]) {
+		let eventStream = testObject.rxs.controlEvents([UIControlEvents.allEvents]) {
 			return $0.value
         }
 		
@@ -49,7 +49,7 @@ class UIControl_TriggerTests: XCTestCase {
     
     func testControlSendsOnlyEventsSubscribedTo() {
         let testObject = Control("")
-        let eventStream = testObject.rxs.controlEvents([.ValueChanged]) {
+        let eventStream = testObject.rxs.controlEvents([.valueChanged]) {
             return $0.value
         }
         
@@ -67,7 +67,7 @@ class UIControl_TriggerTests: XCTestCase {
     
     func testControlSendsCompleteOnDeinit() {
         var testObject:Control? = Control(false)
-        let eventStream = testObject!.rxs.controlEvents([.ValueChanged]) {
+        let eventStream = testObject!.rxs.controlEvents([.valueChanged]) {
             return $0.value
         }
         
