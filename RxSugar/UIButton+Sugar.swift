@@ -11,7 +11,7 @@ extension Sugar where HostType: UIButton {
 	
 	public func primaryControlEvent() -> UIControlEvents {
 		#if os(iOS)
-			return .TouchUpInside
+			return .touchUpInside
 		#elseif os(tvOS)
 			return .PrimaryActionTriggered
 		#endif

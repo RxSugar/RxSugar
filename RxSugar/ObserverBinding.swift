@@ -17,7 +17,7 @@ precedence 141
  - parameter observable: Observable that sends events.
  - returns: Disposable object that can be used to unsubscribe the observer.
  */
-@warn_unused_result(message="http://git.io/rxs.ud")
+
 public func <~<Destination: ObserverType, Source: ObservableConvertibleType where Source.E == Destination.E>(observer: Destination, observable: Source) -> Disposable {
 	return observable.asObservable().subscribe(observer)
 }
@@ -31,7 +31,7 @@ public func <~<Destination: ObserverType, Source: ObservableConvertibleType wher
  - parameter observable: Observable that sends events.
  - returns: Disposable object that can be used to unsubscribe the observer.
  */
-@warn_unused_result(message="http://git.io/rxs.ud")
+
 public func <~<Source: ObservableType>(observer: (Source.E)->Void, observable: Source) -> Disposable {
 	return observable.subscribeNext(observer)
 }

@@ -6,7 +6,7 @@ public protocol Animator {
     /// Called when observing events.
     ///
     /// - parameter animations: A closure called when performing the animation
-    func animate(animations: ()->())
+    func animate(_ animations: ()->())
 }
 
 
@@ -15,10 +15,10 @@ public struct DefaultAnimator: Animator {
     /// Default implementation of an animated observer
     ///
     /// - parameter animations: A closure called when performing the default animation
-    public func animate(animations: ()->()) {
-        UIView.animateWithDuration(0.25,
+    public func animate(_ animations: ()->()) {
+        UIView.animate(withDuration: 0.25,
                                    delay: 0,
-                                   options: UIViewAnimationOptions.BeginFromCurrentState,
+                                   options: UIViewAnimationOptions.beginFromCurrentState,
                                    animations: animations,
                                    completion: nil)
     }
@@ -30,7 +30,7 @@ public struct DefaultAnimator: Animator {
 /// - parameter animator: an optional custom Animator to perform the animations
 ///
 /// - returns: an animated observer
-public func animated<T>(observer: AnyObserver<T>, animator: Animator = DefaultAnimator()) -> AnyObserver<T> {
+public func animated<T>(_ observer: AnyObserver<T>, animator: Animator = DefaultAnimator()) -> AnyObserver<T> {
     let subject = PublishSubject<T>()
     
     _ = subject.subscribe(onError: observer.onError, onCompleted: observer.onCompleted)
@@ -47,7 +47,7 @@ public func animated<T>(observer: AnyObserver<T>, animator: Animator = DefaultAn
 /// - parameter closure:  a closure that is called when the animations are performed
 ///
 /// - returns: a closure that animates the closure argument
-public func animated<T>(animator: Animator = DefaultAnimator(), closure: (T)->()) -> (T) -> () {
+public func animated<T>(_ animator: Animator = DefaultAnimator(), closure: (T)->()) -> (T) -> () {
     return { value in
         animator.animate { closure(value) }
     }

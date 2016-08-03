@@ -10,17 +10,17 @@ public extension Sugar where HostType: UIControl {
 	- parameter valueGetter: closure used to determine value of the control.
 	- returns: Observable<T>.
 	*/
-    public func controlEvents<T>(controlEvents: UIControlEvents, valueGetter: (HostType)->T) -> Observable<T> {
+    public func controlEvents<T>(_ controlEvents: UIControlEvents, valueGetter: (HostType)->T) -> Observable<T> {
 		let observable = TargetActionObservable<T>(
 			valueGenerator: { [weak host] in
 				guard let this = host else { throw RxsError() }
 				return valueGetter(this)
 			},
 			subscribe: { (target, action) in
-				self.host.addTarget(target, action: action, forControlEvents: controlEvents)
+				self.host.addTarget(target, action: action, for: controlEvents)
 			},
 			unsubscribe:{ [weak host] (target, action) in
-				host?.removeTarget(target, action: action, forControlEvents: controlEvents)
+				host?.removeTarget(target, action: action, for: controlEvents)
 			},
 			complete: onDeinit)
 		return observable.asObservable()
@@ -33,7 +33,7 @@ public extension Sugar where HostType: UIControl {
 	- parameter controlEvents: UIControlEvents that will trigger event.
 	- returns: Observable<Void>.
 	*/
-    public func controlEvents(controlEvents: UIControlEvents) -> Observable<Void> {
+    public func controlEvents(_ controlEvents: UIControlEvents) -> Observable<Void> {
         return self.controlEvents(controlEvents, valueGetter: { _ in })
     }
 	
@@ -45,7 +45,7 @@ public extension Sugar where HostType: UIControl {
 	- parameter valueSetter: closure used to set value of the control when event is received.
 	- returns: ValueBinding<T>.
 	*/
-    public func controlValueBinding<T>(valueChangeEventTypes valueChangeEventTypes: UIControlEvents, getter: (HostType)->T, setter: (HostType, T)->()) -> ValueBinding<T> {
+    public func controlValueBinding<T>(valueChangeEventTypes: UIControlEvents, getter: (HostType)->T, setter: (HostType, T)->()) -> ValueBinding<T> {
         return ValueBinding(
             getter: controlEvents(valueChangeEventTypes, valueGetter: getter),
 			setter: valueSetter(setter))
@@ -55,13 +55,13 @@ public extension Sugar where HostType: UIControl {
 	Reactive setter for enabled property
 	*/
     public var enabled: AnyObserver<Bool> {
-		return valueSetter { $0.enabled = $1 }
+		return valueSetter { $0.isEnabled = $1 }
 	}
 	
 	/**
 	Reactive setter for selected property
 	*/
     public var selected: AnyObserver<Bool> {
-		return valueSetter { $0.selected = $1 }
+		return valueSetter { $0.isSelected = $1 }
 	}
 }

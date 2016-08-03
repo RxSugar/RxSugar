@@ -6,10 +6,10 @@ protocol TestControl {}
 
 extension TestControl where Self: UIControl {
 	// best approximation of UIControl behavior without running UI tests
-	func fireControlEvents(controlEvents: UIControlEvents) {
-		self.allTargets().forEach { target in
-			self.actionsForTarget(target, forControlEvent: controlEvents)?.forEach { action in
-				target.performSelector(NSSelectorFromString(action))
+	func fireControlEvents(_ controlEvents: UIControlEvents) {
+		self.allTargets.forEach { target in
+			self.actions(forTarget: target, forControlEvent: controlEvents)?.forEach { action in
+				target.perform(NSSelectorFromString(action))
 			}
 		}
 	}
@@ -21,6 +21,10 @@ private class Control<T>: UIControl, TestControl {
     init(_ initialValue: T) {
         value = initialValue
         super.init(frame: CGRect.zero)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
@@ -35,11 +39,11 @@ class UIControl_TriggerTests: XCTestCase {
 		_ = eventStream.subscribeNext { events.append($0) }
 		
 		testObject.value = "Major Tom"
-		testObject.fireControlEvents([.ValueChanged])
+		testObject.fireControlEvents([.valueChanged])
 		XCTAssertEqual(events, ["Major Tom"])
 		
 		testObject.value = "Ground Control"
-		testObject.fireControlEvents([.TouchDown])
+		testObject.fireControlEvents([.touchDown])
 		XCTAssertEqual(events, ["Major Tom", "Ground Control"])
     }
     
@@ -53,11 +57,11 @@ class UIControl_TriggerTests: XCTestCase {
         _ = eventStream.subscribeNext { events.append($0) }
         
         testObject.value = "Major Tom"
-        testObject.fireControlEvents([.TouchDragInside])
+        testObject.fireControlEvents([.touchDragInside])
         XCTAssertEqual(events, [])
         
         testObject.value = "Ground Control"
-        testObject.fireControlEvents([.ValueChanged])
+        testObject.fireControlEvents([.valueChanged])
         XCTAssertEqual(events, ["Ground Control"])
     }
     

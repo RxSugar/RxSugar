@@ -16,6 +16,6 @@ public extension ObservableType where E: OptionalType {
 */
 public extension ObservableType {
     public func toOptional() -> Observable<E?> {
-        return map { return .Some($0) }
+        return map { return .some($0) }
     }
 }

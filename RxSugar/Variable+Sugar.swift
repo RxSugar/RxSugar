@@ -1,8 +1,8 @@
 import RxSwift
 
 extension Variable: ObserverType, ObservableConvertibleType {
-	public func on(event: Event<E>) {
-		if case .Next(let element) = event {
+	public func on(_ event: Event<E>) {
+		if case .next(let element) = event {
 			value = element
 		}
 	}

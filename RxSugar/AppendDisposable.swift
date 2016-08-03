@@ -3,7 +3,7 @@ import RxSwift
 public protocol DisposableCollection {
 	associatedtype AddDisposableReturnType
 	
-	func addDisposable(disposable: Disposable) -> AddDisposableReturnType
+	func addDisposable(_ disposable: Disposable) -> AddDisposableReturnType
 }
 
 extension CompositeDisposable: DisposableCollection {

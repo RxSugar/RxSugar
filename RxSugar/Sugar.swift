@@ -29,7 +29,7 @@ public extension Sugar where HostType: RXSObject {
     public var onDeinit: Observable<Void> {
         let bag = disposeBag
         return Observable.create { [weak bag] observer in
-            bag?.addDisposable(AnonymousDisposable {
+            bag?.insert(AnonymousDisposable {
                 observer.onNext()
                 observer.onCompleted()
                 })
@@ -54,7 +54,7 @@ public extension Sugar where HostType: RXSObject {
         return bag
 	}
 	
-	public func valueSetter<T>(setter: (HostType, T)->()) -> AnyObserver<T> {
+	public func valueSetter<T>(_ setter: (HostType, T)->()) -> AnyObserver<T> {
 		return ValueSetter<HostType, T>(host: host, setter: setter).asObserver()
 	}
 }

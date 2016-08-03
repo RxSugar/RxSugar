@@ -10,39 +10,39 @@ struct TargetActionPair {
 
 class TestGestureRecognizer: UIGestureRecognizer {
     var targetActionPair: TargetActionPair?
-    var forceState: UIGestureRecognizerState = .Ended
+    var forceState: UIGestureRecognizerState = .ended
     override var state: UIGestureRecognizerState {
         get { return forceState }
         set { self.state = newValue }
     }
 
-    override func addTarget(target: AnyObject, action: Selector) {
+    override func addTarget(_ target: AnyObject, action: Selector) {
         targetActionPair = TargetActionPair(target: target, action: action)
     }
     
-    func fireGestureEvent(state: UIGestureRecognizerState) {
+    func fireGestureEvent(_ state: UIGestureRecognizerState) {
         guard let targetAction = self.targetActionPair else { return }
         forceState = state
-        targetAction.target.performSelector(targetAction.action, withObject: self)
+        targetAction.target.perform(targetAction.action, with: self)
     }
 }
 
 class TestTapGestureRecognizer: UITapGestureRecognizer {
     var targetActionPair: TargetActionPair?
-    var forceState: UIGestureRecognizerState = .Ended
+    var forceState: UIGestureRecognizerState = .ended
     override var state: UIGestureRecognizerState {
         get { return forceState }
         set { self.state = newValue }
     }
     
-    override func addTarget(target: AnyObject, action: Selector) {
+    override func addTarget(_ target: AnyObject, action: Selector) {
         targetActionPair = TargetActionPair(target: target, action: action)
     }
     
-    func fireGestureEvent(state: UIGestureRecognizerState) {
+    func fireGestureEvent(_ state: UIGestureRecognizerState) {
         guard let targetAction = self.targetActionPair else { return }
         forceState = state
-        targetAction.target.performSelector(targetAction.action, withObject: self)
+        targetAction.target.perform(targetAction.action, with: self)
     }
 }
 
@@ -54,16 +54,16 @@ class UIGestureRecognizer_SugarTests: XCTestCase {
         var events: [String] = []
         _ = eventStream.subscribeNext { _ in events.append("event") }
         
-        testObject.fireGestureEvent(.Possible)
+        testObject.fireGestureEvent(.possible)
         XCTAssertEqual(events, ["event"])
         
-        testObject.fireGestureEvent( .Began)
+        testObject.fireGestureEvent( .began)
         XCTAssertEqual(events, ["event", "event"])
         
-        testObject.fireGestureEvent(.Changed)
+        testObject.fireGestureEvent(.changed)
         XCTAssertEqual(events, ["event", "event", "event"])
         
-        testObject.fireGestureEvent(.Ended)
+        testObject.fireGestureEvent(.ended)
         XCTAssertEqual(events, ["event", "event", "event", "event"])
     }
     
@@ -74,16 +74,16 @@ class UIGestureRecognizer_SugarTests: XCTestCase {
         var events: [String] = []
         _ = eventStream.subscribeNext { _ in events.append("tap") }
         
-        testObject.fireGestureEvent(.Ended)
+        testObject.fireGestureEvent(.ended)
         XCTAssertEqual(events, ["tap"])
         
-        testObject.fireGestureEvent( .Possible)
+        testObject.fireGestureEvent( .possible)
         XCTAssertEqual(events, ["tap"])
         
-        testObject.fireGestureEvent(.Changed)
+        testObject.fireGestureEvent(.changed)
         XCTAssertEqual(events, ["tap"])
         
-        testObject.fireGestureEvent(.Ended)
+        testObject.fireGestureEvent(.ended)
         XCTAssertEqual(events, ["tap", "tap"])
     }
 }

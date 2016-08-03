@@ -10,8 +10,8 @@ public struct ValueSetter<HostType: AnyObject, T>: ObserverType {
 		self.setter = setter
 	}
 	
-	public func on(event: Event<T>) {
-		guard case .Next(let value) = event, let host = host else { return }
+	public func on(_ event: Event<T>) {
+		guard case .next(let value) = event, let host = host else { return }
 		setter(host, value)
 	}
 }

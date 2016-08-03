@@ -26,7 +26,7 @@ class IgnoreNilTests: XCTestCase {
         _ = output <~ input.asObservable().toOptional()
         
         input.value = 2
-        XCTAssertEqual(output.value, .Some(2))
+        XCTAssertEqual(output.value, .some(2))
         XCTAssertNotNil(output.value.optional)
     }
 }

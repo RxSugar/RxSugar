@@ -15,6 +15,6 @@ public extension Sugar where HostType: UITapGestureRecognizer {
      - returns: Observable<UITapGestureRecognizer>.
      */
     public var tapGesture: Observable<HostType> {
-        return events.filter { $0.state == .Ended }
+        return events.filter { $0.state == .ended }
     }
 }
