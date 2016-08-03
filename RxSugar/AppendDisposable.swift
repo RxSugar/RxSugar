@@ -31,6 +31,7 @@ precedence 140
  - parameter disposable: A disposable to be added to the collection.
  - returns: The disposable collection.
  */
+@discardableResult
 public func ++<T: DisposableCollection>(composite: T, disposable: Disposable) -> T {
 	composite.addDisposable(disposable)
 	return composite
