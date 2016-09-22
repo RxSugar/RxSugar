@@ -54,7 +54,7 @@ public extension Sugar where HostType: RXSObject {
         return bag
 	}
 	
-	public func valueSetter<T>(_ setter: (HostType, T)->()) -> AnyObserver<T> {
+	public func valueSetter<T>(_ setter: @escaping (HostType, T)->()) -> AnyObserver<T> {
 		return ValueSetter<HostType, T>(host: host, setter: setter).asObserver()
 	}
 }

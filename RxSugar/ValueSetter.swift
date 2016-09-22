@@ -5,7 +5,7 @@ public struct ValueSetter<HostType: AnyObject, T>: ObserverType {
 	private weak var host: HostType?
 	private let setter: (HostType, T)->()
 	
-	public init(host: HostType, setter: (HostType, T)->()) {
+	public init(host: HostType, setter: @escaping (HostType, T)->()) {
 		self.host = host
 		self.setter = setter
 	}

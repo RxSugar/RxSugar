@@ -32,6 +32,6 @@ public func <~<Destination: ObserverType, Source: ObservableConvertibleType wher
  - returns: Disposable object that can be used to unsubscribe the observer.
  */
 
-public func <~<Source: ObservableType>(observer: (Source.E)->Void, observable: Source) -> Disposable {
+public func <~<Source: ObservableType>(observer: @escaping (Source.E)->Void, observable: Source) -> Disposable {
 	return observable.subscribeNext(observer)
 }

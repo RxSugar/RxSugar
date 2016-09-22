@@ -6,7 +6,7 @@ public protocol Animator {
     /// Called when observing events.
     ///
     /// - parameter animations: A closure called when performing the animation
-    func animate(_ animations: ()->())
+    func animate(_ animations: @escaping ()->())
 }
 
 
@@ -15,7 +15,7 @@ public struct DefaultAnimator: Animator {
     /// Default implementation of an animated observer
     ///
     /// - parameter animations: A closure called when performing the default animation
-    public func animate(_ animations: ()->()) {
+    public func animate(_ animations: @escaping ()->()) {
         UIView.animate(withDuration: 0.25,
                                    delay: 0,
                                    options: UIViewAnimationOptions.beginFromCurrentState,
@@ -47,7 +47,7 @@ public func animated<T>(_ observer: AnyObserver<T>, animator: Animator = Default
 /// - parameter closure:  a closure that is called when the animations are performed
 ///
 /// - returns: a closure that animates the closure argument
-public func animated<T>(_ animator: Animator = DefaultAnimator(), closure: (T)->()) -> (T) -> () {
+public func animated<T>(_ animator: Animator = DefaultAnimator(), closure: @escaping (T)->()) -> (T) -> () {
     return { value in
         animator.animate { closure(value) }
     }
