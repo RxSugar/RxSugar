@@ -15,12 +15,12 @@ extension DisposeBag: DisposableCollection {
 }
 
 // Append Disposable
-infix operator ++ {
-associativity left
-
-// Binds same as addition
-precedence 140
+precedencegroup AppendDisposablePrecedence {
+    associativity: left
+    higherThan: RangeFormationPrecedence // same as Addition
 }
+
+infix operator ++: AppendDisposablePrecedence
 
 /**
  Appends a disposable to another disposable collection, aka a CompositeDisposable or DisposeBag.

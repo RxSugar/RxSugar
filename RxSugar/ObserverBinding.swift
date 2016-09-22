@@ -1,12 +1,13 @@
 import Foundation
 import RxSwift
 
-infix operator <~ {
-associativity right
-
-// Binds tighter than addition
-precedence 141
+precedencegroup ObserverBindingPrecedence {
+    associativity: left
+    higherThan: AppendDisposablePrecedence
 }
+
+
+infix operator <~ : ObserverBindingPrecedence
 
 /**
  Creates new subscription and sends elements to observer.
