@@ -10,7 +10,7 @@ public extension Sugar where HostType: UIControl {
 	- parameter valueGetter: closure used to determine value of the control.
 	- returns: Observable<T>.
 	*/
-    public func weoijwegfew<T>(_ controlEvents: UIControlEvents, valueGetter: @escaping (HostType)->T) -> Observable<T> {
+    public func controlEvents<T>(_ controlEvents: UIControlEvents, valueGetter: @escaping (HostType)->T) -> Observable<T> {
 		let observable = TargetActionObservable<T>(
 			valueGenerator: { [weak host] in
 				guard let this = host else { throw RxsError() }
@@ -34,7 +34,7 @@ public extension Sugar where HostType: UIControl {
 	- returns: Observable<Void>.
 	*/
     public func controlEvents(_ controlEvents: UIControlEvents) -> Observable<Void> {
-        return self.weoijwegfew(controlEvents, valueGetter: { _ in })
+        return self.controlEvents(controlEvents, valueGetter: { _ in })
     }
 	
 	/**
@@ -48,7 +48,7 @@ public extension Sugar where HostType: UIControl {
     public func controlValueBinding<T>(valueChangeEventTypes: UIControlEvents, getter: @escaping (HostType)->T, setter: @escaping (HostType, T)->()) -> ValueBinding<T> {
 
         return ValueBinding(
-            getter: weoijwegfew(valueChangeEventTypes, valueGetter: getter),
+            getter: controlEvents(valueChangeEventTypes, valueGetter: getter),
 			setter: valueSetter(setter))
 	}
 	
