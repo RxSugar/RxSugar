@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode7.3
+osx_image: xcode8
 
 script: 
   - set -o pipefail && xcodebuild -project "RxSugar.xcodeproj" -scheme "RxSugar-iOS" -destination "OS=9.3,name=iPad Air 2" build test | xcpretty --color --test
