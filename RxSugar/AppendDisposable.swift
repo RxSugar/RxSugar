@@ -3,7 +3,7 @@ import RxSwift
 public protocol DisposableCollection {
 	associatedtype AddDisposableReturnType
 	
-	func addDisposable(disposable: Disposable) -> AddDisposableReturnType
+	func addDisposable(_ disposable: Disposable) -> AddDisposableReturnType
 }
 
 extension CompositeDisposable: DisposableCollection {
@@ -15,12 +15,12 @@ extension DisposeBag: DisposableCollection {
 }
 
 // Append Disposable
-infix operator ++ {
-associativity left
-
-// Binds same as addition
-precedence 140
+precedencegroup AppendDisposablePrecedence {
+    associativity: left
+    higherThan: RangeFormationPrecedence // same as Addition
 }
+
+infix operator ++: AppendDisposablePrecedence
 
 /**
  Appends a disposable to another disposable collection, aka a CompositeDisposable or DisposeBag.
@@ -31,6 +31,7 @@ precedence 140
  - parameter disposable: A disposable to be added to the collection.
  - returns: The disposable collection.
  */
+@discardableResult
 public func ++<T: DisposableCollection>(composite: T, disposable: Disposable) -> T {
 	composite.addDisposable(disposable)
 	return composite

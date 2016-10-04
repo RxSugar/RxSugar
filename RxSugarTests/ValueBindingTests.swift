@@ -16,7 +16,7 @@ class ValueTestObject: RXSObject {
 	}
 	
 	func fireValueChangeEvent() {
-		events.performSelector(events.actionSelector)
+		events.perform(events.actionSelector)
 	}
 	
 	func simpleBinding() -> ValueBinding<Int> {

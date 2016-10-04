@@ -26,7 +26,7 @@ public extension Sugar where HostType: UIView {
     /**
      RxSugar observer for hidden.
      */
-    public var hidden: AnyObserver<Bool> { return valueSetter { (host, hidden) in host.hidden = hidden } }
+    public var hidden: AnyObserver<Bool> { return valueSetter { (host, hidden) in host.isHidden = hidden } }
     
     #if os(tvOS)
     /**

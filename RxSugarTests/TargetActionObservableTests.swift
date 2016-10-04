@@ -17,10 +17,10 @@ class TargetActionObservableTests: XCTestCase {
 		var events: [Int] = []
 		_ = testObject.subscribeNext { events.append($0) }
         
-		testObject.performSelector(testObject.actionSelector)
+		testObject.perform(testObject.actionSelector)
 		XCTAssertEqual(events, [42])
 		
-		testObject.performSelector(testObject.actionSelector)
+		testObject.perform(testObject.actionSelector)
 		XCTAssertEqual(events, [42, 42])
 	}
 	

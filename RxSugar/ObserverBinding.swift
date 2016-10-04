@@ -1,12 +1,13 @@
 import Foundation
 import RxSwift
 
-infix operator <~ {
-associativity right
-
-// Binds tighter than addition
-precedence 141
+precedencegroup ObserverBindingPrecedence {
+    associativity: left
+    higherThan: AppendDisposablePrecedence
 }
+
+
+infix operator <~ : ObserverBindingPrecedence
 
 /**
  Creates new subscription and sends elements to observer.
@@ -17,7 +18,7 @@ precedence 141
  - parameter observable: Observable that sends events.
  - returns: Disposable object that can be used to unsubscribe the observer.
  */
-@warn_unused_result(message="http://git.io/rxs.ud")
+
 public func <~<Destination: ObserverType, Source: ObservableConvertibleType where Source.E == Destination.E>(observer: Destination, observable: Source) -> Disposable {
 	return observable.asObservable().subscribe(observer)
 }
@@ -31,7 +32,7 @@ public func <~<Destination: ObserverType, Source: ObservableConvertibleType wher
  - parameter observable: Observable that sends events.
  - returns: Disposable object that can be used to unsubscribe the observer.
  */
-@warn_unused_result(message="http://git.io/rxs.ud")
-public func <~<Source: ObservableType>(observer: (Source.E)->Void, observable: Source) -> Disposable {
+
+public func <~<Source: ObservableType>(observer: @escaping (Source.E)->Void, observable: Source) -> Disposable {
 	return observable.subscribeNext(observer)
 }

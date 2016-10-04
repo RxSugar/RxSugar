@@ -6,8 +6,8 @@ public extension Sugar where HostType: UISwitch {
 	*/
     public var on: ValueBinding<Bool> {
         return controlValueBinding(
-            valueChangeEventTypes: .ValueChanged,
-            getter: { $0.on },
-            setter: { $0.on = $1 })
+            valueChangeEventTypes: .valueChanged,
+            getter: { $0.isOn },
+            setter: { $0.isOn = $1 })
     }
 }

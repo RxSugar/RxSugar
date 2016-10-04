@@ -23,9 +23,9 @@ class UILabel_SugarTests: XCTestCase {
 		
 		observer.onNext(attributedStringOne)
 		XCTAssertEqual(testObject.attributedText!.string, attributedStringOne.string)
-		XCTAssertEqual(testObject.attributedText!.attribute("TestAttribute", atIndex: 0, effectiveRange: nil) as? String, "Value")
+		XCTAssertEqual(testObject.attributedText!.attribute("TestAttribute", at: 0, effectiveRange: nil) as? String, "Value")
 		
-		let attributedStringTwo = NSAttributedString(string: "Ground Control", attributes: [NSForegroundColorAttributeName: UIColor.redColor()])
+		let attributedStringTwo = NSAttributedString(string: "Ground Control", attributes: [NSForegroundColorAttributeName: UIColor.red])
 		
 		observer.onNext(attributedStringTwo)
 		XCTAssertEqual(testObject.attributedText!.string, attributedStringTwo.string)

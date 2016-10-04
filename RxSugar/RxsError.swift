@@ -1,3 +1,3 @@
 import Foundation
 
-struct RxsError: ErrorType {}
+struct RxsError: Error {}

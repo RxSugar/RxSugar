@@ -14,7 +14,7 @@ class UIButton_SugarTests: XCTestCase {
         testObject.fireControlEvents([testObject.rxs.primaryControlEvent()])
         XCTAssertEqual(events, ["tap"])
         
-        testObject.fireControlEvents([.TouchDown])
+        testObject.fireControlEvents([.touchDown])
         XCTAssertEqual(events, ["tap"])
         
         testObject.fireControlEvents([testObject.rxs.primaryControlEvent()])
