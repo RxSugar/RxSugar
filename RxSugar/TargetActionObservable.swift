@@ -44,9 +44,9 @@ public final class TargetActionObservable<Element>: NSObject, ObservableType {
 		)
 	}
     
-    public func subscribe<O: ObserverType where O.E == Element>(_ observer: O) -> Disposable {
+    public func subscribe<O: ObserverType>(_ observer: O) -> Disposable where O.E == Element {
         let subjectDisposable = subject.takeUntil(complete).subscribe(observer)
-        let triggerDisposable = AnonymousDisposable { _ = self }
+        let triggerDisposable = Disposables.create(with: { _ = self })
         return CompositeDisposable() ++ subjectDisposable ++ triggerDisposable
     }
 	

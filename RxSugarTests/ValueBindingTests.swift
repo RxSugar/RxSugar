@@ -31,7 +31,7 @@ class ValueBindingTests: XCTestCase {
 		let testObject = ValueTestObject()
 		let publishSubject = PublishSubject<Int>()
 		
-		publishSubject.subscribe(testObject.simpleBinding())
+		_ = publishSubject.subscribe(testObject.simpleBinding())
 		
 		XCTAssertEqual(testObject.value, 2)
 		
@@ -44,9 +44,9 @@ class ValueBindingTests: XCTestCase {
 		let testObject = ValueTestObject()
 		
 		var events: [Int] = []
-		_ = testObject.simpleBinding().subscribeNext {
+        _ = testObject.simpleBinding().subscribe(onNext: {
 			events.append($0)
-		}
+		})
 		
 		XCTAssertEqual(events, [])
 		

@@ -33,6 +33,6 @@ infix operator ++: AppendDisposablePrecedence
  */
 @discardableResult
 public func ++<T: DisposableCollection>(composite: T, disposable: Disposable) -> T {
-	composite.addDisposable(disposable)
+	_ = composite.addDisposable(disposable)
 	return composite
 }

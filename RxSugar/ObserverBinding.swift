@@ -19,7 +19,7 @@ infix operator <~ : ObserverBindingPrecedence
  - returns: Disposable object that can be used to unsubscribe the observer.
  */
 
-public func <~<Destination: ObserverType, Source: ObservableConvertibleType where Source.E == Destination.E>(observer: Destination, observable: Source) -> Disposable {
+public func <~<Destination: ObserverType, Source: ObservableConvertibleType>(observer: Destination, observable: Source) -> Disposable where Source.E == Destination.E {
 	return observable.asObservable().subscribe(observer)
 }
 
@@ -34,5 +34,5 @@ public func <~<Destination: ObserverType, Source: ObservableConvertibleType wher
  */
 
 public func <~<Source: ObservableType>(observer: @escaping (Source.E)->Void, observable: Source) -> Disposable {
-	return observable.subscribeNext(observer)
+    return observable.subscribe(onNext:(observer))
 }

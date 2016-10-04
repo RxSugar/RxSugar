@@ -13,7 +13,7 @@ extension Sugar where HostType: UIButton {
 		#if os(iOS)
 			return .touchUpInside
 		#elseif os(tvOS)
-			return .PrimaryActionTriggered
+			return .primaryActionTriggered
 		#endif
 	}
 }

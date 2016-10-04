@@ -9,7 +9,7 @@ public final class ValueBinding<E>: ObserverType, ObservableType {
 	private let setter: AnyObserver<E>
 	private let observable: Observable<E>
 	
-	public init<Getter: ObservableType, Setter: ObserverType where Getter.E == E, Setter.E == E>(getter: Getter, setter: Setter) {
+	public init<Getter: ObservableType, Setter: ObserverType>(getter: Getter, setter: Setter) where Getter.E == E, Setter.E == E {
 		self.observable = getter.asObservable()
 		self.setter = setter.asObserver()
 	}
@@ -19,7 +19,7 @@ public final class ValueBinding<E>: ObserverType, ObservableType {
 		setter.onNext(value)
 	}
 	
-	public func subscribe<O: ObserverType where O.E == E>(_ observer: O) -> Disposable {
+	public func subscribe<O: ObserverType>(_ observer: O) -> Disposable where O.E == E {
 		return observable.subscribe(observer)
 	}
 }

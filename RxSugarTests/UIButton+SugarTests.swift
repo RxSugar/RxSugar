@@ -9,7 +9,7 @@ class UIButton_SugarTests: XCTestCase {
         let eventStream = testObject.rxs.tap
         
         var events: [String] = []
-        _ = eventStream.subscribeNext { events.append("tap") }
+        _ = eventStream.subscribe(onNext: { events.append("tap") })
         
         testObject.fireControlEvents([testObject.rxs.primaryControlEvent()])
         XCTAssertEqual(events, ["tap"])

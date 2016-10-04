@@ -15,7 +15,7 @@ class TargetActionObservableTests: XCTestCase {
         )
 		
 		var events: [Int] = []
-		_ = testObject.subscribeNext { events.append($0) }
+        _ = testObject.subscribe(onNext: { events.append($0) })
         
 		testObject.perform(testObject.actionSelector)
 		XCTAssertEqual(events, [42])
@@ -35,7 +35,7 @@ class TargetActionObservableTests: XCTestCase {
         )
 		
 		var complete = false
-		_ = testObject.subscribeCompleted { complete = true }
+        _ = testObject.subscribe(onCompleted: { complete = true })
 		
 		XCTAssertFalse(complete)
 		completeSubject.onNext()

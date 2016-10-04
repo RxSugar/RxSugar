@@ -34,9 +34,9 @@ public func animated<T>(_ observer: AnyObserver<T>, animator: Animator = Default
     let subject = PublishSubject<T>()
     
     _ = subject.subscribe(onError: observer.onError, onCompleted: observer.onCompleted)
-    _ = subject.subscribeNext { value in
+    _ = subject.subscribe(onNext: { value in
         animator.animate { observer.onNext(value) }
-    }
+    })
     
     return subject.asObserver()
 }

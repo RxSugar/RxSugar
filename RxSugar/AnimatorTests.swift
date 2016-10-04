@@ -4,7 +4,7 @@ import RxSwift
 import RxSugar
 
 struct TestAnimator: Animator {
-    func animate(_ animations: ()->()) {
+    func animate(_ animations: @escaping ()->()) {
         animations()
     }
 }

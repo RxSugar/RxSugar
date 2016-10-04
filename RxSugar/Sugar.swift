@@ -29,12 +29,12 @@ public extension Sugar where HostType: RXSObject {
     public var onDeinit: Observable<Void> {
         let bag = disposeBag
         return Observable.create { [weak bag] observer in
-            bag?.insert(AnonymousDisposable {
+            bag?.insert(Disposables.create(with: {
                 observer.onNext()
                 observer.onCompleted()
-                })
+                }))
             
-            return NopDisposable.instance
+            return Disposables.create()
         }
     }
 	

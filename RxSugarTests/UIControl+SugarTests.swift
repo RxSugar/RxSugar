@@ -9,7 +9,7 @@ extension TestControl where Self: UIControl {
 	func fireControlEvents(_ controlEvents: UIControlEvents) {
 		self.allTargets.forEach { target in
 			self.actions(forTarget: target, forControlEvent: controlEvents)?.forEach { action in
-				target.perform(NSSelectorFromString(action))
+                _ = (target as AnyObject).perform(NSSelectorFromString(action))
 			}
 		}
 	}
@@ -36,7 +36,7 @@ class UIControl_TriggerTests: XCTestCase {
         }
 		
 		var events: [String] = []
-		_ = eventStream.subscribeNext { events.append($0) }
+        _ = eventStream.subscribe(onNext: { events.append($0) })
 		
 		testObject.value = "Major Tom"
 		testObject.fireControlEvents([.valueChanged])
@@ -54,7 +54,7 @@ class UIControl_TriggerTests: XCTestCase {
         }
         
         var events: [String] = []
-        _ = eventStream.subscribeNext { events.append($0) }
+        _ = eventStream.subscribe(onNext: { events.append($0) })
         
         testObject.value = "Major Tom"
         testObject.fireControlEvents([.touchDragInside])
@@ -72,7 +72,7 @@ class UIControl_TriggerTests: XCTestCase {
         }
         
         var events: [Bool] = []
-        _ = eventStream.subscribeCompleted { events.append(true) }
+        _ = eventStream.subscribe(onCompleted: { events.append(true) })
         
         testObject = nil
         

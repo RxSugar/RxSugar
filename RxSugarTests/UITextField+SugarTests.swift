@@ -10,7 +10,7 @@ class UITextField_SugarTests: XCTestCase {
         let eventStream = testObject.rxs.text
 
         var events: [String] = []
-        _ = eventStream.subscribeNext { events.append($0) }
+        _ = eventStream.subscribe(onNext: { events.append($0) })
 
         testObject.text = "Major Tom"
         testObject.fireControlEvents([.editingChanged])
@@ -45,7 +45,7 @@ class UITextField_SugarTests: XCTestCase {
         let eventStream = testObject.rxs.attributedText
         
         var events: [String] = []
-        _ = eventStream.subscribeNext { events.append($0.string) }
+        _ = eventStream.subscribe(onNext: { events.append($0.string) })
         
         testObject.text = "Major Tom"
         testObject.fireControlEvents([.editingChanged])

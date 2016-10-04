@@ -16,14 +16,14 @@ class TestGestureRecognizer: UIGestureRecognizer {
         set { self.state = newValue }
     }
 
-    override func addTarget(_ target: AnyObject, action: Selector) {
-        targetActionPair = TargetActionPair(target: target, action: action)
+    override open func addTarget(_ target: Any, action: Selector) {
+        targetActionPair = TargetActionPair(target: target as AnyObject, action: action)
     }
     
     func fireGestureEvent(_ state: UIGestureRecognizerState) {
         guard let targetAction = self.targetActionPair else { return }
         forceState = state
-        targetAction.target.perform(targetAction.action, with: self)
+        _ = targetAction.target.perform(targetAction.action, with: self)
     }
 }
 
@@ -35,14 +35,14 @@ class TestTapGestureRecognizer: UITapGestureRecognizer {
         set { self.state = newValue }
     }
     
-    override func addTarget(_ target: AnyObject, action: Selector) {
-        targetActionPair = TargetActionPair(target: target, action: action)
+    override func addTarget(_ target: Any, action: Selector) {
+        targetActionPair = TargetActionPair(target: target as AnyObject, action: action)
     }
     
     func fireGestureEvent(_ state: UIGestureRecognizerState) {
         guard let targetAction = self.targetActionPair else { return }
         forceState = state
-        targetAction.target.perform(targetAction.action, with: self)
+        _ = targetAction.target.perform(targetAction.action, with: self)
     }
 }
 
@@ -52,7 +52,7 @@ class UIGestureRecognizer_SugarTests: XCTestCase {
         let eventStream = testObject.rxs.events
         
         var events: [String] = []
-        _ = eventStream.subscribeNext { _ in events.append("event") }
+        _ = eventStream.subscribe(onNext: { _ in events.append("event") })
         
         testObject.fireGestureEvent(.possible)
         XCTAssertEqual(events, ["event"])
@@ -72,7 +72,7 @@ class UIGestureRecognizer_SugarTests: XCTestCase {
         let eventStream = testObject.rxs.tap
         
         var events: [String] = []
-        _ = eventStream.subscribeNext { _ in events.append("tap") }
+        _ = eventStream.subscribe(onNext: { _ in events.append("tap") })
         
         testObject.fireGestureEvent(.ended)
         XCTAssertEqual(events, ["tap"])

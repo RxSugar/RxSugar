@@ -9,7 +9,7 @@ class UISwitch_SugarTests: XCTestCase {
         let eventStream = testObject.rxs.on
         
         var events: [Bool] = []
-        _ = eventStream.subscribeNext { events.append($0) }
+        _ = eventStream.subscribe(onNext: { events.append($0) })
         
         testObject.isOn = true
         testObject.fireControlEvents([.valueChanged])
