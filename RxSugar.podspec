@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "RxSugar"
-  s.version      = "0.0.10"
+  s.version      = "0.0.11"
   s.summary      = "Simple RxSwift extensions for interacting with Apple APIs"
   s.description  = <<-DESC
     RxSugar adds simple UI extensions for interacting with Apple APIs, and includes custom operators.
@@ -24,5 +24,5 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   
-  s.dependency "RxSwift", "~> 2.3"
+  s.dependency "RxSwift", "~> 3"
 end
