@@ -3,7 +3,7 @@ import RxSwift
 public protocol DisposableCollection {
 	associatedtype AddDisposableReturnType
 	
-	func addDisposable(_ disposable: Disposable) -> AddDisposableReturnType
+	func insert(_ disposable: Disposable) -> AddDisposableReturnType
 }
 
 extension CompositeDisposable: DisposableCollection {
@@ -33,6 +33,6 @@ infix operator ++: AppendDisposablePrecedence
  */
 @discardableResult
 public func ++<T: DisposableCollection>(composite: T, disposable: Disposable) -> T {
-	_ = composite.addDisposable(disposable)
+	_ = composite.insert(disposable)
 	return composite
 }

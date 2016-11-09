@@ -259,7 +259,7 @@
 
 /* Begin PBXFileReference section */
 		4D1733A71D39D858004A2EF6 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
-		4D1733AA1D39D8B7004A2EF6 /* AnimatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatorTests.swift; sourceTree = "<group>"; };
+		4D1733AA1D39D8B7004A2EF6 /* AnimatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimatorTests.swift; path = RxSugarTests/AnimatorTests.swift; sourceTree = SOURCE_ROOT; };
 		4D27989C1C76D7F4007C63B9 /* UIGestureRecognizer+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIGestureRecognizer+Sugar.swift"; path = "RxSugar/UIGestureRecognizer+Sugar.swift"; sourceTree = "<group>"; };
 		4D2798B31C76DC45007C63B9 /* UIGestureRecognizer+SugarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIGestureRecognizer+SugarTests.swift"; path = "RxSugarTests/UIGestureRecognizer+SugarTests.swift"; sourceTree = "<group>"; };
 		4D2798B51C77A9A2007C63B9 /* UITapGestureRecognizer+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITapGestureRecognizer+Sugar.swift"; path = "RxSugar/UITapGestureRecognizer+Sugar.swift"; sourceTree = "<group>"; };
@@ -291,7 +291,7 @@
 		5A9AE87E1C65458100F8FD92 /* IgnoreNil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IgnoreNil.swift; sourceTree = "<group>"; };
 		5A9AE8801C65459000F8FD92 /* CombinePrevious.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinePrevious.swift; sourceTree = "<group>"; };
 		5A9AE8821C6545C900F8FD92 /* OptionalType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalType.swift; sourceTree = "<group>"; };
-		5A9AE8841C6545FC00F8FD92 /* CombinePreviousTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CombinePreviousTests.swift; sourceTree = "<group>"; };
+		5A9AE8841C6545FC00F8FD92 /* CombinePreviousTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CombinePreviousTests.swift; path = RxSugarTests/CombinePreviousTests.swift; sourceTree = SOURCE_ROOT; };
 		5A9AE8871C6548AA00F8FD92 /* IgnoreNilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IgnoreNilTests.swift; path = RxSugarTests/IgnoreNilTests.swift; sourceTree = SOURCE_ROOT; };
 		5A9AE91B1C6A599000F8FD92 /* RxSugar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSugar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9AE9241C6A599000F8FD92 /* RxSugarTests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RxSugarTests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -407,15 +407,20 @@
 			isa = PBXGroup;
 			children = (
 				4D1733A71D39D858004A2EF6 /* Animator.swift */,
+				4D1733AA1D39D8B7004A2EF6 /* AnimatorTests.swift */,
 				5A9AE8801C65459000F8FD92 /* CombinePrevious.swift */,
+				5A9AE8841C6545FC00F8FD92 /* CombinePreviousTests.swift */,
 				5A9AE87E1C65458100F8FD92 /* IgnoreNil.swift */,
+				5A9AE8871C6548AA00F8FD92 /* IgnoreNilTests.swift */,
 				4D91C3441C625FE700926C99 /* Info.plist */,
 				5A9AE8821C6545C900F8FD92 /* OptionalType.swift */,
 				4D809DBC1C62BF51003D1D63 /* RxsError.swift */,
 				4D91C3421C625FE700926C99 /* RxSugar.h */,
 				5AC009841C640B3F005CAAC5 /* Sugar.swift */,
 				4D91C3591C6267D100926C99 /* TargetActionObservable.swift */,
+				4D91C35E1C626B7B00926C99 /* TargetActionObservableTests.swift */,
 				4D809DA41C62B344003D1D63 /* ValueBinding.swift */,
+				4D809DBA1C62B399003D1D63 /* ValueBindingTests.swift */,
 				4D37F9F61C6D01350094DA7D /* ValueSetter.swift */,
 				4DDB4A0E1C6F9F03004C3194 /* Variable+Sugar.swift */,
 			);
@@ -425,11 +430,6 @@
 		4D91C34D1C625FE700926C99 /* RxSugarTests */ = {
 			isa = PBXGroup;
 			children = (
-				5A9AE8841C6545FC00F8FD92 /* CombinePreviousTests.swift */,
-				5A9AE8871C6548AA00F8FD92 /* IgnoreNilTests.swift */,
-				4D91C35E1C626B7B00926C99 /* TargetActionObservableTests.swift */,
-				4D809DBA1C62B399003D1D63 /* ValueBindingTests.swift */,
-				4D1733AA1D39D8B7004A2EF6 /* AnimatorTests.swift */,
 				4D91C3501C625FE700926C99 /* Info.plist */,
 			);
 			path = RxSugarTests;
