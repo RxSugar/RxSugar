@@ -36,3 +36,26 @@ public func <~<Destination: ObserverType, Source: ObservableConvertibleType>(obs
 public func <~<Source: ObservableType>(observer: @escaping (Source.E)->Void, observable: Source) -> Disposable {
     return observable.subscribe(onNext:(observer))
 }
+
+/**
+ Creates a "weak" observer from a class instance method.
+ 
+ This is intended to help avoid retain cycles.
+ 
+ - parameter t: Object instance that method should be called on.
+ - parameter curriedObserver: Curried closure that takes a T and returns an observer.
+ - returns: Observer with a weak reference to the object instance.
+ 
+ To prevent retain cycles, avoid doing this:
+      disposeBag ++ self.someFunction <~ someObservable
+ and instead do this:
+      disposeBag ++ self <~ MyClass.someFunction <~ someObservable
+ */
+public func <~<T: AnyObject, E>(_ t: T, curriedObserver: @escaping (T)->(E)->Void) -> (E)->Void {
+    return {
+        [weak t] e in
+        if let t = t {
+            curriedObserver(t)(e)
+        }
+    }
+}

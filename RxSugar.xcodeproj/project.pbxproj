@@ -50,6 +50,8 @@
 		4DAF9E551D34847500812095 /* ObserverBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AC1C6297A700926C99 /* ObserverBinding.swift */; };
 		4DDB4A0F1C6F9F04004C3194 /* Variable+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB4A0E1C6F9F03004C3194 /* Variable+Sugar.swift */; };
 		4DDB4A101C6F9F04004C3194 /* Variable+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB4A0E1C6F9F03004C3194 /* Variable+Sugar.swift */; };
+		5A0C059C1E14460F006D00EC /* RetainCycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0C059B1E14460F006D00EC /* RetainCycleTests.swift */; };
+		5A0C059D1E14460F006D00EC /* RetainCycleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0C059B1E14460F006D00EC /* RetainCycleTests.swift */; };
 		5A272E9C1C6E6FED00F3C285 /* UIImageView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A272E9B1C6E6FED00F3C285 /* UIImageView+Sugar.swift */; };
 		5A272E9D1C6E6FED00F3C285 /* UIImageView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A272E9B1C6E6FED00F3C285 /* UIImageView+Sugar.swift */; };
 		5A9AE8671C6514DD00F8FD92 /* ObserverBindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AE8661C6514DD00F8FD92 /* ObserverBindingTests.swift */; };
@@ -286,6 +288,7 @@
 		4D91C3AE1C6297C200926C99 /* AppendDisposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppendDisposable.swift; path = RxSugar/AppendDisposable.swift; sourceTree = "<group>"; };
 		4D91C3B01C629B3D00926C99 /* UIControl+SugarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIControl+SugarTests.swift"; path = "RxSugarTests/UIControl+SugarTests.swift"; sourceTree = "<group>"; };
 		4DDB4A0E1C6F9F03004C3194 /* Variable+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Variable+Sugar.swift"; sourceTree = "<group>"; };
+		5A0C059B1E14460F006D00EC /* RetainCycleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RetainCycleTests.swift; sourceTree = "<group>"; };
 		5A272E9B1C6E6FED00F3C285 /* UIImageView+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Sugar.swift"; path = "RxSugar/UIImageView+Sugar.swift"; sourceTree = "<group>"; };
 		5A9AE8661C6514DD00F8FD92 /* ObserverBindingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObserverBindingTests.swift; path = RxSugarTests/ObserverBindingTests.swift; sourceTree = "<group>"; };
 		5A9AE87E1C65458100F8FD92 /* IgnoreNil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IgnoreNil.swift; sourceTree = "<group>"; };
@@ -431,6 +434,7 @@
 			isa = PBXGroup;
 			children = (
 				4D91C3501C625FE700926C99 /* Info.plist */,
+				5A0C059B1E14460F006D00EC /* RetainCycleTests.swift */,
 			);
 			path = RxSugarTests;
 			sourceTree = "<group>";
@@ -779,28 +783,28 @@
 		4D91C3941C62711A00926C99 /* RxTests.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = RxTests.framework;
+			path = RxTest.framework;
 			remoteRef = 4D91C3931C62711A00926C99 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		4D91C3961C62711A00926C99 /* RxTests.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = RxTests.framework;
+			path = RxTest.framework;
 			remoteRef = 4D91C3951C62711A00926C99 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		4D91C3981C62711A00926C99 /* RxTests.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = RxTests.framework;
+			path = RxTest.framework;
 			remoteRef = 4D91C3971C62711A00926C99 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		4D91C39A1C62711A00926C99 /* RxTests.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = RxTests.framework;
+			path = RxTest.framework;
 			remoteRef = 4D91C3991C62711A00926C99 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -821,7 +825,7 @@
 		4D91C3A01C62711A00926C99 /* AllTests-OSX.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "AllTests-OSX.xctest";
+			path = "AllTests-macOS.xctest";
 			remoteRef = 4D91C39F1C62711A00926C99 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -929,6 +933,7 @@
 				5AC009CB1C64EBCB005CAAC5 /* UITextView+SugarTests.swift in Sources */,
 				4D91C3B11C629B3D00926C99 /* UIControl+SugarTests.swift in Sources */,
 				5A9AE8671C6514DD00F8FD92 /* ObserverBindingTests.swift in Sources */,
+				5A0C059C1E14460F006D00EC /* RetainCycleTests.swift in Sources */,
 				5A9AE8861C65476600F8FD92 /* CombinePreviousTests.swift in Sources */,
 				5AC009CD1C64F0DB005CAAC5 /* UITextField+SugarTests.swift in Sources */,
 				4D809DBB1C62B399003D1D63 /* ValueBindingTests.swift in Sources */,
@@ -980,6 +985,7 @@
 				5A9AE9591C6A5A7200F8FD92 /* UIControl+SugarTests.swift in Sources */,
 				4D2798B81C77C7C1007C63B9 /* UIGestureRecognizer+SugarTests.swift in Sources */,
 				5A9AE95B1C6A5A7200F8FD92 /* UITextField+SugarTests.swift in Sources */,
+				5A0C059D1E14460F006D00EC /* RetainCycleTests.swift in Sources */,
 				5A9AE95C1C6A5A7200F8FD92 /* UITextView+SugarTests.swift in Sources */,
 				5A9AE95D1C6A5A7200F8FD92 /* TargetActionObservableTests.swift in Sources */,
 				5A9AE95E1C6A5A7200F8FD92 /* ValueBindingTests.swift in Sources */,
