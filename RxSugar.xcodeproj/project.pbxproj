@@ -45,6 +45,8 @@
 		4D91C3AD1C6297A700926C99 /* ObserverBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AC1C6297A700926C99 /* ObserverBinding.swift */; };
 		4D91C3AF1C6297C200926C99 /* AppendDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AE1C6297C200926C99 /* AppendDisposable.swift */; };
 		4D91C3B11C629B3D00926C99 /* UIControl+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3B01C629B3D00926C99 /* UIControl+SugarTests.swift */; };
+		4D92D9B41E1EA0F300F4DE33 /* UIDatePicker+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92D9B31E1EA0F300F4DE33 /* UIDatePicker+Sugar.swift */; };
+		4D92D9B61E1EA1D600F4DE33 /* UIDatePicker+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D92D9B51E1EA1D600F4DE33 /* UIDatePicker+SugarTests.swift */; };
 		4DAF9E361D34269C00812095 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D91C3821C62711A00926C99 /* RxSwift.framework */; };
 		4DAF9E541D34847500812095 /* AppendDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AE1C6297C200926C99 /* AppendDisposable.swift */; };
 		4DAF9E551D34847500812095 /* ObserverBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AC1C6297A700926C99 /* ObserverBinding.swift */; };
@@ -285,6 +287,8 @@
 		4D91C3AC1C6297A700926C99 /* ObserverBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObserverBinding.swift; path = RxSugar/ObserverBinding.swift; sourceTree = "<group>"; };
 		4D91C3AE1C6297C200926C99 /* AppendDisposable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppendDisposable.swift; path = RxSugar/AppendDisposable.swift; sourceTree = "<group>"; };
 		4D91C3B01C629B3D00926C99 /* UIControl+SugarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIControl+SugarTests.swift"; path = "RxSugarTests/UIControl+SugarTests.swift"; sourceTree = "<group>"; };
+		4D92D9B31E1EA0F300F4DE33 /* UIDatePicker+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIDatePicker+Sugar.swift"; path = "RxSugar/UIDatePicker+Sugar.swift"; sourceTree = "<group>"; };
+		4D92D9B51E1EA1D600F4DE33 /* UIDatePicker+SugarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIDatePicker+SugarTests.swift"; path = "RxSugarTests/UIDatePicker+SugarTests.swift"; sourceTree = "<group>"; };
 		4DDB4A0E1C6F9F03004C3194 /* Variable+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Variable+Sugar.swift"; sourceTree = "<group>"; };
 		5A272E9B1C6E6FED00F3C285 /* UIImageView+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+Sugar.swift"; path = "RxSugar/UIImageView+Sugar.swift"; sourceTree = "<group>"; };
 		5A9AE8661C6514DD00F8FD92 /* ObserverBindingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ObserverBindingTests.swift; path = RxSugarTests/ObserverBindingTests.swift; sourceTree = "<group>"; };
@@ -466,13 +470,13 @@
 				4D91C38E1C62711A00926C99 /* RxBlocking.framework */,
 				4D91C3901C62711A00926C99 /* RxBlocking.framework */,
 				4D91C3921C62711A00926C99 /* RxBlocking.framework */,
-				4D91C3941C62711A00926C99 /* RxTests.framework */,
-				4D91C3961C62711A00926C99 /* RxTests.framework */,
-				4D91C3981C62711A00926C99 /* RxTests.framework */,
-				4D91C39A1C62711A00926C99 /* RxTests.framework */,
+				4D91C3941C62711A00926C99 /* RxTest.framework */,
+				4D91C3961C62711A00926C99 /* RxTest.framework */,
+				4D91C3981C62711A00926C99 /* RxTest.framework */,
+				4D91C39A1C62711A00926C99 /* RxTest.framework */,
 				4D91C39C1C62711A00926C99 /* AllTests-iOS.xctest */,
 				4D91C39E1C62711A00926C99 /* AllTests-tvOS.xctest */,
-				4D91C3A01C62711A00926C99 /* AllTests-OSX.xctest */,
+				4D91C3A01C62711A00926C99 /* AllTests-macOS.xctest */,
 				4D91C3A21C62711A00926C99 /* PerformanceTests.app */,
 			);
 			name = Products;
@@ -486,6 +490,8 @@
 				5AC009CE1C64F238005CAAC5 /* UIButton+SugarTests.swift */,
 				5ADFED091C63B44C0081A5E0 /* UIControl+Sugar.swift */,
 				4D91C3B01C629B3D00926C99 /* UIControl+SugarTests.swift */,
+				4D92D9B31E1EA0F300F4DE33 /* UIDatePicker+Sugar.swift */,
+				4D92D9B51E1EA1D600F4DE33 /* UIDatePicker+SugarTests.swift */,
 				4D27989C1C76D7F4007C63B9 /* UIGestureRecognizer+Sugar.swift */,
 				4D2798B31C76DC45007C63B9 /* UIGestureRecognizer+SugarTests.swift */,
 				5A272E9B1C6E6FED00F3C285 /* UIImageView+Sugar.swift */,
@@ -776,31 +782,31 @@
 			remoteRef = 4D91C3911C62711A00926C99 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		4D91C3941C62711A00926C99 /* RxTests.framework */ = {
+		4D91C3941C62711A00926C99 /* RxTest.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = RxTests.framework;
+			path = RxTest.framework;
 			remoteRef = 4D91C3931C62711A00926C99 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		4D91C3961C62711A00926C99 /* RxTests.framework */ = {
+		4D91C3961C62711A00926C99 /* RxTest.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = RxTests.framework;
+			path = RxTest.framework;
 			remoteRef = 4D91C3951C62711A00926C99 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		4D91C3981C62711A00926C99 /* RxTests.framework */ = {
+		4D91C3981C62711A00926C99 /* RxTest.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = RxTests.framework;
+			path = RxTest.framework;
 			remoteRef = 4D91C3971C62711A00926C99 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		4D91C39A1C62711A00926C99 /* RxTests.framework */ = {
+		4D91C39A1C62711A00926C99 /* RxTest.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
-			path = RxTests.framework;
+			path = RxTest.framework;
 			remoteRef = 4D91C3991C62711A00926C99 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -818,10 +824,10 @@
 			remoteRef = 4D91C39D1C62711A00926C99 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		4D91C3A01C62711A00926C99 /* AllTests-OSX.xctest */ = {
+		4D91C3A01C62711A00926C99 /* AllTests-macOS.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
-			path = "AllTests-OSX.xctest";
+			path = "AllTests-macOS.xctest";
 			remoteRef = 4D91C39F1C62711A00926C99 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -904,6 +910,7 @@
 				4D91C3AD1C6297A700926C99 /* ObserverBinding.swift in Sources */,
 				5ABE29061CBC503300B98E7E /* UIActivityIndicator+Sugar.swift in Sources */,
 				4D91C35A1C6267D100926C99 /* TargetActionObservable.swift in Sources */,
+				4D92D9B41E1EA0F300F4DE33 /* UIDatePicker+Sugar.swift in Sources */,
 				4D2798B61C77A9A2007C63B9 /* UITapGestureRecognizer+Sugar.swift in Sources */,
 				5ADFED0B1C63B44C0081A5E0 /* UIButton+Sugar.swift in Sources */,
 				5ADFED231C63BE4B0081A5E0 /* UISwitch+Sugar.swift in Sources */,
@@ -936,6 +943,7 @@
 				5AE89E4A1C64F94D007034C1 /* UISwitch+SugarTests.swift in Sources */,
 				4D1733AB1D39D8B7004A2EF6 /* AnimatorTests.swift in Sources */,
 				4D37F9F41C6A825E0094DA7D /* UILabel+SugarTests.swift in Sources */,
+				4D92D9B61E1EA1D600F4DE33 /* UIDatePicker+SugarTests.swift in Sources */,
 				4D91C35F1C626B7B00926C99 /* TargetActionObservableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
