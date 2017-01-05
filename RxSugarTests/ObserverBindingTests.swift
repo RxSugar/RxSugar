@@ -49,24 +49,40 @@ class ObserverBindingTests: XCTestCase {
         
         eventStream.onNext("Ground Control")
         XCTAssertEqual(try! testObject.value(), "Major Tom")
-    }
-    
-    func testObservableBindsToObserver() {
-        let testObject = BehaviorSubject<String>(value: "")
-        let eventStream = BehaviorSubject<String>(value: "").asObserver()
-        let disposable = CompositeDisposable()
-        
-        disposable ++ testObject <~ eventStream
-        
-        eventStream.onNext("Major Tom")
-        XCTAssertEqual(try! testObject.value(), "Major Tom")
-        
-        disposable.dispose()
-        
-        eventStream.onNext("Ground Control")
-        XCTAssertEqual(try! testObject.value(), "Major Tom")
-    }
-    
+	}
+	
+	func testObservableBindsToObserver() {
+		let testObject = BehaviorSubject<String>(value: "")
+		let eventStream = BehaviorSubject<String>(value: "").asObserver()
+		let disposable = CompositeDisposable()
+		
+		disposable ++ testObject <~ eventStream
+		
+		eventStream.onNext("Major Tom")
+		XCTAssertEqual(try! testObject.value(), "Major Tom")
+		
+		disposable.dispose()
+		
+		eventStream.onNext("Ground Control")
+		XCTAssertEqual(try! testObject.value(), "Major Tom")
+	}
+	
+	func testObservableBindsToOptionalObserver() {
+		let testObject = BehaviorSubject<String?>(value: "")
+		let eventStream = BehaviorSubject<String>(value: "").asObserver()
+		let disposable = CompositeDisposable()
+		
+		disposable ++ testObject <~ eventStream
+		
+		eventStream.onNext("Major Tom")
+		XCTAssertEqual(try! testObject.value(), "Major Tom")
+		
+		disposable.dispose()
+		
+		eventStream.onNext("Ground Control")
+		XCTAssertEqual(try! testObject.value(), "Major Tom")
+	}
+	
     func testIgnoreNilSkipsNilEvents() {
         let input = Variable<Int?>(1)
         let output = Variable<Int>(0)

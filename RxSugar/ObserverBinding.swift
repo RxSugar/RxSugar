@@ -25,6 +25,19 @@ public func <~<Destination: ObserverType, Source: ObservableConvertibleType>(obs
 
 /**
  Creates new subscription and sends elements to observer.
+
+ In this form it's equivalent to `subscribe` method and visually communicates direction of the flow of information
+ 
+ - parameter observer: Observer that receives events.
+ - parameter observable: Observable that sends events.
+ - returns: Disposable object that can be used to unsubscribe the observer.
+*/
+public func <~<Destination: ObserverType, Source: ObservableConvertibleType>(observer: Destination, observable: Source) -> RxSwift.Disposable where Optional<Source.E> == Destination.E {
+	return observable.asObservable().toOptional().subscribe(observer)
+}
+
+/**
+ Creates new subscription and sends elements to observer.
  
  In this form it's equivalent to `subscribeNext` method and visually communicates direction of the flow of information
  
