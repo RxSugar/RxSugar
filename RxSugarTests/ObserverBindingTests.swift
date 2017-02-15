@@ -119,7 +119,7 @@ class ObserverBindingTests: XCTestCase {
         
         let disposable = CompositeDisposable()
             ++ destination1 <~ source1
-            ++ destination2 <~ source2
+            ++ source2 ~> destination2
         
         source1.value = 4
         source2.value = 5
@@ -142,7 +142,7 @@ class ObserverBindingTests: XCTestCase {
         
         var bag:DisposeBag = DisposeBag()
             ++ destination1 <~ source1
-            ++ destination2 <~ source2
+            ++ source2 ~> destination2
         
         source1.value = 4
         source2.value = 5

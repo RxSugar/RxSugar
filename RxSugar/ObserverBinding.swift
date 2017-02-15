@@ -6,8 +6,8 @@ precedencegroup ObserverBindingPrecedence {
     higherThan: AppendDisposablePrecedence
 }
 
-
 infix operator <~ : ObserverBindingPrecedence
+//infix operator ~> : ObserverBindingPrecedence
 
 /**
  Creates new subscription and sends elements to observer.
@@ -17,10 +17,13 @@ infix operator <~ : ObserverBindingPrecedence
  - parameter observer: Observer that receives events.
  - parameter observable: Observable that sends events.
  - returns: Disposable object that can be used to unsubscribe the observer.
- */
-
+*/
 public func <~<Destination: ObserverType, Source: ObservableConvertibleType>(observer: Destination, observable: Source) -> Disposable where Source.E == Destination.E {
 	return observable.asObservable().subscribe(observer)
+}
+
+public func ~><Destination: ObserverType, Source: ObservableConvertibleType>(observable: Source, observer: Destination) -> Disposable where Source.E == Destination.E {
+	return observer <~ observable
 }
 
 /**
@@ -36,6 +39,10 @@ public func <~<Destination: ObserverType, Source: ObservableConvertibleType>(obs
 	return observable.asObservable().toOptional().subscribe(observer)
 }
 
+public func ~><Destination: ObserverType, Source: ObservableConvertibleType>(observable: Source, observer: Destination) -> Disposable where Optional<Source.E> == Destination.E {
+	return observer <~ observable
+}
+
 /**
  Creates new subscription and sends elements to observer.
  
@@ -46,6 +53,10 @@ public func <~<Destination: ObserverType, Source: ObservableConvertibleType>(obs
  - returns: Disposable object that can be used to unsubscribe the observer.
  */
 
-public func <~<Source: ObservableType>(observer: @escaping (Source.E)->Void, observable: Source) -> Disposable {
-    return observable.subscribe(onNext:(observer))
+public func <~<Source: ObservableConvertibleType>(observer: @escaping (Source.E)->Void, observable: Source) -> Disposable {
+    return observable.asObservable().subscribe(onNext:(observer))
+}
+
+public func ~><Source: ObservableConvertibleType>(observable: Source, observer: @escaping (Source.E)->Void) -> Disposable {
+	return observer <~ observable
 }

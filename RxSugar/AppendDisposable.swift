@@ -18,6 +18,7 @@ extension DisposeBag: DisposableCollection {
 precedencegroup AppendDisposablePrecedence {
     associativity: left
     higherThan: RangeFormationPrecedence // same as Addition
+	lowerThan: DefaultPrecedence//BitwiseShiftPrecedence
 }
 
 infix operator ++: AppendDisposablePrecedence
