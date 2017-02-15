@@ -7,6 +7,8 @@ precedencegroup ObserverBindingPrecedence {
 }
 
 infix operator <~ : ObserverBindingPrecedence
+
+// ~> is already defined in Swift
 //infix operator ~> : ObserverBindingPrecedence
 
 /**
