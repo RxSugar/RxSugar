@@ -11,6 +11,10 @@
 		4D1733A91D39D858004A2EF6 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1733A71D39D858004A2EF6 /* Animator.swift */; };
 		4D1733AB1D39D8B7004A2EF6 /* AnimatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1733AA1D39D8B7004A2EF6 /* AnimatorTests.swift */; };
 		4D1733AC1D39D8B7004A2EF6 /* AnimatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1733AA1D39D8B7004A2EF6 /* AnimatorTests.swift */; };
+		4D1AB1D91E53ECE10031D2F2 /* UIApplication+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1AB1D81E53ECE10031D2F2 /* UIApplication+Sugar.swift */; };
+		4D1AB1DA1E53ECE10031D2F2 /* UIApplication+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1AB1D81E53ECE10031D2F2 /* UIApplication+Sugar.swift */; };
+		4D1AB1F01E53EEAD0031D2F2 /* UIApplication+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1AB1EF1E53EEAD0031D2F2 /* UIApplication+SugarTests.swift */; };
+		4D1AB1F11E53EEAD0031D2F2 /* UIApplication+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1AB1EF1E53EEAD0031D2F2 /* UIApplication+SugarTests.swift */; };
 		4D27989D1C76D7F4007C63B9 /* UIGestureRecognizer+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D27989C1C76D7F4007C63B9 /* UIGestureRecognizer+Sugar.swift */; };
 		4D2798B41C76DC45007C63B9 /* UIGestureRecognizer+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2798B31C76DC45007C63B9 /* UIGestureRecognizer+SugarTests.swift */; };
 		4D2798B61C77A9A2007C63B9 /* UITapGestureRecognizer+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2798B51C77A9A2007C63B9 /* UITapGestureRecognizer+Sugar.swift */; };
@@ -262,6 +266,8 @@
 /* Begin PBXFileReference section */
 		4D1733A71D39D858004A2EF6 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		4D1733AA1D39D8B7004A2EF6 /* AnimatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimatorTests.swift; path = RxSugarTests/AnimatorTests.swift; sourceTree = SOURCE_ROOT; };
+		4D1AB1D81E53ECE10031D2F2 /* UIApplication+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIApplication+Sugar.swift"; path = "RxSugar/UIApplication+Sugar.swift"; sourceTree = "<group>"; };
+		4D1AB1EF1E53EEAD0031D2F2 /* UIApplication+SugarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+SugarTests.swift"; sourceTree = "<group>"; };
 		4D27989C1C76D7F4007C63B9 /* UIGestureRecognizer+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIGestureRecognizer+Sugar.swift"; path = "RxSugar/UIGestureRecognizer+Sugar.swift"; sourceTree = "<group>"; };
 		4D2798B31C76DC45007C63B9 /* UIGestureRecognizer+SugarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIGestureRecognizer+SugarTests.swift"; path = "RxSugarTests/UIGestureRecognizer+SugarTests.swift"; sourceTree = "<group>"; };
 		4D2798B51C77A9A2007C63B9 /* UITapGestureRecognizer+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITapGestureRecognizer+Sugar.swift"; path = "RxSugar/UITapGestureRecognizer+Sugar.swift"; sourceTree = "<group>"; };
@@ -504,6 +510,8 @@
 				5AC009CC1C64F0DB005CAAC5 /* UITextField+SugarTests.swift */,
 				5AC009B11C6416AB005CAAC5 /* UITextView+Sugar.swift */,
 				5AC009CA1C64EBCB005CAAC5 /* UITextView+SugarTests.swift */,
+				4D1AB1D81E53ECE10031D2F2 /* UIApplication+Sugar.swift */,
+				4D1AB1EF1E53EEAD0031D2F2 /* UIApplication+SugarTests.swift */,
 				5ABE291D1CBD36BE00B98E7E /* UIView+Sugar.swift */,
 			);
 			name = "RxSugar+UIKit";
@@ -906,6 +914,7 @@
 				4D91C3AF1C6297C200926C99 /* AppendDisposable.swift in Sources */,
 				5ADFED0C1C63B44C0081A5E0 /* UIControl+Sugar.swift in Sources */,
 				4D809DA51C62B344003D1D63 /* ValueBinding.swift in Sources */,
+				4D1AB1D91E53ECE10031D2F2 /* UIApplication+Sugar.swift in Sources */,
 				5A9AE8831C6545C900F8FD92 /* OptionalType.swift in Sources */,
 				4D91C3AD1C6297A700926C99 /* ObserverBinding.swift in Sources */,
 				5ABE29061CBC503300B98E7E /* UIActivityIndicator+Sugar.swift in Sources */,
@@ -932,6 +941,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AC009CF1C64F238005CAAC5 /* UIButton+SugarTests.swift in Sources */,
+				4D1AB1F01E53EEAD0031D2F2 /* UIApplication+SugarTests.swift in Sources */,
 				5A9AE8881C6548AA00F8FD92 /* IgnoreNilTests.swift in Sources */,
 				5AC009CB1C64EBCB005CAAC5 /* UITextView+SugarTests.swift in Sources */,
 				4D91C3B11C629B3D00926C99 /* UIControl+SugarTests.swift in Sources */,
@@ -961,6 +971,7 @@
 				4D37F9F81C6D01360094DA7D /* ValueSetter.swift in Sources */,
 				5ABE29071CBC503300B98E7E /* UIActivityIndicator+Sugar.swift in Sources */,
 				4D2798B91C77C7C3007C63B9 /* UITapGestureRecognizer+Sugar.swift in Sources */,
+				4D1AB1DA1E53ECE10031D2F2 /* UIApplication+Sugar.swift in Sources */,
 				5A9AE94C1C6A5A3E00F8FD92 /* UIControl+Sugar.swift in Sources */,
 				5A9AE94E1C6A5A3E00F8FD92 /* UITextField+Sugar.swift in Sources */,
 				5A9AE94F1C6A5A3E00F8FD92 /* UITextView+Sugar.swift in Sources */,
@@ -990,6 +1001,7 @@
 				5A9AE95B1C6A5A7200F8FD92 /* UITextField+SugarTests.swift in Sources */,
 				5A9AE95C1C6A5A7200F8FD92 /* UITextView+SugarTests.swift in Sources */,
 				5A9AE95D1C6A5A7200F8FD92 /* TargetActionObservableTests.swift in Sources */,
+				4D1AB1F11E53EEAD0031D2F2 /* UIApplication+SugarTests.swift in Sources */,
 				5A9AE95E1C6A5A7200F8FD92 /* ValueBindingTests.swift in Sources */,
 				5A9AE95F1C6A5A7200F8FD92 /* IgnoreNilTests.swift in Sources */,
 				5A9AE9601C6A5A7200F8FD92 /* CombinePreviousTests.swift in Sources */,
