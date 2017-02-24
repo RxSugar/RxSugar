@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D00A54F1E5FF0F200BB0044 /* UITableView+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D00A54E1E5FF0F200BB0044 /* UITableView+Sugar.swift */; };
+		4D00A5651E5FF11500BB0044 /* Map+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D00A5641E5FF11500BB0044 /* Map+Sugar.swift */; };
+		4D00A5661E5FF11E00BB0044 /* Map+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D00A5641E5FF11500BB0044 /* Map+Sugar.swift */; };
+		4D00A5671E5FF11F00BB0044 /* Map+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D00A5641E5FF11500BB0044 /* Map+Sugar.swift */; };
+		4D00A5691E5FF1B400BB0044 /* Map+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D00A5681E5FF1B400BB0044 /* Map+SugarTests.swift */; };
+		4D00A56A1E5FF1B400BB0044 /* Map+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D00A5681E5FF1B400BB0044 /* Map+SugarTests.swift */; };
 		4D1733A81D39D858004A2EF6 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1733A71D39D858004A2EF6 /* Animator.swift */; };
 		4D1733A91D39D858004A2EF6 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1733A71D39D858004A2EF6 /* Animator.swift */; };
 		4D1733AB1D39D8B7004A2EF6 /* AnimatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1733AA1D39D8B7004A2EF6 /* AnimatorTests.swift */; };
@@ -264,6 +270,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D00A54E1E5FF0F200BB0044 /* UITableView+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITableView+Sugar.swift"; path = "RxSugar/UITableView+Sugar.swift"; sourceTree = "<group>"; };
+		4D00A5641E5FF11500BB0044 /* Map+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Map+Sugar.swift"; sourceTree = "<group>"; };
+		4D00A5681E5FF1B400BB0044 /* Map+SugarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Map+SugarTests.swift"; sourceTree = "<group>"; };
 		4D1733A71D39D858004A2EF6 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		4D1733AA1D39D8B7004A2EF6 /* AnimatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AnimatorTests.swift; path = RxSugarTests/AnimatorTests.swift; sourceTree = SOURCE_ROOT; };
 		4D1AB1D81E53ECE10031D2F2 /* UIApplication+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIApplication+Sugar.swift"; path = "RxSugar/UIApplication+Sugar.swift"; sourceTree = "<group>"; };
@@ -433,6 +442,8 @@
 				4D809DBA1C62B399003D1D63 /* ValueBindingTests.swift */,
 				4D37F9F61C6D01350094DA7D /* ValueSetter.swift */,
 				4DDB4A0E1C6F9F03004C3194 /* Variable+Sugar.swift */,
+				4D00A5641E5FF11500BB0044 /* Map+Sugar.swift */,
+				4D00A5681E5FF1B400BB0044 /* Map+SugarTests.swift */,
 			);
 			path = RxSugar;
 			sourceTree = "<group>";
@@ -506,6 +517,7 @@
 				5ADFED221C63BE4B0081A5E0 /* UISwitch+Sugar.swift */,
 				5AE89E491C64F94D007034C1 /* UISwitch+SugarTests.swift */,
 				4D2798B51C77A9A2007C63B9 /* UITapGestureRecognizer+Sugar.swift */,
+				4D00A54E1E5FF0F200BB0044 /* UITableView+Sugar.swift */,
 				5ADFED0A1C63B44C0081A5E0 /* UITextField+Sugar.swift */,
 				5AC009CC1C64F0DB005CAAC5 /* UITextField+SugarTests.swift */,
 				5AC009B11C6416AB005CAAC5 /* UITextView+Sugar.swift */,
@@ -892,6 +904,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D381D031D341EB5001F7085 /* Sugar.swift in Sources */,
+				4D00A5671E5FF11F00BB0044 /* Map+Sugar.swift in Sources */,
 				4DAF9E541D34847500812095 /* AppendDisposable.swift in Sources */,
 				4D381D041D341EB5001F7085 /* RxsError.swift in Sources */,
 				4D381D071D341EB5001F7085 /* ValueBinding.swift in Sources */,
@@ -908,6 +921,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D00A5651E5FF11500BB0044 /* Map+Sugar.swift in Sources */,
+				4D00A54F1E5FF0F200BB0044 /* UITableView+Sugar.swift in Sources */,
 				4D37F9F71C6D01360094DA7D /* ValueSetter.swift in Sources */,
 				5ADFED0D1C63B44C0081A5E0 /* UITextField+Sugar.swift in Sources */,
 				4D809DBD1C62BF51003D1D63 /* RxsError.swift in Sources */,
@@ -953,6 +968,7 @@
 				5AE89E4A1C64F94D007034C1 /* UISwitch+SugarTests.swift in Sources */,
 				4D1733AB1D39D8B7004A2EF6 /* AnimatorTests.swift in Sources */,
 				4D37F9F41C6A825E0094DA7D /* UILabel+SugarTests.swift in Sources */,
+				4D00A5691E5FF1B400BB0044 /* Map+SugarTests.swift in Sources */,
 				4D92D9B61E1EA1D600F4DE33 /* UIDatePicker+SugarTests.swift in Sources */,
 				4D91C35F1C626B7B00926C99 /* TargetActionObservableTests.swift in Sources */,
 			);
@@ -983,6 +999,7 @@
 				5ABE291F1CBD36BE00B98E7E /* UIView+Sugar.swift in Sources */,
 				5A9AE9541C6A5A3E00F8FD92 /* OptionalType.swift in Sources */,
 				5A9AE9551C6A5A3E00F8FD92 /* IgnoreNil.swift in Sources */,
+				4D00A5661E5FF11E00BB0044 /* Map+Sugar.swift in Sources */,
 				4D1733A91D39D858004A2EF6 /* Animator.swift in Sources */,
 				5A9AE9561C6A5A3E00F8FD92 /* CombinePrevious.swift in Sources */,
 			);
@@ -997,6 +1014,7 @@
 				4D37F9F51C6A825F0094DA7D /* UILabel+SugarTests.swift in Sources */,
 				5A9AE9581C6A5A7200F8FD92 /* UIButton+SugarTests.swift in Sources */,
 				5A9AE9591C6A5A7200F8FD92 /* UIControl+SugarTests.swift in Sources */,
+				4D00A56A1E5FF1B400BB0044 /* Map+SugarTests.swift in Sources */,
 				4D2798B81C77C7C1007C63B9 /* UIGestureRecognizer+SugarTests.swift in Sources */,
 				5A9AE95B1C6A5A7200F8FD92 /* UITextField+SugarTests.swift in Sources */,
 				5A9AE95C1C6A5A7200F8FD92 /* UITextView+SugarTests.swift in Sources */,
