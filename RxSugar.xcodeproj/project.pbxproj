@@ -110,6 +110,7 @@
 		5ADFED0D1C63B44C0081A5E0 /* UITextField+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFED0A1C63B44C0081A5E0 /* UITextField+Sugar.swift */; };
 		5ADFED231C63BE4B0081A5E0 /* UISwitch+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADFED221C63BE4B0081A5E0 /* UISwitch+Sugar.swift */; };
 		5AE89E4A1C64F94D007034C1 /* UISwitch+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE89E491C64F94D007034C1 /* UISwitch+SugarTests.swift */; };
+		ABE63D241E9C161200DAA562 /* UIFocusGuide+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE63D221E9C160E00DAA562 /* UIFocusGuide+Sugar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -327,6 +328,7 @@
 		5ADFED0A1C63B44C0081A5E0 /* UITextField+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UITextField+Sugar.swift"; path = "RxSugar/UITextField+Sugar.swift"; sourceTree = "<group>"; };
 		5ADFED221C63BE4B0081A5E0 /* UISwitch+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UISwitch+Sugar.swift"; path = "RxSugar/UISwitch+Sugar.swift"; sourceTree = "<group>"; };
 		5AE89E491C64F94D007034C1 /* UISwitch+SugarTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UISwitch+SugarTests.swift"; path = "RxSugarTests/UISwitch+SugarTests.swift"; sourceTree = "<group>"; };
+		ABE63D221E9C160E00DAA562 /* UIFocusGuide+Sugar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIFocusGuide+Sugar.swift"; path = "RxSugar/UIFocusGuide+Sugar.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -509,6 +511,7 @@
 				4D91C3B01C629B3D00926C99 /* UIControl+SugarTests.swift */,
 				4D92D9B31E1EA0F300F4DE33 /* UIDatePicker+Sugar.swift */,
 				4D92D9B51E1EA1D600F4DE33 /* UIDatePicker+SugarTests.swift */,
+				ABE63D221E9C160E00DAA562 /* UIFocusGuide+Sugar.swift */,
 				4D27989C1C76D7F4007C63B9 /* UIGestureRecognizer+Sugar.swift */,
 				4D2798B31C76DC45007C63B9 /* UIGestureRecognizer+SugarTests.swift */,
 				5A272E9B1C6E6FED00F3C285 /* UIImageView+Sugar.swift */,
@@ -1002,6 +1005,7 @@
 				4D00A5661E5FF11E00BB0044 /* Map+Sugar.swift in Sources */,
 				4D1733A91D39D858004A2EF6 /* Animator.swift in Sources */,
 				5A9AE9561C6A5A3E00F8FD92 /* CombinePrevious.swift in Sources */,
+				ABE63D241E9C161200DAA562 /* UIFocusGuide+Sugar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
