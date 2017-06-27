@@ -16,8 +16,8 @@ public extension Sugar where HostType: UIControl {
 				guard let this = host else { throw RxsError() }
 				return valueGetter(this)
 			},
-			subscribe: { (target, action) in
-				self.host.addTarget(target, action: action, for: controlEvents)
+			subscribe: { [weak host] (target, action) in
+				host?.addTarget(target, action: action, for: controlEvents)
 			},
 			unsubscribe:{ [weak host] (target, action) in
 				host?.removeTarget(target, action: action, for: controlEvents)
