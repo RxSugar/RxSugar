@@ -1,4 +1,4 @@
-import UIKit
+import Foundation
 import RxSwift
 
 public final class TargetActionObservable<Element>: NSObject, ObservableType {
@@ -16,19 +16,6 @@ public final class TargetActionObservable<Element>: NSObject, ObservableType {
         complete = completeEvents
 		super.init()
 		subscribeAction(self, actionSelector)
-	}
-	
-	public convenience init (control: UIControl, forEvents controlEvents: UIControlEvents, valueGenerator generator: @escaping () throws -> Element) {
-		self.init(
-			valueGenerator: generator,
-			subscribe: { (target, action) in
-				control.addTarget(target, action: action, for: controlEvents)
-			},
-			unsubscribe: { (target, action) in
-				control.removeTarget(target, action: action, for: controlEvents)
-			},
-            complete: control.rxs.onDeinit
-		)
 	}
 	
     public convenience init<ObservedType: RXSObject>(notificationName: String, onObject: ObservedType, valueGenerator: @escaping (ObservedType) throws -> Element) {

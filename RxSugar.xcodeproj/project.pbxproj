@@ -42,6 +42,22 @@
 		4D381D0C1D341EB5001F7085 /* CombinePrevious.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AE8801C65459000F8FD92 /* CombinePrevious.swift */; };
 		4D381D0E1D341EB5001F7085 /* ValueSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F9F61C6D01350094DA7D /* ValueSetter.swift */; };
 		4D381D0F1D341EB5001F7085 /* Variable+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB4A0E1C6F9F03004C3194 /* Variable+Sugar.swift */; };
+		4D483D8A1F3B636100B26BE1 /* RxSugar-macOS.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D483D881F3B636100B26BE1 /* RxSugar-macOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4D483DA31F3B63C600B26BE1 /* AppendDisposable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AE1C6297C200926C99 /* AppendDisposable.swift */; };
+		4D483DA41F3B63C600B26BE1 /* ObserverBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3AC1C6297A700926C99 /* ObserverBinding.swift */; };
+		4D483DA51F3B63C600B26BE1 /* CombinePrevious.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AE8801C65459000F8FD92 /* CombinePrevious.swift */; };
+		4D483DA61F3B63C600B26BE1 /* IgnoreNil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AE87E1C65458100F8FD92 /* IgnoreNil.swift */; };
+		4D483DA71F3B63C600B26BE1 /* OptionalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9AE8821C6545C900F8FD92 /* OptionalType.swift */; };
+		4D483DA81F3B63C600B26BE1 /* RxsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DBC1C62BF51003D1D63 /* RxsError.swift */; };
+		4D483DA91F3B63C600B26BE1 /* Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC009841C640B3F005CAAC5 /* Sugar.swift */; };
+		4D483DAA1F3B63C600B26BE1 /* TargetActionObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3591C6267D100926C99 /* TargetActionObservable.swift */; };
+		4D483DAB1F3B63C600B26BE1 /* ValueBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DA41C62B344003D1D63 /* ValueBinding.swift */; };
+		4D483DAC1F3B63C600B26BE1 /* ValueSetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D37F9F61C6D01350094DA7D /* ValueSetter.swift */; };
+		4D483DAD1F3B63C600B26BE1 /* Map+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D00A5641E5FF11500BB0044 /* Map+Sugar.swift */; };
+		4D483DAE1F3B641700B26BE1 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D91C37E1C62711A00926C99 /* RxSwift.framework */; };
+		4D483DB01F3B657300B26BE1 /* TargetActionObservable+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D483DAF1F3B657300B26BE1 /* TargetActionObservable+UIKit.swift */; };
+		4D483DB11F3B659F00B26BE1 /* TargetActionObservable+UIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D483DAF1F3B657300B26BE1 /* TargetActionObservable+UIKit.swift */; };
+		4D483DB21F3B65A900B26BE1 /* TargetActionObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D91C3591C6267D100926C99 /* TargetActionObservable.swift */; };
 		4D809DA51C62B344003D1D63 /* ValueBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DA41C62B344003D1D63 /* ValueBinding.swift */; };
 		4D809DBB1C62B399003D1D63 /* ValueBindingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DBA1C62B399003D1D63 /* ValueBindingTests.swift */; };
 		4D809DBD1C62BF51003D1D63 /* RxsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D809DBC1C62BF51003D1D63 /* RxsError.swift */; };
@@ -296,6 +312,10 @@
 		4D381CFB1D341E50001F7085 /* RxSugar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSugar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D381CFD1D341E50001F7085 /* RxSugar-watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RxSugar-watchOS.h"; sourceTree = "<group>"; };
 		4D381CFE1D341E50001F7085 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D483D861F3B636100B26BE1 /* RxSugar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RxSugar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D483D881F3B636100B26BE1 /* RxSugar-macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RxSugar-macOS.h"; sourceTree = "<group>"; };
+		4D483D891F3B636100B26BE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D483DAF1F3B657300B26BE1 /* TargetActionObservable+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TargetActionObservable+UIKit.swift"; sourceTree = "<group>"; };
 		4D809DA41C62B344003D1D63 /* ValueBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueBinding.swift; sourceTree = "<group>"; };
 		4D809DBA1C62B399003D1D63 /* ValueBindingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValueBindingTests.swift; path = RxSugarTests/ValueBindingTests.swift; sourceTree = SOURCE_ROOT; };
 		4D809DBC1C62BF51003D1D63 /* RxsError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxsError.swift; sourceTree = "<group>"; };
@@ -344,6 +364,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DAF9E361D34269C00812095 /* RxSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D483D821F3B636100B26BE1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D483DAE1F3B641700B26BE1 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +432,15 @@
 			path = "RxSugar-watchOS";
 			sourceTree = "<group>";
 		};
+		4D483D871F3B636100B26BE1 /* RxSugar-macOS */ = {
+			isa = PBXGroup;
+			children = (
+				4D483D881F3B636100B26BE1 /* RxSugar-macOS.h */,
+				4D483D891F3B636100B26BE1 /* Info.plist */,
+			);
+			path = "RxSugar-macOS";
+			sourceTree = "<group>";
+		};
 		4D91C3351C625FE700926C99 = {
 			isa = PBXGroup;
 			children = (
@@ -414,6 +451,7 @@
 				4D91C3631C6270EE00926C99 /* Dependencies */,
 				4D381CEF1D341E36001F7085 /* RxSugar-watchOS */,
 				4D381CFC1D341E50001F7085 /* RxSugar-watchOS */,
+				4D483D871F3B636100B26BE1 /* RxSugar-macOS */,
 				4D91C35D1C6268DF00926C99 /* Frameworks */,
 				4D91C3401C625FE700926C99 /* Products */,
 			);
@@ -427,6 +465,7 @@
 				5A9AE91B1C6A599000F8FD92 /* RxSugar.framework */,
 				5A9AE9241C6A599000F8FD92 /* RxSugarTests-tvOS.xctest */,
 				4D381CFB1D341E50001F7085 /* RxSugar.framework */,
+				4D483D861F3B636100B26BE1 /* RxSugar.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -446,6 +485,7 @@
 				4D91C3421C625FE700926C99 /* RxSugar.h */,
 				5AC009841C640B3F005CAAC5 /* Sugar.swift */,
 				4D91C3591C6267D100926C99 /* TargetActionObservable.swift */,
+				4D483DAF1F3B657300B26BE1 /* TargetActionObservable+UIKit.swift */,
 				4D91C35E1C626B7B00926C99 /* TargetActionObservableTests.swift */,
 				4D809DA41C62B344003D1D63 /* ValueBinding.swift */,
 				4D809DBA1C62B399003D1D63 /* ValueBindingTests.swift */,
@@ -561,6 +601,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4D483D831F3B636100B26BE1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D483D8A1F3B636100B26BE1 /* RxSugar-macOS.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D91C33C1C625FE700926C99 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -595,6 +643,24 @@
 			name = "RxSugar-watchOS";
 			productName = "RxSugar-watchOS";
 			productReference = 4D381CFB1D341E50001F7085 /* RxSugar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4D483D851F3B636100B26BE1 /* RxSugar-macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D483DA21F3B636100B26BE1 /* Build configuration list for PBXNativeTarget "RxSugar-macOS" */;
+			buildPhases = (
+				4D483D811F3B636100B26BE1 /* Sources */,
+				4D483D821F3B636100B26BE1 /* Frameworks */,
+				4D483D831F3B636100B26BE1 /* Headers */,
+				4D483D841F3B636100B26BE1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RxSugar-macOS";
+			productName = "RxSugar-macOS";
+			productReference = 4D483D861F3B636100B26BE1 /* RxSugar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		4D91C33E1C625FE700926C99 /* RxSugar-iOS */ = {
@@ -685,6 +751,10 @@
 						DevelopmentTeamName = "Asynchrony Solutions, Inc.";
 						ProvisioningStyle = Automatic;
 					};
+					4D483D851F3B636100B26BE1 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
 					4D91C33E1C625FE700926C99 = {
 						CreatedOnToolsVersion = 7.2;
 						LastSwiftMigration = 0800;
@@ -724,6 +794,7 @@
 				5A9AE91A1C6A599000F8FD92 /* RxSugar-tvOS */,
 				5A9AE9231C6A599000F8FD92 /* RxSugarTests-tvOS */,
 				4D381CFA1D341E50001F7085 /* RxSugar-watchOS */,
+				4D483D851F3B636100B26BE1 /* RxSugar-macOS */,
 			);
 		};
 /* End PBXProject section */
@@ -887,6 +958,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4D483D841F3B636100B26BE1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4D91C33D1C625FE700926C99 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -923,6 +1001,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D381D031D341EB5001F7085 /* Sugar.swift in Sources */,
+				4D483DB21F3B65A900B26BE1 /* TargetActionObservable.swift in Sources */,
 				4D00A5671E5FF11F00BB0044 /* Map+Sugar.swift in Sources */,
 				4DAF9E541D34847500812095 /* AppendDisposable.swift in Sources */,
 				4D381D041D341EB5001F7085 /* RxsError.swift in Sources */,
@@ -933,6 +1012,24 @@
 				4D381D0E1D341EB5001F7085 /* ValueSetter.swift in Sources */,
 				4D381D0F1D341EB5001F7085 /* Variable+Sugar.swift in Sources */,
 				4DAF9E551D34847500812095 /* ObserverBinding.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D483D811F3B636100B26BE1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D483DA31F3B63C600B26BE1 /* AppendDisposable.swift in Sources */,
+				4D483DA41F3B63C600B26BE1 /* ObserverBinding.swift in Sources */,
+				4D483DA51F3B63C600B26BE1 /* CombinePrevious.swift in Sources */,
+				4D483DA61F3B63C600B26BE1 /* IgnoreNil.swift in Sources */,
+				4D483DA71F3B63C600B26BE1 /* OptionalType.swift in Sources */,
+				4D483DA81F3B63C600B26BE1 /* RxsError.swift in Sources */,
+				4D483DA91F3B63C600B26BE1 /* Sugar.swift in Sources */,
+				4D483DAA1F3B63C600B26BE1 /* TargetActionObservable.swift in Sources */,
+				4D483DAB1F3B63C600B26BE1 /* ValueBinding.swift in Sources */,
+				4D483DAC1F3B63C600B26BE1 /* ValueSetter.swift in Sources */,
+				4D483DAD1F3B63C600B26BE1 /* Map+Sugar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -952,6 +1049,7 @@
 				5A9AE8831C6545C900F8FD92 /* OptionalType.swift in Sources */,
 				4D91C3AD1C6297A700926C99 /* ObserverBinding.swift in Sources */,
 				5ABE29061CBC503300B98E7E /* UIActivityIndicator+Sugar.swift in Sources */,
+				4D483DB01F3B657300B26BE1 /* TargetActionObservable+UIKit.swift in Sources */,
 				4D91C35A1C6267D100926C99 /* TargetActionObservable.swift in Sources */,
 				4D92D9B41E1EA0F300F4DE33 /* UIDatePicker+Sugar.swift in Sources */,
 				4D2798B61C77A9A2007C63B9 /* UITapGestureRecognizer+Sugar.swift in Sources */,
@@ -1005,6 +1103,7 @@
 				4DDB4A101C6F9F04004C3194 /* Variable+Sugar.swift in Sources */,
 				4D37F9F81C6D01360094DA7D /* ValueSetter.swift in Sources */,
 				5ABE29071CBC503300B98E7E /* UIActivityIndicator+Sugar.swift in Sources */,
+				4D483DB11F3B659F00B26BE1 /* TargetActionObservable+UIKit.swift in Sources */,
 				4D2798B91C77C7C3007C63B9 /* UITapGestureRecognizer+Sugar.swift in Sources */,
 				4D1AB1DA1E53ECE10031D2F2 /* UIApplication+Sugar.swift in Sources */,
 				5A9AE94C1C6A5A3E00F8FD92 /* UIControl+Sugar.swift in Sources */,
@@ -1108,6 +1207,57 @@
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+			};
+			name = Release;
+		};
+		4D483D8B1F3B636100B26BE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "RxSugar-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.rxsugar.RxSugar-macOS";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		4D483D8C1F3B636100B26BE1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "RxSugar-macOS/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.rxsugar.RxSugar-macOS";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -1362,6 +1512,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		4D483DA21F3B636100B26BE1 /* Build configuration list for PBXNativeTarget "RxSugar-macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D483D8B1F3B636100B26BE1 /* Debug */,
+				4D483D8C1F3B636100B26BE1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		4D91C3391C625FE700926C99 /* Build configuration list for PBXProject "RxSugar" */ = {
 			isa = XCConfigurationList;
