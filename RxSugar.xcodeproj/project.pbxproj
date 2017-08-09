@@ -21,6 +21,7 @@
 		4D1AB1DA1E53ECE10031D2F2 /* UIApplication+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1AB1D81E53ECE10031D2F2 /* UIApplication+Sugar.swift */; };
 		4D1AB1F01E53EEAD0031D2F2 /* UIApplication+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1AB1EF1E53EEAD0031D2F2 /* UIApplication+SugarTests.swift */; };
 		4D1AB1F11E53EEAD0031D2F2 /* UIApplication+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1AB1EF1E53EEAD0031D2F2 /* UIApplication+SugarTests.swift */; };
+		4D223B511F3B81DC00D28D0B /* Variable+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDB4A0E1C6F9F03004C3194 /* Variable+Sugar.swift */; };
 		4D27989D1C76D7F4007C63B9 /* UIGestureRecognizer+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D27989C1C76D7F4007C63B9 /* UIGestureRecognizer+Sugar.swift */; };
 		4D2798B41C76DC45007C63B9 /* UIGestureRecognizer+SugarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2798B31C76DC45007C63B9 /* UIGestureRecognizer+SugarTests.swift */; };
 		4D2798B61C77A9A2007C63B9 /* UITapGestureRecognizer+Sugar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D2798B51C77A9A2007C63B9 /* UITapGestureRecognizer+Sugar.swift */; };
@@ -130,13 +131,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4D2E2D601ECE2DB6004C5284 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4D91C3641C62711A00926C99 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C8E8BA551E2C181A00A4AC2C;
-			remoteInfo = Benchmarks;
-		};
 		4D91C34B1C625FE700926C99 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4D91C3361C625FE700926C99 /* Project object */;
@@ -544,7 +538,6 @@
 				4D91C39E1C62711A00926C99 /* AllTests-tvOS.xctest */,
 				4D91C3A01C62711A00926C99 /* AllTests-macOS.xctest */,
 				4D91C3A21C62711A00926C99 /* PerformanceTests.app */,
-				4D2E2D611ECE2DB6004C5284 /* Benchmarks.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -800,13 +793,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		4D2E2D611ECE2DB6004C5284 /* Benchmarks.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = Benchmarks.xctest;
-			remoteRef = 4D2E2D601ECE2DB6004C5284 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		4D91C37C1C62711A00926C99 /* RxSwift.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -943,8 +929,7 @@
 		4D91C3A21C62711A00926C99 /* PerformanceTests.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
-			name = PerformanceTests.app;
-			path = Microoptimizations.app;
+			path = PerformanceTests.app;
 			remoteRef = 4D91C3A11C62711A00926C99 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -1029,6 +1014,7 @@
 				4D483DAA1F3B63C600B26BE1 /* TargetActionObservable.swift in Sources */,
 				4D483DAB1F3B63C600B26BE1 /* ValueBinding.swift in Sources */,
 				4D483DAC1F3B63C600B26BE1 /* ValueSetter.swift in Sources */,
+				4D223B511F3B81DC00D28D0B /* Variable+Sugar.swift in Sources */,
 				4D483DAD1F3B63C600B26BE1 /* Map+Sugar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1520,6 +1506,7 @@
 				4D483D8C1F3B636100B26BE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4D91C3391C625FE700926C99 /* Build configuration list for PBXProject "RxSugar" */ = {
 			isa = XCConfigurationList;
