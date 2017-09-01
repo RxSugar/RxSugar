@@ -1,7 +1,7 @@
 <img src="RxSugarLogo.png" alt="RxSugar Logo" width="74" height="74">  RxSugar
 ===
 
-[![Travis CI](https://travis-ci.org/RxSugar/RxSugar.svg?branch=master)](https://travis-ci.org/RxSugar/RxSugar) ![platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20tvOS%20%7C%20watchOS-333333.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![pod](https://img.shields.io/cocoapods/v/RxSugar.svg)](https://cocoapods.org/?q=RxSugar) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
+[![Travis CI](https://travis-ci.org/RxSugar/RxSugar.svg?branch=master)](https://travis-ci.org/RxSugar/RxSugar) ![platforms](https://img.shields.io/badge/platforms-iOS%20%7C%20tvOS%20%7C%20watchOS%20%7C%20macOS-333333.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![pod](https://img.shields.io/cocoapods/v/RxSugar.svg)](https://cocoapods.org/?q=RxSugar) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 Simple RxSwift extensions for interacting with Apple APIs.
 
