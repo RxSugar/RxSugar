@@ -12,6 +12,7 @@ public protocol Animator {
 
 /// Default animator.
 public struct DefaultAnimator: Animator {
+	public init() {}
     /// Default implementation of an animated observer
     ///
     /// - parameter animations: A closure called when performing the default animation

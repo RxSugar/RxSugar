@@ -8,10 +8,10 @@ class ValueTestObject: RXSObject {
 	private var events: TargetActionObservable<Int>!
 	
 	init() {
-        events = TargetActionObservable(
-            valueGenerator: { return self.value },
-            subscribe: { _ in },
-            unsubscribe: { _ in },
+        events = TargetActionObservable<Int>(
+            valueGenerator: { self.value },
+            subscribe: { _,_  in },
+            unsubscribe: { _,_  in },
             complete: rxs.onDeinit)
 	}
 	

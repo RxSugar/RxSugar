@@ -99,8 +99,8 @@ class ObserverBindingTests: XCTestCase {
     
     func testCombinePreviousSendsTheLatestTwoValues() {
         let input = Variable<Int>(1)
-        let output = Variable<(Int, Int)>(0, 0)
-        _ = output <~ input.asObservable().combinePrevious { $0 }
+        let output = Variable<(Int, Int)>((0, 0))
+        _ = output <~ input.asObservable().combinePrevious { ($0, $1) }
         
         input.value = 2
         XCTAssertEqual(output.value.0, 1)

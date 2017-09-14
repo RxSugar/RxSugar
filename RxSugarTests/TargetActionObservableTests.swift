@@ -6,11 +6,11 @@ import XCTest
 class TargetActionObservableTests: XCTestCase {
 	func testObservableEventsUponPerformSelector () {
 		let testObject = TargetActionObservable<Int>(
-            valueGenerator: { _ in
+            valueGenerator: { 
                 return 42
             },
-            subscribe: { _ in },
-            unsubscribe: { _ in },
+            subscribe: { _,_  in },
+            unsubscribe: { _,_  in },
             complete: self.rxs.onDeinit
         )
 		
@@ -28,9 +28,9 @@ class TargetActionObservableTests: XCTestCase {
         let completeSubject = PublishSubject<Void>()
         
 		let testObject: TargetActionObservable<Int> = TargetActionObservable(
-            valueGenerator: { _ in return 42 },
-            subscribe: { _ in },
-            unsubscribe: { _ in },
+            valueGenerator: {  return 42 },
+            subscribe: { _,_  in },
+            unsubscribe: { _,_  in },
             complete: completeSubject
         )
 		
@@ -38,7 +38,7 @@ class TargetActionObservableTests: XCTestCase {
         _ = testObject.subscribe(onCompleted: { complete = true })
 		
 		XCTAssertFalse(complete)
-		completeSubject.onNext()
+		completeSubject.onNext(())
 		XCTAssertTrue(complete)
 	}
 }

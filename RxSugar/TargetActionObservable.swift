@@ -37,7 +37,7 @@ public final class TargetActionObservable<Element>: NSObject, ObservableType {
         return CompositeDisposable() ++ subjectDisposable ++ triggerDisposable
     }
 	
-    func action() {
+    @objc func action() {
         guard let value = try? valueGenerator() else { subject.onError(RxsError()); return }
 		subject.onNext(value)
 	}

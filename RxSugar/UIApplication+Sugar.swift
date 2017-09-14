@@ -7,7 +7,7 @@ public extension Sugar where HostType: RXSObject {
      */
     public var significantTimeChange: Observable<Void> {
         let timeChanges = TargetActionObservable<Void>(
-            valueGenerator: { _ in },
+            valueGenerator: {  },
             subscribe: { target, action in
                 NotificationCenter.default.addObserver(target, selector: action, name: NSNotification.Name.UIApplicationSignificantTimeChange, object: nil)
             },

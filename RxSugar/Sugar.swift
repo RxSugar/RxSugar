@@ -30,7 +30,7 @@ public extension Sugar where HostType: RXSObject {
         let bag = disposeBag
         return Observable.create { [weak bag] observer in
             bag?.insert(Disposables.create(with: {
-                observer.onNext()
+				observer.onNext(())
                 observer.onCompleted()
                 }))
             

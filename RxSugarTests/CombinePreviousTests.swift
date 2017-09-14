@@ -6,9 +6,9 @@ import RxSugar
 class CombinePreviousTests: XCTestCase {
     func testCombinePreivousCombinesLatestTwoValues() {
         let input = Variable<Int>(42)
-        let output = Variable<(Int, Int)>(0, 0)
+        let output = Variable<(Int, Int)>((0, 0))
         
-        _ = output <~ input.asObservable().combinePrevious { $0 }
+        _ = output <~ input.asObservable().combinePrevious { ($0, $1) }
         
         input.onNext(11)
         XCTAssertEqual(output.value.0, 42)
