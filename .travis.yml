@@ -1,6 +1,6 @@
-language: objective-c
-osx_image: xcode8
+language: swift
+osx_image: xcode9
 
 script: 
-  - set -o pipefail && xcodebuild -project "RxSugar.xcodeproj" -scheme "RxSugar-iOS" -destination "OS=9.3,name=iPad Air 2" build test | xcpretty --color --test
+  - set -o pipefail && xcodebuild -project "RxSugar.xcodeproj" -scheme "RxSugar-iOS" -destination "OS=11.2,name=iPad Air 2" build test | xcpretty --color --test
   - set -o pipefail && xcodebuild -project "RxSugar.xcodeproj" -scheme "RxSugar-tvOS" -destination "platform=tvOS Simulator,name=Apple TV 1080p" build test | xcpretty --color --test
