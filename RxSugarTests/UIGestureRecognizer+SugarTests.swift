@@ -10,8 +10,8 @@ struct TargetActionPair {
 
 class TestGestureRecognizer: UIGestureRecognizer {
     var targetActionPair: TargetActionPair?
-    var forceState: UIGestureRecognizerState = .ended
-    override var state: UIGestureRecognizerState {
+    var forceState: UIGestureRecognizer.State = .ended
+    override var state: UIGestureRecognizer.State {
         get { return forceState }
         set { self.state = newValue }
     }
@@ -20,7 +20,7 @@ class TestGestureRecognizer: UIGestureRecognizer {
         targetActionPair = TargetActionPair(target: target as AnyObject, action: action)
     }
     
-    func fireGestureEvent(_ state: UIGestureRecognizerState) {
+    func fireGestureEvent(_ state: UIGestureRecognizer.State) {
         guard let targetAction = self.targetActionPair else { return }
         forceState = state
         _ = targetAction.target.perform(targetAction.action, with: self)
@@ -29,8 +29,8 @@ class TestGestureRecognizer: UIGestureRecognizer {
 
 class TestTapGestureRecognizer: UITapGestureRecognizer {
     var targetActionPair: TargetActionPair?
-    var forceState: UIGestureRecognizerState = .ended
-    override var state: UIGestureRecognizerState {
+    var forceState: UIGestureRecognizer.State = .ended
+    override var state: UIGestureRecognizer.State {
         get { return forceState }
         set { self.state = newValue }
     }
@@ -39,7 +39,7 @@ class TestTapGestureRecognizer: UITapGestureRecognizer {
         targetActionPair = TargetActionPair(target: target as AnyObject, action: action)
     }
     
-    func fireGestureEvent(_ state: UIGestureRecognizerState) {
+    func fireGestureEvent(_ state: UIGestureRecognizer.State) {
         guard let targetAction = self.targetActionPair else { return }
         forceState = state
         _ = targetAction.target.perform(targetAction.action, with: self)

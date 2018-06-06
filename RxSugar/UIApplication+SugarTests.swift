@@ -11,10 +11,10 @@ class UIApplication_SugarTests: XCTestCase {
         var events: [Bool] = []
         _ = eventStream.subscribe(onNext: { events.append(true) })
         
-        NotificationCenter.default.post(name: NSNotification.Name.UIApplicationSignificantTimeChange, object: nil)
+        NotificationCenter.default.post(name: UIApplication.significantTimeChangeNotification, object: nil)
         XCTAssertEqual(events, [true])
         
-        NotificationCenter.default.post(name: NSNotification.Name.UIApplicationSignificantTimeChange, object: nil)
+        NotificationCenter.default.post(name: UIApplication.significantTimeChangeNotification, object: nil)
         XCTAssertEqual(events, [true, true])
     }
     
@@ -30,12 +30,12 @@ class UIApplication_SugarTests: XCTestCase {
                 events.append(true)
             })
             
-            NotificationCenter.default.post(name: NSNotification.Name.UIApplicationSignificantTimeChange, object: nil)
+            NotificationCenter.default.post(name: UIApplication.significantTimeChangeNotification, object: nil)
             XCTAssertEqual(events, [true])
             
             strongObject = nil
             
-            NotificationCenter.default.post(name: NSNotification.Name.UIApplicationSignificantTimeChange, object: nil)
+            NotificationCenter.default.post(name: UIApplication.significantTimeChangeNotification, object: nil)
             XCTAssertEqual(events, [true])
         }
 

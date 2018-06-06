@@ -1,7 +1,7 @@
 import UIKit
 
 extension TargetActionObservable {
-	public convenience init (control: UIControl, forEvents controlEvents: UIControlEvents, valueGenerator generator: @escaping () throws -> Element) {
+	public convenience init (control: UIControl, forEvents controlEvents: UIControl.Event, valueGenerator generator: @escaping () throws -> Element) {
 		self.init(
 			valueGenerator: generator,
 			subscribe: { (target, action) in

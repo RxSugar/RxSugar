@@ -9,10 +9,10 @@ public extension Sugar where HostType: RXSObject {
         let timeChanges = TargetActionObservable<Void>(
             valueGenerator: {  },
             subscribe: { target, action in
-                NotificationCenter.default.addObserver(target, selector: action, name: NSNotification.Name.UIApplicationSignificantTimeChange, object: nil)
+                NotificationCenter.default.addObserver(target, selector: action, name: UIApplication.significantTimeChangeNotification, object: nil)
             },
             unsubscribe: { target, _ in
-                NotificationCenter.default.removeObserver(target, name: NSNotification.Name.UIApplicationSignificantTimeChange, object: nil)
+                NotificationCenter.default.removeObserver(target, name: UIApplication.significantTimeChangeNotification, object: nil)
             },
             complete: host.rxs.onDeinit
         )

@@ -6,7 +6,7 @@ protocol TestControl {}
 
 extension TestControl where Self: UIControl {
 	// best approximation of UIControl behavior without running UI tests
-	func fireControlEvents(_ controlEvents: UIControlEvents) {
+	func fireControlEvents(_ controlEvents: UIControl.Event) {
 		self.allTargets.forEach { target in
 			self.actions(forTarget: target, forControlEvent: controlEvents)?.forEach { action in
                 _ = (target as AnyObject).perform(NSSelectorFromString(action))
@@ -31,7 +31,7 @@ private class Control<T>: UIControl, TestControl {
 class UIControl_TriggerTests: XCTestCase {
 	func testControlSendsEvents() {
 		let testObject = Control("")
-		let eventStream = testObject.rxs.controlEvents([UIControlEvents.allEvents]) {
+		let eventStream = testObject.rxs.controlEvents([UIControl.Event.allEvents]) {
 			return $0.value
         }
 		
@@ -39,17 +39,17 @@ class UIControl_TriggerTests: XCTestCase {
         _ = eventStream.subscribe(onNext: { events.append($0) })
 		
 		testObject.value = "Major Tom"
-		testObject.fireControlEvents([.valueChanged])
+		testObject.fireControlEvents([UIControl.Event.valueChanged])
 		XCTAssertEqual(events, ["Major Tom"])
 		
 		testObject.value = "Ground Control"
-		testObject.fireControlEvents([.touchDown])
+		testObject.fireControlEvents([UIControl.Event.touchDown])
 		XCTAssertEqual(events, ["Major Tom", "Ground Control"])
     }
     
     func testControlSendsOnlyEventsSubscribedTo() {
         let testObject = Control("")
-        let eventStream = testObject.rxs.controlEvents([.valueChanged]) {
+        let eventStream = testObject.rxs.controlEvents([UIControl.Event.valueChanged]) {
             return $0.value
         }
         
@@ -57,17 +57,17 @@ class UIControl_TriggerTests: XCTestCase {
         _ = eventStream.subscribe(onNext: { events.append($0) })
         
         testObject.value = "Major Tom"
-        testObject.fireControlEvents([.touchDragInside])
+        testObject.fireControlEvents([UIControl.Event.touchDragInside])
         XCTAssertEqual(events, [])
         
         testObject.value = "Ground Control"
-        testObject.fireControlEvents([.valueChanged])
+        testObject.fireControlEvents([UIControl.Event.valueChanged])
         XCTAssertEqual(events, ["Ground Control"])
     }
     
     func testControlSendsCompleteOnDeinit() {
         var testObject:Control? = Control(false)
-        let eventStream = testObject!.rxs.controlEvents([.valueChanged]) {
+        let eventStream = testObject!.rxs.controlEvents([UIControl.Event.valueChanged]) {
             return $0.value
         }
         

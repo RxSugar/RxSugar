@@ -11,13 +11,13 @@ class UITextView_SugarTests: XCTestCase {
         _ = eventStream.subscribe(onNext: { events.append($0) })
         
         testObject.text = "Major Tom"
-        NotificationCenter.default.post(name: NSNotification.Name.UITextViewTextDidChange, object: testObject)
+        NotificationCenter.default.post(name: UITextView.textDidChangeNotification, object: testObject)
         XCTAssertEqual(events, ["Major Tom"])
         
         testObject.text = "No Event"
         
         testObject.text = "Ground Control"
-        NotificationCenter.default.post(name: NSNotification.Name.UITextViewTextDidChange, object: testObject)
+        NotificationCenter.default.post(name: UITextView.textDidChangeNotification, object: testObject)
         XCTAssertEqual(events, ["Major Tom", "Ground Control"])
     }
     
@@ -40,13 +40,13 @@ class UITextView_SugarTests: XCTestCase {
         _ = eventStream.subscribe(onNext: { events.append($0.string) })
         
         testObject.text = "Major Tom"
-        NotificationCenter.default.post(name: NSNotification.Name.UITextViewTextDidChange, object: testObject)
+        NotificationCenter.default.post(name: UITextView.textDidChangeNotification, object: testObject)
         XCTAssertEqual(events, ["Major Tom"])
         
         testObject.text = "No Event"
         
         testObject.text = "Ground Control"
-        NotificationCenter.default.post(name: NSNotification.Name.UITextViewTextDidChange, object: testObject)
+        NotificationCenter.default.post(name: UITextView.textDidChangeNotification, object: testObject)
         XCTAssertEqual(events, ["Major Tom", "Ground Control"])
     }
     
@@ -54,13 +54,13 @@ class UITextView_SugarTests: XCTestCase {
         let testObject = UITextView()
         let observer = testObject.rxs.attributedText
         
-        let attributedStringOne = NSAttributedString(string: "Major Tom", attributes: [NSAttributedStringKey(rawValue: "TestAttribute") : "Value"])
+        let attributedStringOne = NSAttributedString(string: "Major Tom", attributes: [NSAttributedString.Key(rawValue: "TestAttribute") : "Value"])
         
         observer.onNext(attributedStringOne)
         XCTAssertEqual(testObject.attributedText.string, attributedStringOne.string)
-        XCTAssertEqual(testObject.attributedText.attribute(NSAttributedStringKey(rawValue: "TestAttribute"), at: 0, effectiveRange: nil) as? String, "Value")
+        XCTAssertEqual(testObject.attributedText.attribute(NSAttributedString.Key(rawValue: "TestAttribute"), at: 0, effectiveRange: nil) as? String, "Value")
 
-        let attributedStringTwo = NSAttributedString(string: "Ground Control", attributes: [NSAttributedStringKey.foregroundColor: UIColor.red])
+        let attributedStringTwo = NSAttributedString(string: "Ground Control", attributes: [NSAttributedString.Key.foregroundColor: UIColor.red])
 
         observer.onNext(attributedStringTwo)
         XCTAssertEqual(testObject.attributedText.string, attributedStringTwo.string)

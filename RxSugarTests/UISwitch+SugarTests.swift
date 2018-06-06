@@ -12,21 +12,21 @@ class UISwitch_SugarTests: XCTestCase {
         _ = eventStream.subscribe(onNext: { events.append($0) })
         
         testObject.isOn = true
-        testObject.fireControlEvents([.valueChanged])
+        testObject.fireControlEvents([UIControl.Event.valueChanged])
         XCTAssertEqual(events, [true])
         
         testObject.isOn = false
-        testObject.fireControlEvents([.valueChanged])
+        testObject.fireControlEvents([UIControl.Event.valueChanged])
         XCTAssertEqual(events, [true, false])
         
         testObject.isOn = true
-        testObject.fireControlEvents([.valueChanged])
+        testObject.fireControlEvents([UIControl.Event.valueChanged])
         
         testObject.isOn = false
-        testObject.fireControlEvents([.touchCancel])
+        testObject.fireControlEvents([UIControl.Event.touchCancel])
         
         testObject.isOn = true
-        testObject.fireControlEvents([.valueChanged])
+        testObject.fireControlEvents([UIControl.Event.valueChanged])
         XCTAssertEqual(events, [true, false, true, true])
     }
     

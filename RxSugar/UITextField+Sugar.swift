@@ -7,7 +7,7 @@ public extension Sugar where HostType: UITextField {
 	*/
 	public var text: ValueBinding<String> {
 		return controlValueBinding(
-            valueChangeEventTypes: [.editingChanged, .editingDidEnd],
+            valueChangeEventTypes: [UIControl.Event.editingChanged, UIControl.Event.editingDidEnd],
 			getter: { $0.text ?? "" },
 			setter: { $0.text = $1 })
 	}
@@ -17,7 +17,7 @@ public extension Sugar where HostType: UITextField {
 	*/
 	public var attributedText: ValueBinding<NSAttributedString> {
 		return controlValueBinding(
-            valueChangeEventTypes: [.editingChanged, .editingDidEnd],
+            valueChangeEventTypes: [UIControl.Event.editingChanged, UIControl.Event.editingDidEnd],
 			getter: { $0.attributedText ?? NSAttributedString() },
 			setter: { $0.attributedText = $1 })
 	}

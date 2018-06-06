@@ -6,7 +6,7 @@ public extension Sugar where HostType: UIDatePicker {
 	*/
     public var date: ValueBinding<Date> {
         return controlValueBinding(
-            valueChangeEventTypes: .valueChanged,
+            valueChangeEventTypes: UIControl.Event.valueChanged,
             getter: { $0.date },
             setter: { $0.date = $1 })
     }

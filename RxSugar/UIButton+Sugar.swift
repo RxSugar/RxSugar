@@ -9,9 +9,9 @@ extension Sugar where HostType: UIButton {
         return controlEvents(primaryControlEvent())
     }
 	
-	public func primaryControlEvent() -> UIControlEvents {
+	public func primaryControlEvent() -> UIControl.Event {
 		#if os(iOS)
-			return .touchUpInside
+			return UIControl.Event.touchUpInside
 		#elseif os(tvOS)
 			return .primaryActionTriggered
 		#endif

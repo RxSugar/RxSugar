@@ -19,7 +19,7 @@ public struct DefaultAnimator: Animator {
     public func animate(_ animations: @escaping ()->()) {
         UIView.animate(withDuration: 0.25,
                                    delay: 0,
-                                   options: UIViewAnimationOptions.beginFromCurrentState,
+                                   options: UIView.AnimationOptions.beginFromCurrentState,
                                    animations: animations,
                                    completion: nil)
     }
