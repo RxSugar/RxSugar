@@ -53,16 +53,16 @@ public extension Sugar where HostType: UIControl {
 	}
 	
 	/**
-	Reactive setter for enabled property
+	Reactive setter for isEnabled property
 	*/
-    public var enabled: AnyObserver<Bool> {
+    public var isEnabled: AnyObserver<Bool> {
 		return valueSetter { $0.isEnabled = $1 }
 	}
 	
 	/**
-	Reactive setter for selected property
+	Reactive setter for isSelected property
 	*/
-    public var selected: AnyObserver<Bool> {
+    public var isSelected: AnyObserver<Bool> {
 		return valueSetter { $0.isSelected = $1 }
 	}
 }

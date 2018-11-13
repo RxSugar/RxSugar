@@ -4,7 +4,7 @@ public extension Sugar where HostType: UISwitch {
 	/**
 	RxSugar wrapper for on property.
 	*/
-    public var on: ValueBinding<Bool> {
+    public var isOn: ValueBinding<Bool> {
         return controlValueBinding(
             valueChangeEventTypes: UIControl.Event.valueChanged,
             getter: { $0.isOn },
