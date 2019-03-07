@@ -20,10 +20,10 @@ public extension Sugar where HostType: RXSObject {
     }
     
     /**
-     RxSugar wrapper for significantTimeChange
+     RxSugar wrapper for contentSizeCategoryDidChange
      */
     public var contentSizeCategoryDidChange: Observable<Void> {
-        let timeChanges = TargetActionObservable<Void>(
+        let contentSizeCategoryChanges = TargetActionObservable<Void>(
             valueGenerator: {  },
             subscribe: { target, action in
                 NotificationCenter.default.addObserver(target, selector: action, name: UIContentSizeCategory.didChangeNotification, object: nil)
@@ -33,6 +33,6 @@ public extension Sugar where HostType: RXSObject {
         },
             complete: host.rxs.onDeinit
         )
-        return timeChanges.asObservable()
+        return contentSizeCategoryChanges.asObservable()
     }
 }
