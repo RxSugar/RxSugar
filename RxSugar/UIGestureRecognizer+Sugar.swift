@@ -7,7 +7,7 @@ public extension Sugar where HostType: UIGestureRecognizer {
 
      - returns: Observable<UIGestureRecognizer>.
      */
-    public var events: Observable<HostType> {
+    var events: Observable<HostType> {
         let events = TargetActionObservable<HostType>(
             valueGenerator: { [unowned host] in
                 return host

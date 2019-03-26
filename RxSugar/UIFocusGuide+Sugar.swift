@@ -5,5 +5,5 @@ public extension Sugar where HostType: UIFocusGuide {
     /**
      RxSugar wrapper for isEnabled property.
      */
-    public var isEnabled: AnyObserver<Bool> { return valueSetter { $0.isEnabled = $1 } }
+    var isEnabled: AnyObserver<Bool> { return valueSetter { $0.isEnabled = $1 } }
 }

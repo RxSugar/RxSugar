@@ -6,30 +6,30 @@ public extension Sugar where HostType: UILabel {
 	/**
 	RxSugar wrapper for text property.
 	*/
-	public var text: AnyObserver<String> { return valueSetter { $0.text = $1 } }
+    var text: AnyObserver<String> { return valueSetter { $0.text = $1 } }
 	
 	/**
 	RxSugar wrapper for attributedText property.
 	*/
-	public var attributedText: AnyObserver<NSAttributedString> { return valueSetter { $0.attributedText = $1 } }
+    var attributedText: AnyObserver<NSAttributedString> { return valueSetter { $0.attributedText = $1 } }
     
     /**
      RxSugar wrapper for font property.
      */
-    public var font: AnyObserver<UIFont> { return valueSetter { $0.font = $1 } }
+    var font: AnyObserver<UIFont> { return valueSetter { $0.font = $1 } }
 	
 	/**
 	RxSugar wrapper for textColor property.
 	*/
-	public var textColor: AnyObserver<UIColor> { return valueSetter { $0.textColor = $1 } }
+    var textColor: AnyObserver<UIColor> { return valueSetter { $0.textColor = $1 } }
 	
 	/**
 	RxSugar wrapper for isHighlighted property.
 	*/
-	public var isHighlighted: AnyObserver<Bool> { return valueSetter { $0.isHighlighted = $1 } }
+    var isHighlighted: AnyObserver<Bool> { return valueSetter { $0.isHighlighted = $1 } }
 	
 	/**
 	RxSugar wrapper for isHighlighted property.
 	*/
-	public var isEnabled: AnyObserver<Bool> { return valueSetter { $0.isEnabled = $1 } }
+    var isEnabled: AnyObserver<Bool> { return valueSetter { $0.isEnabled = $1 } }
 }

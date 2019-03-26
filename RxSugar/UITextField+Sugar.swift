@@ -5,7 +5,7 @@ public extension Sugar where HostType: UITextField {
 	/**
 	RxSugar wrapper for text property.
 	*/
-	public var text: ValueBinding<String> {
+    var text: ValueBinding<String> {
 		return controlValueBinding(
             valueChangeEventTypes: [UIControl.Event.editingChanged, UIControl.Event.editingDidEnd],
 			getter: { $0.text ?? "" },
@@ -15,7 +15,7 @@ public extension Sugar where HostType: UITextField {
 	/**
 	RxSugar wrapper for attributedText property.
 	*/
-	public var attributedText: ValueBinding<NSAttributedString> {
+    var attributedText: ValueBinding<NSAttributedString> {
 		return controlValueBinding(
             valueChangeEventTypes: [UIControl.Event.editingChanged, UIControl.Event.editingDidEnd],
 			getter: { $0.attributedText ?? NSAttributedString() },
@@ -25,10 +25,10 @@ public extension Sugar where HostType: UITextField {
     /**
      RxSugar wrapper for font property.
      */
-    public var font: AnyObserver<UIFont> { return valueSetter { $0.font = $1 } }
+    var font: AnyObserver<UIFont> { return valueSetter { $0.font = $1 } }
     
     /**
      RxSugar wrapper for textColor property.
      */
-    public var textColor: AnyObserver<UIColor> { return valueSetter { $0.textColor = $1 } }
+    var textColor: AnyObserver<UIColor> { return valueSetter { $0.textColor = $1 } }
 }

@@ -5,7 +5,7 @@ public extension Sugar where HostType: RXSObject {
     /**
      RxSugar wrapper for significantTimeChange
      */
-    public var significantTimeChange: Observable<Void> {
+    var significantTimeChange: Observable<Void> {
         let timeChanges = TargetActionObservable<Void>(
             valueGenerator: {  },
             subscribe: { target, action in
@@ -22,7 +22,7 @@ public extension Sugar where HostType: RXSObject {
     /**
      RxSugar wrapper for contentSizeCategoryDidChange
      */
-    public var contentSizeCategoryDidChange: Observable<Void> {
+    var contentSizeCategoryDidChange: Observable<Void> {
         let contentSizeCategoryChanges = TargetActionObservable<Void>(
             valueGenerator: {  },
             subscribe: { target, action in

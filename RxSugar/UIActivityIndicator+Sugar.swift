@@ -1,11 +1,11 @@
 import UIKit
 import RxSwift
 
-extension Sugar where HostType: UIActivityIndicatorView {
+public extension Sugar where HostType: UIActivityIndicatorView {
     /**
      RxSugar wrapper for animating.
      */
-    public var animating: AnyObserver<Bool> {
+    var animating: AnyObserver<Bool> {
         return valueSetter {
             if $1 {
                 $0.startAnimating()

@@ -10,7 +10,7 @@ public extension Sugar where HostType: UIControl {
 	- parameter valueGetter: closure used to determine value of the control.
 	- returns: Observable<T>.
 	*/
-    public func controlEvents<T>(_ controlEvents: UIControl.Event, valueGetter: @escaping (HostType)->T) -> Observable<T> {
+    func controlEvents<T>(_ controlEvents: UIControl.Event, valueGetter: @escaping (HostType)->T) -> Observable<T> {
 		let observable = TargetActionObservable<T>(
 			valueGenerator: { [weak host] in
 				guard let this = host else { throw RxsError() }
@@ -33,7 +33,7 @@ public extension Sugar where HostType: UIControl {
 	- parameter controlEvents: UIControlEvents that will trigger event.
 	- returns: Observable<Void>.
 	*/
-    public func controlEvents(_ controlEvents: UIControl.Event) -> Observable<Void> {
+    func controlEvents(_ controlEvents: UIControl.Event) -> Observable<Void> {
         return self.controlEvents(controlEvents, valueGetter: { _ in })
     }
 	
@@ -45,7 +45,7 @@ public extension Sugar where HostType: UIControl {
 	- parameter valueSetter: closure used to set value of the control when event is received.
 	- returns: ValueBinding<T>.
 	*/
-    public func controlValueBinding<T>(valueChangeEventTypes: UIControl.Event, getter: @escaping (HostType)->T, setter: @escaping (HostType, T)->()) -> ValueBinding<T> {
+    func controlValueBinding<T>(valueChangeEventTypes: UIControl.Event, getter: @escaping (HostType)->T, setter: @escaping (HostType, T)->()) -> ValueBinding<T> {
 
         return ValueBinding(
             getter: controlEvents(valueChangeEventTypes, valueGetter: getter),
@@ -55,14 +55,14 @@ public extension Sugar where HostType: UIControl {
 	/**
 	Reactive setter for isEnabled property
 	*/
-    public var isEnabled: AnyObserver<Bool> {
+    var isEnabled: AnyObserver<Bool> {
 		return valueSetter { $0.isEnabled = $1 }
 	}
 	
 	/**
 	Reactive setter for isSelected property
 	*/
-    public var isSelected: AnyObserver<Bool> {
+    var isSelected: AnyObserver<Bool> {
 		return valueSetter { $0.isSelected = $1 }
 	}
 }

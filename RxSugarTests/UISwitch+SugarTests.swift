@@ -6,7 +6,7 @@ extension UISwitch: TestControl {}
 class UISwitch_SugarTests: XCTestCase {
     func testSwitchSendsEvents() {
         let testObject = UISwitch()
-        let eventStream = testObject.rxs.on
+        let eventStream = testObject.rxs.isOn
         
         var events: [Bool] = []
         _ = eventStream.subscribe(onNext: { events.append($0) })
@@ -32,7 +32,7 @@ class UISwitch_SugarTests: XCTestCase {
     
     func testSwitchUpdatesValue() {
         let testObject = UISwitch()
-        let observer = testObject.rxs.on
+        let observer = testObject.rxs.isOn
         
         observer.onNext(true)
         XCTAssertTrue(testObject.isOn)
