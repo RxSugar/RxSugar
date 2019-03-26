@@ -548,9 +548,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D381D001D341E50001F7085 /* Build configuration list for PBXNativeTarget "RxSugar-watchOS" */;
 			buildPhases = (
+				4D381CF81D341E50001F7085 /* Headers */,
 				4D381CF61D341E50001F7085 /* Sources */,
 				4D381CF71D341E50001F7085 /* Frameworks */,
-				4D381CF81D341E50001F7085 /* Headers */,
 				4D381CF91D341E50001F7085 /* Resources */,
 			);
 			buildRules = (
@@ -566,9 +566,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D483DA21F3B636100B26BE1 /* Build configuration list for PBXNativeTarget "RxSugar-macOS" */;
 			buildPhases = (
+				4D483D831F3B636100B26BE1 /* Headers */,
 				4D483D811F3B636100B26BE1 /* Sources */,
 				4D483D821F3B636100B26BE1 /* Frameworks */,
-				4D483D831F3B636100B26BE1 /* Headers */,
 				4D483D841F3B636100B26BE1 /* Resources */,
 			);
 			buildRules = (
@@ -584,9 +584,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D91C3531C625FE700926C99 /* Build configuration list for PBXNativeTarget "RxSugar-iOS" */;
 			buildPhases = (
+				4D91C33C1C625FE700926C99 /* Headers */,
 				4D91C33A1C625FE700926C99 /* Sources */,
 				4D91C33B1C625FE700926C99 /* Frameworks */,
-				4D91C33C1C625FE700926C99 /* Headers */,
 				4D91C33D1C625FE700926C99 /* Resources */,
 			);
 			buildRules = (
@@ -620,9 +620,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A9AE9441C6A599000F8FD92 /* Build configuration list for PBXNativeTarget "RxSugar-tvOS" */;
 			buildPhases = (
+				5A9AE9181C6A599000F8FD92 /* Headers */,
 				5A9AE9161C6A599000F8FD92 /* Sources */,
 				5A9AE9171C6A599000F8FD92 /* Frameworks */,
-				5A9AE9181C6A599000F8FD92 /* Headers */,
 				5A9AE9191C6A599000F8FD92 /* Resources */,
 			);
 			buildRules = (
