@@ -3,6 +3,8 @@ import Foundation
 import RxSwift
 import RxSugar
 
+#if os(iOS) || os(tvOS)
+
 struct TestAnimator: Animator {
     func animate(_ animations: @escaping ()->()) {
         animations()
@@ -40,3 +42,5 @@ class AnimatorTests: XCTestCase {
         XCTAssertEqual(variable.value, 7)
     }
 }
+
+#endif

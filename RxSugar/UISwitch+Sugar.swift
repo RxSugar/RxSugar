@@ -1,5 +1,8 @@
 import RxSwift
 
+#if os(iOS)
+import UIKit
+
 public extension Sugar where HostType: UISwitch {
 	/**
 	RxSugar wrapper for on property.
@@ -11,3 +14,5 @@ public extension Sugar where HostType: UISwitch {
             setter: { $0.isOn = $1 })
     }
 }
+
+#endif

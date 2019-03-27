@@ -1,3 +1,4 @@
+#if os(iOS) || os(tvOS)
 import RxSugar
 import XCTest
 import UIKit
@@ -87,3 +88,4 @@ class UIGestureRecognizer_SugarTests: XCTestCase {
         XCTAssertEqual(events, ["tap", "tap"])
     }
 }
+#endif

@@ -6,7 +6,7 @@
 //  Copyright © 2016 RxSugar. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for RxSugar.
 FOUNDATION_EXPORT double RxSugarVersionNumber;

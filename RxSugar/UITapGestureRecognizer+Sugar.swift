@@ -1,5 +1,7 @@
-import UIKit
 import RxSwift
+
+#if os(iOS) || os(tvOS)
+import UIKit
 
 public extension Sugar where HostType: UITapGestureRecognizer {
     /**
@@ -18,3 +20,5 @@ public extension Sugar where HostType: UITapGestureRecognizer {
         return events.filter { $0.state == .ended }
     }
 }
+
+#endif

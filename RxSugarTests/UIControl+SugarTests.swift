@@ -1,3 +1,4 @@
+#if os(iOS) || os(tvOS)
 import UIKit
 import RxSugar
 import XCTest
@@ -79,3 +80,4 @@ class UIControl_TriggerTests: XCTestCase {
         XCTAssertEqual(events, [true])
     }
 }
+#endif

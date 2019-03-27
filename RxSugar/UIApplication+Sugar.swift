@@ -1,4 +1,6 @@
 import RxSwift
+
+#if os(iOS) || os(tvOS)
 import UIKit
 
 public extension Sugar where HostType: RXSObject {
@@ -36,3 +38,5 @@ public extension Sugar where HostType: RXSObject {
         return contentSizeCategoryChanges.asObservable()
     }
 }
+
+#endif

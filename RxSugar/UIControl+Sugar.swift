@@ -1,5 +1,7 @@
-import UIKit
 import RxSwift
+
+#if os(iOS) || os(tvOS)
+import UIKit
 
 public extension Sugar where HostType: UIControl {
 	
@@ -66,3 +68,5 @@ public extension Sugar where HostType: UIControl {
 		return valueSetter { $0.isSelected = $1 }
 	}
 }
+
+#endif

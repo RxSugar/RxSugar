@@ -1,5 +1,7 @@
-import UIKit
 import RxSwift
+
+#if os(iOS) || os(tvOS)
+import UIKit
 
 public extension Sugar where HostType: UIImageView {
 
@@ -10,3 +12,5 @@ public extension Sugar where HostType: UIImageView {
         return valueSetter { $0.image = $1 }
     }
 }
+
+#endif

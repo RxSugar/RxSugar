@@ -1,3 +1,4 @@
+#if os(iOS) || os(tvOS)
 import UIKit
 
 extension TargetActionObservable {
@@ -14,3 +15,5 @@ extension TargetActionObservable {
 		)
 	}
 }
+
+#endif

@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4D91C33E1C625FE700926C99"
                BuildableName = "RxSugar.framework"
-               BlueprintName = "RxSugar-iOS"
+               BlueprintName = "RxSugar"
                ReferencedContainer = "container:RxSugar.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,7 +46,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4D91C33E1C625FE700926C99"
             BuildableName = "RxSugar.framework"
-            BlueprintName = "RxSugar-iOS"
+            BlueprintName = "RxSugar"
             ReferencedContainer = "container:RxSugar.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -68,7 +68,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4D91C33E1C625FE700926C99"
             BuildableName = "RxSugar.framework"
-            BlueprintName = "RxSugar-iOS"
+            BlueprintName = "RxSugar"
             ReferencedContainer = "container:RxSugar.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -86,7 +86,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4D91C33E1C625FE700926C99"
             BuildableName = "RxSugar.framework"
-            BlueprintName = "RxSugar-iOS"
+            BlueprintName = "RxSugar"
             ReferencedContainer = "container:RxSugar.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

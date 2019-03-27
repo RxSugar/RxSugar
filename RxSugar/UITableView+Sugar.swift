@@ -1,5 +1,7 @@
-import UIKit
 import RxSwift
+
+#if os(iOS) || os(tvOS)
+import UIKit
 
 public extension Sugar where HostType: UITableView {
     /**
@@ -9,3 +11,5 @@ public extension Sugar where HostType: UITableView {
         return valueSetter { (host, _) in host.reloadData() }
     }
 }
+
+#endif

@@ -1,5 +1,7 @@
-import UIKit
 import RxSwift
+
+#if os(iOS) || os(tvOS)
+import UIKit
 
 public extension Sugar where HostType: UIActivityIndicatorView {
     /**
@@ -15,3 +17,5 @@ public extension Sugar where HostType: UIActivityIndicatorView {
         }
     }
 }
+
+#endif

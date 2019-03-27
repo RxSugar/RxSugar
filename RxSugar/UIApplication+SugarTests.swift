@@ -1,6 +1,7 @@
-import UIKit
-import RxSugar
+#if os(iOS) || os(tvOS)
 import RxSwift
+import RxSugar
+import UIKit
 import XCTest
 
 class UIApplication_SugarTests: XCTestCase {
@@ -42,3 +43,5 @@ class UIApplication_SugarTests: XCTestCase {
         XCTAssertEqual(events, [true])
     }
 }
+
+#endif

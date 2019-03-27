@@ -1,6 +1,8 @@
 import RxSugar
 import XCTest
 
+#if os(iOS) || os(tvOS)
+
 extension UIButton: TestControl {}
 
 class UIButton_SugarTests: XCTestCase {
@@ -21,3 +23,5 @@ class UIButton_SugarTests: XCTestCase {
         XCTAssertEqual(events, ["tap", "tap"])
     }
 }
+
+#endif

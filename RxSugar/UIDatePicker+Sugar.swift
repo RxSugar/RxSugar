@@ -1,4 +1,6 @@
+#if os(iOS)
 import RxSwift
+import UIKit
 
 public extension Sugar where HostType: UIDatePicker {
 	/**
@@ -11,3 +13,5 @@ public extension Sugar where HostType: UIDatePicker {
             setter: { $0.date = $1 })
     }
 }
+
+#endif

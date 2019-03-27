@@ -1,3 +1,4 @@
+#if os(iOS) || os(tvOS)
 import UIKit
 import RxSugar
 import XCTest
@@ -31,3 +32,4 @@ class UILabel_SugarTests: XCTestCase {
 		XCTAssertEqual(testObject.attributedText!.string, attributedStringTwo.string)
 	}
 }
+#endif

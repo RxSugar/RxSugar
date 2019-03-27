@@ -1,5 +1,7 @@
-import UIKit
 import RxSwift
+
+#if os(iOS) || os(tvOS)
+import UIKit
 
 public extension Sugar where HostType: UITextView {
 	
@@ -29,3 +31,5 @@ public extension Sugar where HostType: UITextView {
      */
     var textColor: AnyObserver<UIColor> { return valueSetter { $0.textColor = $1 } }
 }
+
+#endif

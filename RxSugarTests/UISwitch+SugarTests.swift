@@ -1,6 +1,8 @@
 import RxSugar
 import XCTest
 
+#if os(iOS)
+
 extension UISwitch: TestControl {}
 
 class UISwitch_SugarTests: XCTestCase {
@@ -41,3 +43,5 @@ class UISwitch_SugarTests: XCTestCase {
         XCTAssertFalse(testObject.isOn)
     }
 }
+
+#endif

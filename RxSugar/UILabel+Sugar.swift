@@ -1,5 +1,7 @@
-import UIKit
 import RxSwift
+
+#if os(iOS) || os(tvOS)
+import UIKit
 
 public extension Sugar where HostType: UILabel {
 	
@@ -33,3 +35,5 @@ public extension Sugar where HostType: UILabel {
 	*/
     var isEnabled: AnyObserver<Bool> { return valueSetter { $0.isEnabled = $1 } }
 }
+
+#endif

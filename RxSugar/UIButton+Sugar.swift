@@ -1,5 +1,7 @@
-import UIKit
 import RxSwift
+
+#if os(iOS) || os(tvOS)
+import UIKit
 
 public extension Sugar where HostType: UIButton {
 	/**
@@ -17,3 +19,5 @@ public extension Sugar where HostType: UIButton {
 		#endif
 	}
 }
+
+#endif

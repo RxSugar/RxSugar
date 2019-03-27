@@ -243,6 +243,8 @@
 		4D483D881F3B636100B26BE1 /* RxSugar-macOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RxSugar-macOS.h"; sourceTree = "<group>"; };
 		4D483D891F3B636100B26BE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D483DAF1F3B657300B26BE1 /* TargetActionObservable+UIKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TargetActionObservable+UIKit.swift"; sourceTree = "<group>"; };
+		4D741FC0224AEDB2009E4B15 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		4D741FC1224BB3C7009E4B15 /* TestConfig.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = TestConfig.xcconfig; sourceTree = "<group>"; };
 		4D809DA41C62B344003D1D63 /* ValueBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ValueBinding.swift; sourceTree = "<group>"; };
 		4D809DBA1C62B399003D1D63 /* ValueBindingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValueBindingTests.swift; path = RxSugarTests/ValueBindingTests.swift; sourceTree = SOURCE_ROOT; };
 		4D809DBC1C62BF51003D1D63 /* RxsError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxsError.swift; sourceTree = "<group>"; };
@@ -370,6 +372,8 @@
 		4D91C3351C625FE700926C99 = {
 			isa = PBXGroup;
 			children = (
+				4D741FC0224AEDB2009E4B15 /* Config.xcconfig */,
+				4D741FC1224BB3C7009E4B15 /* TestConfig.xcconfig */,
 				5AC009B01C641155005CAAC5 /* Operator Overloads */,
 				4D91C3A61C62778F00926C99 /* RxSugar+UIKit */,
 				4D91C3411C625FE700926C99 /* RxSugar */,
@@ -580,9 +584,9 @@
 			productReference = 4D483D861F3B636100B26BE1 /* RxSugar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4D91C33E1C625FE700926C99 /* RxSugar-iOS */ = {
+		4D91C33E1C625FE700926C99 /* RxSugar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4D91C3531C625FE700926C99 /* Build configuration list for PBXNativeTarget "RxSugar-iOS" */;
+			buildConfigurationList = 4D91C3531C625FE700926C99 /* Build configuration list for PBXNativeTarget "RxSugar" */;
 			buildPhases = (
 				4D91C33C1C625FE700926C99 /* Headers */,
 				4D91C33A1C625FE700926C99 /* Sources */,
@@ -593,7 +597,7 @@
 			);
 			dependencies = (
 			);
-			name = "RxSugar-iOS";
+			name = RxSugar;
 			productName = RxSugar;
 			productReference = 4D91C33F1C625FE700926C99 /* RxSugar.framework */;
 			productType = "com.apple.product-type.framework";
@@ -705,7 +709,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				4D91C33E1C625FE700926C99 /* RxSugar-iOS */,
+				4D91C33E1C625FE700926C99 /* RxSugar */,
 				4D91C3481C625FE700926C99 /* RxSugarTests-iOS */,
 				5A9AE91A1C6A599000F8FD92 /* RxSugar-tvOS */,
 				5A9AE9231C6A599000F8FD92 /* RxSugarTests-tvOS */,
@@ -994,7 +998,7 @@
 /* Begin PBXTargetDependency section */
 		4D91C34C1C625FE700926C99 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4D91C33E1C625FE700926C99 /* RxSugar-iOS */;
+			target = 4D91C33E1C625FE700926C99 /* RxSugar */;
 			targetProxy = 4D91C34B1C625FE700926C99 /* PBXContainerItemProxy */;
 		};
 		5A9AE9271C6A599000F8FD92 /* PBXTargetDependency */ = {
@@ -1152,7 +1156,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1204,7 +1208,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,3,4";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1213,6 +1217,7 @@
 		};
 		4D91C3541C625FE700926C99 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D741FC0224AEDB2009E4B15 /* Config.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1226,13 +1231,17 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.rxsugar.RxSugar;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Debug;
 		};
 		4D91C3551C625FE700926C99 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D741FC0224AEDB2009E4B15 /* Config.xcconfig */;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -1246,12 +1255,16 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.rxsugar.RxSugar;
 				PRODUCT_NAME = "$(PROJECT_NAME)";
+				SDKROOT = "";
 				SKIP_INSTALL = YES;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
 		4D91C3571C625FE700926C99 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D741FC1224BB3C7009E4B15 /* TestConfig.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RxSugarTests/Info.plist;
@@ -1264,6 +1277,7 @@
 		};
 		4D91C3581C625FE700926C99 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D741FC1224BB3C7009E4B15 /* TestConfig.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = RxSugarTests/Info.plist;
@@ -1377,7 +1391,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4D91C3531C625FE700926C99 /* Build configuration list for PBXNativeTarget "RxSugar-iOS" */ = {
+		4D91C3531C625FE700926C99 /* Build configuration list for PBXNativeTarget "RxSugar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4D91C3541C625FE700926C99 /* Debug */,

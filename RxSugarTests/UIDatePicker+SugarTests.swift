@@ -1,6 +1,8 @@
 import RxSugar
 import XCTest
 
+#if os(iOS)
+
 extension UIDatePicker: TestControl {}
 
 class UIDatePicker_SugarTests: XCTestCase {
@@ -41,3 +43,5 @@ class UIDatePicker_SugarTests: XCTestCase {
 		XCTAssertEqual(testObject.date, date2)
 	}
 }
+
+#endif

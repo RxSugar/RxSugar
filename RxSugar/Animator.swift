@@ -1,5 +1,7 @@
-import UIKit
 import RxSwift
+
+#if os(iOS) || os(tvOS)
+import UIKit
 
 /// Respresents an animator.
 public protocol Animator {
@@ -53,3 +55,5 @@ public func animated<T>(_ animator: Animator = DefaultAnimator(), closure: @esca
         animator.animate { closure(value) }
     }
 }
+
+#endif

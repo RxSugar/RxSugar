@@ -1,5 +1,7 @@
-import UIKit
 import RxSwift
+
+#if os(iOS) || os(tvOS)
+import UIKit
 
 public extension Sugar where HostType: UIGestureRecognizer {
     /**
@@ -23,3 +25,5 @@ public extension Sugar where HostType: UIGestureRecognizer {
         return events.asObservable()
     }
 }
+
+#endif
