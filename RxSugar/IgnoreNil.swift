@@ -4,8 +4,8 @@ import RxSwift
 /**
 - returns: Observable that ignores nil events and unwraps the optional values.
 */
-public extension ObservableType where E: OptionalType {
-    func ignoreNil() -> Observable<E.Wrapped> {
+public extension ObservableType where Element: OptionalType {
+    func ignoreNil() -> Observable<Element.Wrapped> {
         return filter { $0.hasValue() }
             .map { $0.optional! }
     }
@@ -15,7 +15,7 @@ public extension ObservableType where E: OptionalType {
 - returns: Observable that wraps each value in an optional.
 */
 public extension ObservableType {
-    func toOptional() -> Observable<E?> {
+    func toOptional() -> Observable<Element?> {
         return map { return .some($0) }
     }
 }
